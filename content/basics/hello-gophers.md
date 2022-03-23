@@ -1,7 +1,6 @@
 ---
 title: "Hello Gophers"
-date: 2022-03-21T20:25:47-04:00
-draft: true
+draft: false
 lesson: 0
 ---
 
