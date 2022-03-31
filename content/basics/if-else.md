@@ -8,6 +8,26 @@ I'll give you two options, `if` you follow this lesson then you'll learn about
 control flow in programming `else` you'll never know how to control the
 execution of your code 💀
 
+## Setup
+
+Let's make our directory `if-else` and the files we want inside of that
+directory `example_test.go` `if_else.go`
+
+```sh
+mkdir if_else
+touch if-else/example_test.go if-else/if_else.go
+```
+
+Now let's open up `if_else.go` and for the very first line we'll add
+```go
+package if_else
+```
+Next for `example_test.go` for the very first line we'll add
+```go
+package if_else_test
+```
+
+
 ## If Else Statements
 
 We use `if` and `else` in programming the same as we use it in real life: `if`
