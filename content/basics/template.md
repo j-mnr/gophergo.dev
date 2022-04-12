@@ -1,16 +1,22 @@
+---
+title: "TODO"
+draft: false
+lesson: TODO
+---
+
 ## Setup
 
-Let's make our directory `CHANGEME` and the files we want inside of that directory
-`example_test.go` `CHANGEME.go`
+Let's make our directory `FIXME` and the files we want inside of that directory
+`example_test.go` `FIXME.go`
 
 ```sh
-mkdir CHANGEME
-touch CHANGEME/example_test.go CHANGEME/CHANGEME.go
+mkdir FIXME
+touch FIXME/example_test.go FIXME/FIXME.go
 ```
 
-Now let's open up `CHANGEME.go` and for the very first line we'll add
+Now let's open up `FIXME.go` and for the very first line we'll add
 ```go
-package CHANGEME
+package FIXME
 ```
 Next for `example_test.go` for the very first line we'll add
 ```go
@@ -23,7 +29,7 @@ package CHANGEME_test
 
 ![https://twitter.com/egonelbre](/gopher-heart-eyes.png)
 
-#### CHANGEME.go
+#### FIXME.go
 
 ```go
 ```
