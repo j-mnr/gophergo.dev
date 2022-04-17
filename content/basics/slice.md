@@ -106,6 +106,10 @@ need, you'll get that much.
 
 #### slices.go
 
+Here we introduce the unpacking operator `...` which is further explained in
+[functions](/basics/function/#variadic-arguments-varargs) So, don't worry
+we'll get to it!
+
 ```go
 // SliceAppend shows how to put more elements into a slice even if we don't
 // have the capacity for it using `append`.
@@ -122,6 +126,13 @@ func SliceAppend() {
 	fmt.Println("length:", len(slice))
 	fmt.Println("We had to go find more space! Which takes time and effort!")
 	fmt.Println("slice:", slice)
+
+	unpackAllThese := []string{"`...`", "is used to put", "all the values in", "at the same time"}
+	slice = append(slice, unpackAllThese...)
+	fmt.Println("capacity:", cap(slice))
+	fmt.Println("length:", len(slice))
+	fmt.Println("We had to go find even more space!!!")
+	fmt.Println("slice:", slice)
 }
 ```
 
@@ -137,6 +148,10 @@ func ExampleSliceAppend() {
 	// length: 4
 	// We had to go find more space! Which takes time and effort!
 	// slice: [append a single value append multiple values]
+	// capacity: 8
+	// length: 8
+	// We had to go find even more space!!!
+	// slice: [append a single value append multiple values `...` is used to put all the values in at the same time]
 }
 ```
 
@@ -408,6 +423,13 @@ func SliceAppend() {
 	fmt.Println("length:", len(slice))
 	fmt.Println("We had to go find more space! Which takes time and effort!")
 	fmt.Println("slice:", slice)
+
+	unpackAllThese := []string{"`...`", "is used to put", "all the values in", "at the same time"}
+	slice = append(slice, unpackAllThese...)
+	fmt.Println("capacity:", cap(slice))
+	fmt.Println("length:", len(slice))
+	fmt.Println("We had to go find even more space!!!")
+	fmt.Println("slice:", slice)
 }
 
 // SliceCopy shows how to copy one slice into another slice using the builtin
@@ -525,6 +547,10 @@ func ExampleSliceAppend() {
 	// length: 4
 	// We had to go find more space! Which takes time and effort!
 	// slice: [append a single value append multiple values]
+	// capacity: 8
+	// length: 8
+	// We had to go find even more space!!!
+	// slice: [append a single value append multiple values `...` is used to put all the values in at the same time]
 }
 
 func ExampleSliceCopy() {

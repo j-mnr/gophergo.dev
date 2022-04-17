@@ -376,7 +376,7 @@ func FuncVariadic(varargsNums ...int) (sum int) {
 #### example_test.go
 
 Here we give the caller the ability to pass in no values, some values, or an
-entire slice with the unpack operator `...` We can see how convenient that it
+entire slice with the unpack operator `...` We briefly looked at this on our lesson with [slice](/basics/slice/#append) We can see how convenient that it
 for them, but for more complex functions we may need to do checks for no values
 or other edge cases.
 
