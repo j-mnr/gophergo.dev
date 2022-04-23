@@ -5,3 +5,20 @@ theme: PaperMod
 params:
   assets:
     disableHLJS: true
+  profileMode:
+    enabled: true
+    title: "Just Go for it!"
+    subtitle: "Pick an area to explore"
+    imageUrl: "GoCommunity.png"
+    imageTitle: "Go Community"
+    buttons:
+      - name: Basics
+        url: "/basics"
+      - name: Standard Library
+        url: "/std"
+      - name: Coding Questions
+        url: "/code"
+      - name: Projects
+        url: "/projects"
+      - name: Go command
+        url: "/cmd"
