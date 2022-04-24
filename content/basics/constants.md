@@ -51,7 +51,7 @@ expensive in programming.
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
 
 #### contants.go
 
@@ -136,7 +136,7 @@ therefore have underlying types that can be converted
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
 
 #### constants.go
 
@@ -195,7 +195,7 @@ func ExamplePrint() {
 
 ## The Whole File
 
-![https://twitter.com/egonelbre](/gopher-victorious.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-victorious.png)
 
 ```go
 package constants
@@ -267,7 +267,7 @@ func Print(s myString) { fmt.Println(s) }
 
 ## All Of The Outputs To Our Examples
 
-![https://twitter.com/egonelbre](/typing-furiously.gif)
+![https://twitter.com/egonelbre](/egon-elbre/typing-furiously.gif)
 
 ```go
 package constants_test

@@ -120,7 +120,7 @@ Save the file and type `go run cmd/main.go` in your terminal.
 
 and 🥳🥳🎉🎊🎉 You're officially a Gopher!
 
-![https://twitter.com/egonelbre](/gopher-dance-long-3x.gif)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-dance-long-3x.gif)
 
 Why not celebrate and [Make You're Own Gopher](https://gopherize.me/) and if
 you want there's a very supportive community over on

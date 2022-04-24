@@ -36,7 +36,7 @@ very limited in what they do and how they function. They are much more verbose
 (they say a lot without doing much more) than simple `switch` statements in Go
 and it is normal in Go to be short and sweet. ❤️
 
-![https://twitter.com/egonelbre](/gopher-blushing.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-blushing.png)
 
 ### Compare with If/Else
 
@@ -81,7 +81,7 @@ just make some other statement that has nothing to do with the topic at hand!
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
 
 #### switches.go
 
@@ -153,7 +153,7 @@ a flexible manner. This is great engineering! 😉
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
 
 #### switches.go
 
@@ -219,7 +219,7 @@ There is no comparison with `if/else` in this case. It can't do it 🤷
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
 
 #### switches.go
 
@@ -296,7 +296,7 @@ case apple == "🍌":
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
 
 #### switches.go
 
@@ -345,7 +345,7 @@ useful, but if you find a use let me know! 😁 👍
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
 
 #### switches.go
 
@@ -385,7 +385,7 @@ func ExampleSwitchFallthrough() {
 
 ## The Whole File
 
-![https://twitter.com/egonelbre](/gopher-victorious.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-victorious.png)
 
 ```go
 package switches
@@ -488,7 +488,7 @@ func SwitchFallthrough() {
 
 ## All Of The Outputs To Our Examples
 
-![https://twitter.com/egonelbre](/typing-furiously.gif)
+![https://twitter.com/egonelbre](/egon-elbre/typing-furiously.gif)
 
 ```go
 package switches_test

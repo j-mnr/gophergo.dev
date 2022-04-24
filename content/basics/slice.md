@@ -44,7 +44,7 @@ think about how many elements we want in it, we just declare it.
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
 
 #### slices.go
 
@@ -102,7 +102,7 @@ need, you'll get that much.
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
 
 #### slices.go
 
@@ -167,7 +167,7 @@ values.
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
 
 #### slices.go
 
@@ -219,7 +219,7 @@ outside of the capacity, you're going to have a bad time ⏰
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
 
 #### slices.go
 
@@ -275,7 +275,7 @@ with the slice operator `:` is. What efficiency you may ask? Well I'll let
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
 
 #### slices.go
 
@@ -341,7 +341,7 @@ more if you want. So don't be intimidated, you got this! 💪😤
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
 
 #### slices.go
 
@@ -381,7 +381,7 @@ func ExampleSliceMatrix() {
 
 ## The Whole File
 
-![https://twitter.com/egonelbre](/gopher-victorious.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-victorious.png)
 
 ```go
 package slices
@@ -520,7 +520,7 @@ func SliceMatrix() {
 
 ## All Of The Outputs To Our Examples
 
-![https://twitter.com/egonelbre](/typing-furiously.gif)
+![https://twitter.com/egonelbre](/egon-elbre/typing-furiously.gif)
 
 ```go
 package slices_test

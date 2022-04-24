@@ -72,7 +72,7 @@ This is one of those features you just have to play with to understand. So....
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
 
 #### for_loop.go
 
@@ -128,7 +128,7 @@ loop without a start or next part. So it would be:
 `for` {{< ln_thr_code "no need := 0;" >}} `stop condition` {{< ln_thr_code
 ";no next" >}} `{`
 
-![https://twitter.com/egonelbre](/gopher-thinking.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-thinking.png)
 
 Do we _really_ need another keyword for the same loop? It would then require
 it's own syntax and knowledge and may spawn more feature requests like being
@@ -136,7 +136,7 @@ able to `do while` or something else -- You know what? Let's just not.
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
 
 #### for_loop.go
 
@@ -178,7 +178,7 @@ func ExampleWhileLoop() {
 
 You may have thought of something looking at the previous example.
 
-![https://twitter.com/egonelbre](/gopher-thinking.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-thinking.png)
 
 > What happens if we have a condition that never evaluates to true?
 
@@ -189,7 +189,7 @@ it is. A loop that has no exit! It's very simple to accomplish in Go just use
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
 
 As a precaution I've put in a `break` statement, which we're going to learn
 about next, but if you want, delete the break statement and in `cmd/main.go`
@@ -252,7 +252,7 @@ Let's say you're counting the number of letters (`byte`) in a `string`, but if
 the letter (`byte`) is a certain letter (`byte`) you **don't** want to count it
 because reasons....
 
-![https://twitter.com/egonelbre](/gopher-not-sure-if.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-not-sure-if.png)
 
 IT COULD HAPPEN! You never know! Anyways, you would make an `if` statement and
 check whether the letter was equal to that letter and not count it. `if ltr ==
@@ -271,7 +271,7 @@ stuff in there.
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
 
 #### for_loop.go
 
@@ -321,7 +321,7 @@ func ExampleContinueBreakLoop() {
 
 ## The Whole File
 
-![https://twitter.com/egonelbre](/gopher-victorious.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-victorious.png)
 
 ```go
 package for_loop
@@ -397,7 +397,7 @@ func ContinueBreakLoop() {
 
 ## All Of The Outputs To Our Examples
 
-![https://twitter.com/egonelbre](/typing-furiously.gif)
+![https://twitter.com/egonelbre](/egon-elbre/typing-furiously.gif)
 
 ```go
 package for_loop_test

@@ -77,7 +77,7 @@ We don't know what each of those calls are doing but it reads like a story.
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
 
 #### functions.go
 
@@ -125,7 +125,7 @@ have a {{< anchor-new-window "fmt_test"
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
 
 #### functions.go
 
@@ -167,7 +167,7 @@ though, so no big deal.
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
 
 #### functions.go
 
@@ -205,7 +205,7 @@ turn it Go style!
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
 
 #### functions.go
 
@@ -250,7 +250,7 @@ func Add(n1 int, n2 int) (int, bool) {
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
 
 #### functions.go
 
@@ -296,7 +296,7 @@ func Add(n1 int, n2 int) (sum int, gtThousand bool) {
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
 
 #### functions.go
 
@@ -352,7 +352,7 @@ anchor-new-window "pack/unpack"
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
 
 #### functions.go
 
@@ -395,7 +395,7 @@ func ExampleFuncVariadic() {
 
 ## The Whole File
 
-![https://twitter.com/egonelbre](/gopher-victorious.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-victorious.png)
 
 ```go
 package functions
@@ -464,7 +464,7 @@ func FuncVariadic(varargsNums ...int) (sum int) {
 
 ## All Of The Outputs To Our Examples
 
-![https://twitter.com/egonelbre](/typing-furiously.gif)
+![https://twitter.com/egonelbre](/egon-elbre/typing-furiously.gif)
 
 ```go
 package functions_test
