@@ -1,0 +1,41 @@
+<style>
+.banner {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin:0 0 4rem;
+}
+.banner a {
+  text-decoration: underline;
+}
+</style>
+<div class="profile">
+  {{- with .Site.Params.profileMode }}
+  <div class="profile_inner">
+    <div class="banner">
+      <img src="{{ .imageUrl }}" alt={{ .imageTitle }} />
+      <div>
+        <span>
+          <a href="https://github.com/ashleymcnamara/gophers/blob/master/COMING_SOON_GOPHER.png"
+            target="_blank" rel="noopener noreferrer">"{{ .imageTitle }}"</a> by
+          <a href="https://twitter.com/ashleymcnamara" target="_blank" rel="noopener noreferrer">Ashley McNamara</a>,
+          used under
+          <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY</a>
+        </span>
+      </div>
+    </div>
+    <h1>{{ .title | default $.Site.Title | markdownify }}</h1>
+    <span>{{ .subtitle | markdownify }}</span>
+    {{- partial "social_icons.html" $.Site.Params.socialIcons -}}
+    {{- with .buttons }}
+    <div class="buttons">
+      {{- range . }}
+      <a class="button" href="{{ trim .url " " }}" rel="noopener" title="{{ .name | title }}">
+        <span class="button-inner">{{ .name | title }}</span>
+      </a>
+      {{- end }}
+    </div>
+    {{- end }}
+  </div>
+  {{- end}}
+</div>
