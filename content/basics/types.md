@@ -32,7 +32,7 @@ package types_test
 
 ## Bool
 
-![https://twitter.com/egonelbre](/gopher-wondering.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-wondering.png)
 
 A `bool` is a way for us to control the flow of our application. You can think
 of `bool` as a forked road. You are given two choices -- go right or go left.
@@ -42,7 +42,7 @@ piece of code _only_ when a certain criteria is met.
 
 ### Uses
 
-![https://twitter.com/egonelbre](/gopher-idea.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-idea.png)
 
 Let's say you write a program that will greet people, but you want it to greet
 someone special 😉 with a personal message. How could you do that? You would
@@ -51,7 +51,7 @@ a special message for them! 😘
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
 
 ```go
 // Bool shows us the type bool which is short for boolean. A bool is either
@@ -65,7 +65,7 @@ func Bool() {
 
 ## String
 
-![https://twitter.com/egonelbre](/gopher-wondering.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-wondering.png)
 
 A `string` is named as such because it's a string of letters. In computer
 speak, there is no such thing as letters or characters, it's all numbers! 🤯 So
@@ -82,14 +82,14 @@ variable.
 
 ### Uses
 
-![https://twitter.com/egonelbre](/gopher-idea.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-idea.png)
 
 `string` is used everytime you want to write something ... which is a lot of
 the time. 😂 It would be very hard to program without them.
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
 
 ```go
 // String shows us how to make a sequence of characters (or runes in Go) in a
@@ -103,7 +103,7 @@ func String() {
 
 ## Rune
 
-![https://twitter.com/egonelbre](/gopher-wondering.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-wondering.png)
 
 A `rune` is the letters or characters of a `string`. If you have come from
 other programming language you may have heard of the `char` type. They are
@@ -120,7 +120,7 @@ A `rune` **must** be surrounded by single quotation marks. `'X'` is a `rune`,
 
 ### Uses
 
-![https://twitter.com/egonelbre](/gopher-idea.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-idea.png)
 
 Anytime you're dealing with the letters in a `string` you're dealing with a
 `rune` or a `byte` and in programming we deal with **lots** of `string` types,
@@ -129,7 +129,7 @@ so getting comfortable with `rune` will get you comfortable with manipulating
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
 
 ```go
 // Rune shows us how to represent and manipulate each value in a string.
@@ -145,7 +145,7 @@ func Rune() {
 
 ## Int
 
-![https://twitter.com/egonelbre](/gopher-wondering.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-wondering.png)
 
 An `int` is an integer or what we would think of as a regular number. All of
 these are of type `int`:
@@ -162,7 +162,7 @@ exists.
 
 ### Uses
 
-![https://twitter.com/egonelbre](/gopher-idea.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-idea.png)
 
 Many times you need to manipulate numbers in programming, whether that be for
 the amount of seconds you want to wait `time.Sleep(1 * time.Second)` or if you
@@ -172,7 +172,7 @@ grabbing an index, etc., there are many reasons to use the `int` type.
 
 ### Coding Time!
 
-![https://twitter.com/egonelbree](/gopher-heart-eyes.png)
+![https://twitter.com/egonelbree](/egon-elbre/gopher-heart-eyes.png)
 
 ```go
 // Int short for integer shows us how to use the int type in Go. We can also do
@@ -185,7 +185,7 @@ func Int() {
 
 ## Float
 
-![https://twitter.com/egonelbre](/gopher-wondering.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-wondering.png)
 
 `float` is short for decimal floating point. Which is a mouthful 👀 So it's a
 good thing we just call it `float`. A `float` is just like an `int` except that
@@ -202,7 +202,7 @@ for now.
 
 ### Uses
 
-![https://twitter.com/egonelbre](/gopher-idea.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-idea.png)
 
 When you're looking for more precision than what an `int` will give you, like
 with data science or number crunching or dollar amounts, distances, etc., then
@@ -210,7 +210,7 @@ you'll want to use a `float`.
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
 
 ```go
 // Float short for floating point number shows how to represent numbers with
@@ -223,7 +223,7 @@ func Float() {
 
 ## Complex
 
-![https://twitter.com/egonelbre](/gopher-wondering.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-wondering.png)
 
 A `complex` number is a number which comprises of a real and an imaginary part.
 
@@ -236,7 +236,7 @@ bigger `complex128`.
 
 ### Uses
 
-![https://twitter.com/egonelbre](/gopher-idea.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-idea.png)
 
 According to some article I just DDG'd (DuckDuckGo) 🥸
 
@@ -247,7 +247,7 @@ Neat 🙂
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
 
 ```go
 // Complex shows how to use complex numbers in Go... If you would ever need
@@ -263,7 +263,7 @@ func Complex() {
 
 ## The Whole File
 
-![https://twitter.com/egonelbre](/gopher-victorious.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-victorious.png)
 
 ```go
 package types
@@ -326,7 +326,7 @@ func Complex() {
 
 ## All Of The Outputs To Our Examples
 
-![https://twitter.com/egonelbre](/typing-furiously.gif)
+![https://twitter.com/egonelbre](/egon-elbre/typing-furiously.gif)
 
 ```go
 package types_test

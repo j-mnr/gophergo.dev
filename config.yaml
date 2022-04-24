@@ -9,7 +9,7 @@ params:
     enabled: true
     title: "Just Go for it!"
     subtitle: "Pick an area to explore"
-    imageUrl: "GoCommunity.png"
+    imageUrl: "/ashley-mcnamara/GoCommunity.png"
     imageTitle: "Go Community"
     buttons:
       - name: Basics
