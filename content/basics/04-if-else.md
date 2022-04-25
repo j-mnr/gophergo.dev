@@ -1,7 +1,7 @@
 ---
-title: "If/Else"
-draft: false
-lesson: 5
+Lesson: 4
+Title: "If/Else"
+Draft: false
 ---
 
 I'll give you two options, `if` you follow this lesson then you'll learn about

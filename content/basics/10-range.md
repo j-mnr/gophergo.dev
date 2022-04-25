@@ -1,19 +1,22 @@
 ---
-title: "Range"
-draft: false
-lesson: TODO
+Lesson: 10
+Title: "Range"
+Draft: false
 ---
 
 The `range` keyword works the same way we use it in speech.
 
 Example 1
+
+Friend Asks:
 > What are your feelings on all of the Star Wars movies?
 
+You say:
 > Eh, my feelings range from hot garbage to best movies of all time.
 
 Example 2
-> If you come to my town we have a **huge** range of restaurants to choose
-> from. 🌮🍙🍺🍲 🥙
+> If you come to my town we have a **huge** range of restaurants 🌮🍙🍺🍲 🥙 to
+> choose from.
 
 Example 3
 > Move in closer! You're not in range of the camera! 📸

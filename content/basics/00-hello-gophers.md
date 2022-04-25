@@ -1,12 +1,13 @@
 ---
-title: "Hello Gophers"
-draft: false
-lesson: 0
+Lesson: 0
+Title: "Hello Gophers"
+Draft: false
 ---
 
 ## Install Go
 
-Before we can begin writing Go code we'll need to, would you believe it? [Install Go](https://go.dev/doc/install)
+Before we can begin writing Go code we'll need to, would you believe it?
+[Install Go](https://go.dev/doc/install)
 
 ## Install Text Editor
 
@@ -24,32 +25,36 @@ practices the magic arts, you need a tool. Instead of using a wand, developers
 use text editors or IDEs (Integrated Development Environment). Text editors
 allow us to use our powers.
 
-So now it's time to choose your Text Editor, I've ranked them by popularity:
+So now it's time to choose your Text Editor, I've ranked them by (popularity /
+ease of use):
 
 1. [VSCode](https://code.visualstudio.com/) (Free / Easy)
 1. [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim) (Free /
    Hard)
 1. [Vim](https://www.vim.org/download.php) (Free / Hard)
 1. [GoLand](https://www.jetbrains.com/go/) (Pay / Medium)
-1. [Sublime Text](https://www.sublimetext.com/download) (Pay / ???)
-1. [Atom](https://flight-manual.atom.io/getting-started/sections/installing-atom/#platform-windows) (Free / Medium)
+1. [Sublime Text](https://www.sublimetext.com/download) (Pay / Medium)
+1. [Atom](https://flight-manual.atom.io/getting-started/sections/installing-atom/#platform-windows)
+(Free / Medium)
 1. [Emacs](https://www.gnu.org/software/emacs/download.html) (Free / Hard)
-1. [Notepad++](https://notepad-plus-plus.org/downloads/) (Free / Easy / Windows)
+1. [Notepad++](https://notepad-plus-plus.org/downloads/) (Free / Easy --
+Windows only)
 
-I use **Neovim** but if you're a beginner, I **highly** recommend **VSCode**.
-**Vim** is a very, _very_ powerful text editor (I once updated 20 lines of 50
-files, 1000 lines of code, with a single vim command), but it is **not**
-beginner friendly. If you know what you're doing and want to improve your speed
-and understanding as a developer give **Neovim** or **Vim** a try; with
-**VSCode** you want to search for the [Go
-extension](https://code.visualstudio.com/docs/languages/go) and install it;
-**Goland** already has **Go** things installed.
+I use **Neovim** but if you're a beginner, I _highly_ recommend **VSCode**.
+**Vim** is a very, _very_ powerful text editor (I've had to update 20 lines of
+50 files, 1000 lines of code, all done with a single command), but it is
+**not** beginner friendly. If you know what you're doing and want to improve
+your speed and understanding as a developer give **Neovim** or **Vim** a try;
+with any of the IDEs, you want to find a plugin/extension store and install Go.
+For example with **VSCode** you want to search for the [Go
+extension](https://code.visualstudio.com/docs/languages/go) and install it.
 
 ## Setup
 
 We have **Go** installed and we have a text editor, now it's time to start our
 first project❗ Are you excited⁉️ I am 😁 From this point on I'll assume we're
-using **VSCode**. Open **VSCode** and hit Ctrl+\` to open the
+using **VSCode**. Open **VSCode** and hit Ctrl+\` (That's the backtick or the
+key right next to `1` on a QWERTY keyboard) to open the
 [Terminal](https://code.visualstudio.com/docs/editor/integrated-terminal) and
 type the following in the terminal:
 1. `mkdir basics` -- make a directory and name it basics (Our project name)
@@ -62,7 +67,7 @@ type the following in the terminal:
 {{< asciinema "asciicast-la4abLSpvMffT6OWtG2Ublapj"
   "https://asciinema.org/a/la4abLSpvMffT6OWtG2Ublapj.js" >}}
 
-Now you should see a little directory named `cmd` on the left open it
+Now you should see a little directory named `cmd` on the left. Open it
 and click `main.go`
 
 Now time to write your first `Go` code.
@@ -77,7 +82,7 @@ func main() {
 }
 ```
 
-Lets it explain each line.
+Lets explain each line.
 
 ### package main
 
@@ -94,12 +99,11 @@ main` with a `func main()`.
 ### import "fmt"
 
 `fmt` is a package! Just like the `package main` we made one line above, but
-we don't want to have to write _everything_, so we can import others amazing
-code, and amazing the `fmt` package is. It's a very common package that's
-imported in many, many `Go` programs. Later we'll make our own packages and we
-can run them here in `cmd/main`.
+it comes from the standard library. The standard library is a place where lots
+of amazing packages exists, all we have to do is `import` them!
+Later we'll make our own packages and we can run them here in `cmd/main`.
 
-### func main() {...}
+### func main()
 
 `func main()` is the place where it all begins and it all ends, your
 application that is. Here is where you will start and end anything and
@@ -114,11 +118,11 @@ function. `Println` is short for print line. It's called that because it will
 print a line of text to your terminal, also known as standard out. You can pass
 lots of things to `Println`, but we'll see more of that in later lessons.
 
-## Run it!
+## Run your very first program
 
-Save the file and type `go run cmd/main.go` in your terminal.
+Save the file and type `go run cmd/main.go` into your terminal.
 
-and 🥳🥳🎉🎊🎉 You're officially a Gopher!
+🥳🥳 Congratulations! 🎉🎊🎉 You're officially a Gopher!
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-dance-long-3x.gif)
 
@@ -128,7 +132,7 @@ you want there's a very supportive community over on
 
 All that said and done. Let's head on over to the next lesson!
 
-[Types]({{< relref "types" >}} "That's My Type!")
+[Types]({{< relref "01-types" >}} "That's My Type!")
 
 ## Troubleshooting
 

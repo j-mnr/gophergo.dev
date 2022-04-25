@@ -1,7 +1,7 @@
 ---
-title: "Constants"
-draft: false
-lesson: 3
+Lesson: 3
+Title: "Constants"
+Draft: false
 ---
 
 Constants are variables that cannot be changed.

@@ -1,7 +1,7 @@
 ---
-title: "Function"
-draft: false
-lesson: TODO
+Lesson: 12
+Title: "Function"
+Draft: false
 ---
 
 It's time for the **FUNC** 🪩🕺 Can you handle it?

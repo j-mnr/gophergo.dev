@@ -1,7 +1,7 @@
 ---
-title: "Variables"
-draft: false
-lesson: 2
+Lesson: 2
+Title: "Variables"
+Draft: false
 ---
 
 A Variable is something that can inherently _**change**_
