@@ -1,7 +1,7 @@
 ---
-title: "For Loop"
-draft: false
-lesson: 6
+Lesson: 6
+Title: "For Loop"
+Draft: false
 ---
 
 L➿➿➿➿➿➿ps, they just go on and on. At least, that's what we're aiming for

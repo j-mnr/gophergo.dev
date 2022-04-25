@@ -1,7 +1,7 @@
 ---
-title: "Types"
-draft: false
-lesson: 1
+Lesson: 1
+Title: "Types"
+Draft: false
 ---
 
 Types are the building blocks of all applications. They are like the words of a
@@ -30,7 +30,7 @@ Next for `example_test.go` for the very first line we'll add
 package types_test
 ```
 
-## Bool
+## `bool`
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-wondering.png)
 
@@ -40,7 +40,7 @@ That is all it can do, but don't let that fool you, it's a very powerful tool
 that is seen **everywhere**. `bool` is most useful when you want to execute a
 piece of code _only_ when a certain criteria is met.
 
-### Uses
+### Uses of `bool`
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-idea.png)
 
@@ -49,7 +49,7 @@ someone special 😉 with a personal message. How could you do that? You would
 check if the person has that special person's name and if it did, `fmt.Println`
 a special message for them! 😘
 
-### Coding Time!
+### Coding Time for `bool`
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
 
@@ -63,7 +63,7 @@ func Bool() {
 }
 ```
 
-## String
+## `string`
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-wondering.png)
 
@@ -80,14 +80,14 @@ It is also good to know when writing code in `Go` a string **must** have
 quotation marks around it. `"Gopher"` is a `string`, but `Gopher` is a
 variable.
 
-### Uses
+### Uses of `string`
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-idea.png)
 
 `string` is used everytime you want to write something ... which is a lot of
 the time. 😂 It would be very hard to program without them.
 
-### Coding Time!
+### Coding Time for `string`
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
 
@@ -101,7 +101,7 @@ func String() {
 }
 ```
 
-## Rune
+## `rune`
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-wondering.png)
 
@@ -118,7 +118,7 @@ For example `'a'` is a `rune` and a `byte`, but `'第'` is _only_ a `rune`.
 A `rune` **must** be surrounded by single quotation marks. `'X'` is a `rune`,
 `"X"` is a `string` and `X` is a variable.
 
-### Uses
+### Uses of `rune`
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-idea.png)
 
@@ -127,7 +127,7 @@ Anytime you're dealing with the letters in a `string` you're dealing with a
 so getting comfortable with `rune` will get you comfortable with manipulating
 `string` types
 
-### Coding Time!
+### Coding Time for `rune`
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
 
@@ -143,7 +143,7 @@ func Rune() {
 }
 ```
 
-## Int
+## `int`
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-wondering.png)
 
@@ -160,7 +160,7 @@ yourself in trouble! 🤕 Though you're safe in most cases when you just use
 `int`, so don't worry about it for now. We'll cover it later; just know it
 exists.
 
-### Uses
+### Uses of `int`
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-idea.png)
 
@@ -170,7 +170,7 @@ want to give something a name, without much overhead (This is known as an enum)
 you can give it an `int` type with a good descriptive name; doing math,
 grabbing an index, etc., there are many reasons to use the `int` type.
 
-### Coding Time!
+### Coding Time for `int`
 
 ![https://twitter.com/egonelbree](/egon-elbre/gopher-heart-eyes.png)
 
@@ -183,7 +183,7 @@ func Int() {
 }
 ```
 
-## Float
+## `float`
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-wondering.png)
 
@@ -200,7 +200,7 @@ goes with `float`. There is `float32` and `float64`, all you really need to
 know is `float64` can hold bigger numbers than `float32` and leave it at that
 for now.
 
-### Uses
+### Uses of `float`
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-idea.png)
 
@@ -208,7 +208,7 @@ When you're looking for more precision than what an `int` will give you, like
 with data science or number crunching or dollar amounts, distances, etc., then
 you'll want to use a `float`.
 
-### Coding Time!
+### Coding Time for `float`
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
 
@@ -221,7 +221,7 @@ func Float() {
 }
 ```
 
-## Complex
+## `complex`
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-wondering.png)
 
@@ -234,7 +234,7 @@ has them for you! 😁 👍
 And for a final note on different types, there is a smaller `complex64` and a
 bigger `complex128`.
 
-### Uses
+### Uses of `complex`
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-idea.png)
 
@@ -245,11 +245,22 @@ According to some article I just DDG'd (DuckDuckGo) 🥸
 
 Neat 🙂
 
-### Coding Time!
+### Coding Time for `complex`
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
 
+At the top of the file we need to import `math/cmplex` as this will make
+dealing with complex numbers feasible.
+
 ```go
+import (
+	"fmt"
+	"math/cmplx"
+)
+//
+// Other functions go here...
+//
+
 // Complex shows how to use complex numbers in Go... If you would ever need
 // them ¯\_(ツ)_/¯
 func Complex() {

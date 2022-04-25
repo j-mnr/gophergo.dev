@@ -1,7 +1,7 @@
 ---
-title: "Runes"
-draft: false
-lesson: TODO
+Lesson: 11
+Title: "Runes"
+Draft: false
 ---
 
 Maybe it's the nerd in me 🤓 but when I hear `rune` my mind goes to the
@@ -19,7 +19,7 @@ into that. 💡 Before that lets take a look at a `byte` _or_ a `uint8`.
 A `uint8` or unsigned integer 8 is called that because it has 8 slots and
 _all_ of them are for values. If it was signed that means that one of the slots
 would be `0` for positive or `1` for negative. Lets look at `uint8` through the
-eyes 👁️👁️ of a computer 
+eyes 👁️👁️ of a computer
 
 `0000 0000`
 

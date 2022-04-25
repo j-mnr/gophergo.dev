@@ -1,7 +1,7 @@
 ---
-title: "Maps"
-draft: false
-lesson: TODO
+Lesson: 9
+Title: "Maps"
+Draft: false
 ---
 
 Time for maps! 🗺️ and just like maps we use to point to specific locations in
@@ -34,7 +34,7 @@ package maps_test
 When using a `map` there really is only three 3️⃣ things to worry about.
 
 1. Adding key-value pairs
-1. Removing key-value pairs 
+1. Removing key-value pairs
 1. Getting key-value pairs.
 
 The same syntax we saw in the previous lesson on slices apply to maps. So we

@@ -1,7 +1,7 @@
 ---
-title: "Slices"
-draft: false
-lesson: TODO
+Lesson: 8
+Title: "Slices"
+Draft: false
 ---
 
 We just got done speaking on arrays and it's a perfect time to start talking

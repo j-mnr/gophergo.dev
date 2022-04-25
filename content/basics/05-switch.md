@@ -1,7 +1,7 @@
 ---
-title: "Switch Statement"
-draft: false
-lesson: 6
+Lesson: 5
+Title: "Switch"
+Draft: false
 ---
 
 A `switch` statement is made up of `case` statements and if necessary a
@@ -430,32 +430,28 @@ func SwitchMultiple() {
 // SwitchType shows us that we can do type assertions using switch statements!
 // This is particularly useful when getting JSON data with no idea what's
 // inside.
-func SwitchType() {
-	findType := func(i interface{}) {
-		switch t := i.(type) {
-		case int:
-			fmt.Printf("You seem like an %T-eresting type.\n", t)
-		case bool:
-			fmt.Printf("You %T! I knew it was you all along.\n", t)
-		case []string:
-			fmt.Printf("Hey, hey. Save me a slice! %T\n", t)
-		default:
-			fmt.Printf("We've never seen a %T like this.\n", t)
-		}
+func SwitchType(i interface{}) {
+	switch t := i.(type) {
+	case int:
+		fmt.Printf("You seem like an %T-eresting type.\n", t)
+	case bool:
+		fmt.Printf("You %T! I knew it was you all along.\n", t)
+	case []string:
+		fmt.Printf("Hey, hey. Save me a slice! %T\n", t)
+	default:
+		fmt.Printf("We've never seen a %T like this.\n", t)
 	}
-	findType(true)
-	findType(8)
-	findType([]string{"some", "strings"})
-	findType(struct{}{})
 }
 
 // SwitchNoValue shows that you don't have to give a value to the `switch`
 // statement, but instead perform true or false (bool) assertions on a given
 // value.
 func SwitchNoValue() {
+	// This will get the current month. So this test may fail, see if you can't
+	// update the test with the correct string to make it pass! 😁
 	t := time.Now().Month()
 	switch {
-	case t < time.February || t == time.December:
+	case t <= time.February || t == time.December:
 		fmt.Println("Winter is here.")
 	case t <= time.May:
 		fmt.Println("Looks like it's Spring!")
@@ -508,7 +504,10 @@ func ExampleSwitchMultiple() {
 }
 
 func ExampleSwitchType() {
-	switches.SwitchType()
+	switches.SwitchType(true)
+	switches.SwitchType(8)
+	switches.SwitchType([]string{"some", "strings"})
+	switches.SwitchType(struct{}{})
 	// Output:
 	// You bool! I knew it was you all along.
 	// You seem like an int-eresting type.

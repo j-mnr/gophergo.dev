@@ -1,7 +1,7 @@
 ---
-title: "Arrays"
-draft: false
-lesson: TODO
+Lesson: 7
+Title: "Arrays"
+Draft: false
 ---
 
 In programming there is the One and the Many. One tree with Many branches. One
