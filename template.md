@@ -1,7 +1,7 @@
 ---
-title: "TODO"
-draft: false
-lesson: TODO
+Lesson: TODO
+Title: "TODO"
+Draft: false
 ---
 
 ## Setup

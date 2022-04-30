@@ -5,7 +5,7 @@ Draft: false
 ---
 
 Time for maps! 🗺️ and just like maps we use to point to specific locations in
-the world, a `map` in Go in no different! We use a `key` to point to a `value`.
+the world, a `map` in Go is no different! We use a `key` to point to a `value`.
 In other languages they are called Dictionaries, Hash Tables, or Associative
 Arrays. [Wikipedia](https://en.wikipedia.org/wiki/Associative_array) provides
 us with a showing of just how timeless ⏳ this data structure truly is.
@@ -52,7 +52,7 @@ have some map 🗺️ we have a _specific_ location we're pointing to. We _know_
 that we want to go a certain place given `key` coordinates; with a `slice` we
 can put all of our gophers
 
-{{< inline-img "/looking-around.gif" >}}
+{{< inline-img "/egon-elbre/looking-around.gif" >}}
 
 in a row.
 
