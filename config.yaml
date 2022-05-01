@@ -23,6 +23,8 @@ markup:
 
 theme: PaperMod
 params:
+  showToc: true
+
   assets:
     disableHLJS: true
 
