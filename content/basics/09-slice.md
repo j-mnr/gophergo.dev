@@ -270,7 +270,7 @@ with the slice operator `:` is. What efficiency you may ask? Well I'll let
 > creating a substring is very efficient. All that needs to happen is the
 > creation of a two-word string header. Since the string is read-only, the
 > original string and the string resulting from the slice operation can share
-> the same array safely. 
+> the same array safely.
 >  -- Rob Pike
 
 ### Coding Time!
