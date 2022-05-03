@@ -1,13 +1,13 @@
 ---
 Lesson: 3
-Title: "Constants"
+Title: "Constant"
 Draft: false
 ---
 
 Constants are variables that cannot be changed.
 
 If you have taken any math or physics classes you've probably used a constant
-before. Pi `π` is a constant and the speed of light `c` is a constant.
+before. Pi 🥧 `π` is a constant and the speed of light 🔦 `c` is a constant.
 
 There are times in programming you want to declare something, but don't want it
 to change. For example, we might want a default format `string` for our
@@ -21,19 +21,19 @@ Constants are super useful and seen throughout many codebases, in Go, you're
 only allowed to declare certain types as constant. Types that can be guaranteed
 to not change, can be constant. Many of these values are known as primitive
 types. `int`, `rune` (aka `int32`), `byte` (aka `uint8`) `float`, `bool`. The
-only exception is a `string` which can also be declared as constant! This may
-or may not make since to you if you've dealt with strings in other programming
-languages.
+only exception is a `string` which can also be declared as constant! This can
+be confusing if you knew `string` is basically a mutable data structure
+`[]byte`
 
-Let's expand a little on why a `string` is an exception. We need to
-understand that just like `byte` is an alias for `uint8` (unsigned integer with
-8 slots), `string` is an alias for `[]byte` or what's known as a slice of
-bytes. We haven't gotten into slices yet, (coming soon) but just know they can
+Let's expand a little on why a `string` is an exception. We need to understand
+that just like `byte` is an alias for `uint8` (unsigned integer with 8 slots),
+`string` is an alias for `[]byte` or what's known as a slice of bytes. We
+haven't gotten into [slices](/basics/09-slice) yet,  but just know they can
 change. In programming when something can change it's called mutable. I'll say
 it again, slices are mutable. Constants **cannot** change and are known as
 immutable.
 
-Now the question! How is a mutable slice of bytes (`[]byte`) able to be
+Now the question! 🤔 How is a mutable slice of bytes (`[]byte`) able to be
 declared as an immutable value (`const`)? Well, I lied 🙃 though a `string`
 is _basically_ a slice of bytes (`[]byte`) it holds a little more extra
 information than what a normal slice holds **and** guarantees that each `byte`
@@ -43,11 +43,14 @@ guarantees `string` to be immutable.
 
 This may come as a surprise if you've tried to change a `string`, because
 you're allowed to do this: `var twoStrings = "string1" + "string2"` and it will
-come out as `string1string2` if you `fmt.Println` it. The reason it works is
-because an entirely **new**❗❗ `string` is being made in it's place. Done out
-of convenience, expectations, or legacy it is what it is. Just know when you
-add to a `string` you're making an entirely **new** `string` and that's
-expensive in programming.
+come out as `string1string2` if you `fmt.Println(twoStrings)`
+
+The reason it works is because an **entirely new**❗ `string` is being made in
+it's place. Done out of convenience, expectations, or legacy -- it is what it
+is. Just know when you add to a `string` you're making an **entirely new**
+`string` and that's expensive 💰💰💰 in programming. Imagine every time you put
+your socks 🧦 in a drawer that you had to find another, bigger drawer for each
+pair you put in; lots of time 🕗 wasted.
 
 ### Coding Time!
 
@@ -124,7 +127,7 @@ func ExampleAlwaysTrue() {
 ## Untyped Constants
 
 Everything in Go has a type.... Unless it's a constant 🤷 At least not until it
-is actually used in the our application.
+is actually used in our application.
 
 ### Uses
 
@@ -132,7 +135,7 @@ Why is this important and what does it mean? Sometimes we want to put certain
 values into a function _but_ Go needs us to convert it to a specific `type`.
 Wouldn't it just be nice if we didn't have to do that small conversion?
 Constants actually allow this! Enums (coming soon) in Go are `const` values and
-therefore have underlying types that can be converted
+therefore have underlying types that can be converted.
 
 ### Coding Time!
 
