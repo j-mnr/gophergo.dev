@@ -132,7 +132,7 @@ bloat your `interface`. What I mean is how easy is it to implement this
 interface?
 
 ```go
-type Printer interface{ Print() }
+type Printer interface{ Print(size int) }
 
 type HPPrinter struct{ HasPaper, HasInk bool }
 
@@ -212,7 +212,7 @@ the function in the `interface`.
 
 In Go there is no explicit keyword that forces you to implement an interface.
 All interfaces that a `type` implements are _implicit_. This is a **super**
-🦸 powerful feature of Go. It means any `type` can impelement any amount of
+🦸 powerful feature of Go. It means any `type` can implement any amount of
 interfaces solely by having the defined behaviors bound to it. **This is more
 of a reason to keep your interfaces short and sweet.** You will never have to
 do this 👇🤢
@@ -253,7 +253,7 @@ type SecurityLevel uint8
 // Guard will make sure that only certain clearances of security levels can
 // access certain documents. An error is thrown if the file cannot be found or
 // the SecurityLevel does not have the clearance to view that file.
-func (sl SecurityLevel) Guard() (os.File, error) { ... }
+func (sl SecurityLevel) Guard() (os.File, error) {...}
 ```
 
 Absolutely Gorgeous, isn't it? 🤩 I can't stress it enough, Go supports
