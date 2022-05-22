@@ -124,14 +124,14 @@ noWork := structs.Gopher{
 }
 ```
 
-We'll get "unknown field privateField in struct literal". So the way we get
+We'll get `unknown field privateField in struct literal`. So the way we get
 around that is by creating a function that can make our `struct`. A constructor
 of structs. I say that because often times you will hear `New` functions
 referred to as constructors, because that's **exactly** what they do; construct
 a `struct`.
 
 It is idiomatic Go to have `New` as a constructor name or have the name of the
-`struct` appended to the function, e.g. `func NewGopher(...) gopher {...}`
+`struct` appended to the function, e.g. `func NewGopher( ... ) gopher { ... }`
 
 ### Coding Time!
 
@@ -212,8 +212,9 @@ instead of a `struct`
 
 ```go
 type country string
+type capital string
 // Simple, easy, straight forward and fast.
-mCountries := map[country]string{
+mCountries := map[country]capital{
 	"Mongolia": "Ulaanbaatar",
 	"Burundi":  "Gitega",
 	"Pakistan": "Islamabad",
@@ -221,7 +222,8 @@ mCountries := map[country]string{
 	"Ethiopia": "Addis Ababa",
 }
 // Complex, hard to follow, hard to understand, construct new structs and
-// have no way of accessing country immediately
+// have no way of accessing country immediately. We have to search entire slice
+// before we get our country.
 type Country struct {
 	Name    string
 	Capital string
@@ -244,8 +246,9 @@ sCountries := []Country{
 ```go
 // StructBasic shows you how to initialize (make) structs, manipulate all the
 // values within a struct by getting and setting the values and use them in
-// other structs.
-func StructBasic() {
+// other structs. We also return a `city` struct here to show you can give back
+// unexported types from exported functions.
+func StructBasic() city {
 	// Make a gopher and have ALL fields set to the zero value.
 	var zero Gopher
 	// Make a gopher and set all fields to what we want them to be.
@@ -273,22 +276,23 @@ func StructBasic() {
 	fmt.Printf("anon gopher: %#v\n", anon)
 
 	teska := city{
-		gophers: []Gopher{gordo, gary, anon},
-		gopherAddresses: map[Gopher]string{
+		Gophers: []Gopher{gordo, gary, anon},
+		GopherAddresses: map[Gopher]string{
 			gordo: "123 Lemon Dr.",
 			gary:  "889 Galaway Ave.",
 			anon:  "543 W 8th St.",
 		},
 	}
-	fmt.Printf("gopher city: %+v\n", teska)
 	// Since teska has a slice of gophers we can get it and range over each of
-	// them in a for-loop. g == gopher
-	for _, g := range teska.gophers {
+	// them in a for loop. g == gopher
+	for _, g := range teska.Gophers {
 		// Access each gopher's IsCoding field. In the slice of gophers we are
 		// accessing from the city!
 		if g.IsCoding {
 			fmt.Println(g.Name, "is in the middle of coding! Come back soon.")
+			continue
 		}
+		fmt.Println(g, "lives at", teska.GopherAddresses[g])
 	}
 	fmt.Println()
 
@@ -298,14 +302,25 @@ func StructBasic() {
 	gordo.IsCoding = false
 	gordo.privateField = ""
 	fmt.Printf("gordo gopher: %#v\nzero  gopher: %#v\n", gordo, zero)
+	return teska
 }
 ```
 
 #### example_test.go
 
+Here we can see we can _use_ an unexported `struct` 🤯 because the function
+`structs.StructBasic` returns it. Why do this? It means the person using your
+code can't create a `city` _but_ they can get one pre-made and ready to be
+used.
+
 ```go
 func ExampleStructBasic() {
-	structs.StructBasic()
+	city := structs.StructBasic()
+	for _, g := range city.Gophers {
+		if g.Name == "Garfunkel" {
+			fmt.Printf("We found him: %s\n", city.GopherAddresses[g])
+		}
+	}
 	// Output:
 	// zero valued gopher: structs.Gopher{Name:"", Age:0, IsCoding:false, privateField:""}
 	// gordo gopher: structs.Gopher{Name:"Gordo", Age:22, IsCoding:true, privateField:"Set it and forget it"}
@@ -314,12 +329,13 @@ func ExampleStructBasic() {
 	//
 	// gary gopher: structs.Gopher{Name:"Gary", Age:33, IsCoding:false, privateField:"Searching: Why does my husband fart so much."}
 	// anon gopher: structs.Gopher{Name:"Garfunkel", Age:42, IsCoding:true, privateField:"Scanning 60000 ports"}
-	// gopher city: {gophers:[{Name:Gordo Age:22 IsCoding:true privateField:Set it and forget it} {Name:Gary Age:33 IsCoding:false privateField:Searching: Why does my husband fart so much.} {Name:Garfunkel Age:42 IsCoding:true privateField:Scanning 60000 ports}] gopherAddresses:map[{Name:Garfunkel Age:42 IsCoding:true privateField:Scanning 60000 ports}:543 W 8th St. {Name:Gary Age:33 IsCoding:false privateField:Searching: Why does my husband fart so much.}:889 Galaway Ave. {Name:Gordo Age:22 IsCoding:true privateField:Set it and forget it}:123 Lemon Dr.]}
 	// Gordo is in the middle of coding! Come back soon.
+	// {Gary 33 false Searching: Why does my husband fart so much.} lives at 889 Galaway Ave.
 	// Garfunkel is in the middle of coding! Come back soon.
 	//
 	// gordo gopher: structs.Gopher{Name:"", Age:0, IsCoding:false, privateField:""}
 	// zero  gopher: structs.Gopher{Name:"", Age:0, IsCoding:false, privateField:""}
+	// We found him: 543 W 8th St.
 }
 ```
 
@@ -334,8 +350,9 @@ import "fmt"
 
 // Gopher is a public struct that can be made outside of the package. It
 // consists of some basic fields that all gophers have and a privateField that
-// can only be accessed in the package. We make things private so the people
-// using our library (this code) don't have to worry about certain fields.
+// can only be accessed in the package. We make things private or better said
+// -- unexported -- so the people using our library (this code) don't have to
+// worry about certain fields.
 type Gopher struct {
 	Name         string
 	Age          int
@@ -343,13 +360,13 @@ type Gopher struct {
 	privateField string
 }
 
-// city is a private struct with a struct inside of it! 🤯 That's because a
+// city is a unexported struct with a struct inside of it! 🤯 That's because a
 // gopher is a `type` and we can put ALL types into a struct. That means we can
 // put city into another struct called state and it would haves cities in it
 // with gophers in them! 🤯
 type city struct {
-	gophers         []Gopher
-	gopherAddresses map[Gopher]string
+	Gophers         []Gopher
+	GopherAddresses map[Gopher]string
 }
 
 // New is a constructor of a Gopher, since New is exported (because it is
@@ -366,8 +383,9 @@ func New(name string, age int, isCoding bool, privateField string) Gopher {
 
 // StructBasic shows you how to initialize (make) structs, manipulate all the
 // values within a struct by getting and setting the values and use them in
-// other structs.
-func StructBasic() {
+// other structs. We also return a `city` struct here to show you can give back
+// unexported types from exported functions.
+func StructBasic() city {
 	// Make a gopher and have ALL fields set to the zero value.
 	var zero Gopher
 	// Make a gopher and set all fields to what we want them to be.
@@ -395,22 +413,23 @@ func StructBasic() {
 	fmt.Printf("anon gopher: %#v\n", anon)
 
 	teska := city{
-		gophers: []Gopher{gordo, gary, anon},
-		gopherAddresses: map[Gopher]string{
+		Gophers: []Gopher{gordo, gary, anon},
+		GopherAddresses: map[Gopher]string{
 			gordo: "123 Lemon Dr.",
 			gary:  "889 Galaway Ave.",
 			anon:  "543 W 8th St.",
 		},
 	}
-	fmt.Printf("gopher city: %+v\n", teska)
 	// Since teska has a slice of gophers we can get it and range over each of
-	// them in a for-loop. g == gopher
-	for _, g := range teska.gophers {
+	// them in a for loop. g == gopher
+	for _, g := range teska.Gophers {
 		// Access each gopher's IsCoding field. In the slice of gophers we are
 		// accessing from the city!
 		if g.IsCoding {
 			fmt.Println(g.Name, "is in the middle of coding! Come back soon.")
+			continue
 		}
+		fmt.Println(g, "lives at", teska.GopherAddresses[g])
 	}
 	fmt.Println()
 
@@ -420,6 +439,7 @@ func StructBasic() {
 	gordo.IsCoding = false
 	gordo.privateField = ""
 	fmt.Printf("gordo gopher: %#v\nzero  gopher: %#v\n", gordo, zero)
+	return teska
 }
 ```
 
@@ -461,7 +481,12 @@ func ExampleNew() {
 }
 
 func ExampleStructBasic() {
-	structs.StructBasic()
+	city := structs.StructBasic()
+	for _, g := range city.Gophers {
+		if g.Name == "Garfunkel" {
+			fmt.Printf("We found him: %s\n", city.GopherAddresses[g])
+		}
+	}
 	// Output:
 	// zero valued gopher: structs.Gopher{Name:"", Age:0, IsCoding:false, privateField:""}
 	// gordo gopher: structs.Gopher{Name:"Gordo", Age:22, IsCoding:true, privateField:"Set it and forget it"}
@@ -470,11 +495,12 @@ func ExampleStructBasic() {
 	//
 	// gary gopher: structs.Gopher{Name:"Gary", Age:33, IsCoding:false, privateField:"Searching: Why does my husband fart so much."}
 	// anon gopher: structs.Gopher{Name:"Garfunkel", Age:42, IsCoding:true, privateField:"Scanning 60000 ports"}
-	// gopher city: {gophers:[{Name:Gordo Age:22 IsCoding:true privateField:Set it and forget it} {Name:Gary Age:33 IsCoding:false privateField:Searching: Why does my husband fart so much.} {Name:Garfunkel Age:42 IsCoding:true privateField:Scanning 60000 ports}] gopherAddresses:map[{Name:Garfunkel Age:42 IsCoding:true privateField:Scanning 60000 ports}:543 W 8th St. {Name:Gary Age:33 IsCoding:false privateField:Searching: Why does my husband fart so much.}:889 Galaway Ave. {Name:Gordo Age:22 IsCoding:true privateField:Set it and forget it}:123 Lemon Dr.]}
 	// Gordo is in the middle of coding! Come back soon.
+	// {Gary 33 false Searching: Why does my husband fart so much.} lives at 889 Galaway Ave.
 	// Garfunkel is in the middle of coding! Come back soon.
 	//
 	// gordo gopher: structs.Gopher{Name:"", Age:0, IsCoding:false, privateField:""}
 	// zero  gopher: structs.Gopher{Name:"", Age:0, IsCoding:false, privateField:""}
+	// We found him: 543 W 8th St.
 }
 ```
