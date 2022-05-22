@@ -505,7 +505,7 @@ func ExampleRangeScopedValues() {
 
 When we create a `for` loop and we assign values to that for loop
 
-`for i, n := range numbers {...}`
+`for i, n := range numbers { ... }`
 
 here 👆 👆 we can see we're _assigning_ values, right? Meaning we're picking 🤏
 an index and a value from our numbers slice and _assigning_ it to `i` and `n`

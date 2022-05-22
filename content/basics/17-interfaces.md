@@ -238,9 +238,9 @@ type MyStruct struct {
 
 // Create the methods that satisfy the interfaces you want down below. You can
 // always mix and match, add and remove, the world is your oyster 🦪
-func (s MyStruct) Walk() {...}
-func (s MyStruct) Talk() {...}
-func (s MyStruct) Rock() {...}
+func (s MyStruct) Walk() { ... }
+func (s MyStruct) Talk() { ... }
+func (s MyStruct) Rock() { ... }
 ```
 
 Or even better _types_ can satisfy interfaces:
@@ -253,7 +253,7 @@ type SecurityLevel uint8
 // Guard will make sure that only certain clearances of security levels can
 // access certain documents. An error is thrown if the file cannot be found or
 // the SecurityLevel does not have the clearance to view that file.
-func (sl SecurityLevel) Guard() (os.File, error) {...}
+func (sl SecurityLevel) Guard() (os.File, error) { ... }
 ```
 
 Absolutely Gorgeous, isn't it? 🤩 I can't stress it enough, Go supports
