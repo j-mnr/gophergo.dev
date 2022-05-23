@@ -70,7 +70,7 @@ We don't know what each of those calls are doing but it reads like a story.
 
 > 1. Create a test with a difficulty.
 > 1. If error (difficulty doesn't exist, maybe?) return error
-> 1. Find a gopher who's wants to participate in the typing test
+> 1. Find a gopher who wants to participate in the typing test
 > 1. Have gopher do the test, which produces how long it took or an error
 > 1. If error (spilled tea 🍵 on keyboard, maybe?) return error and 0 seconds
 > 1. Return how long it took them
