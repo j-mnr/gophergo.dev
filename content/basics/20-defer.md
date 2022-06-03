@@ -235,20 +235,20 @@ func ExampleDeferReturn() {
 ## Panic! At the 🪩 Function...😹
 
 Here is where we see our first very necessary use of `defer`. In Go, there are
-no exceptions like you might find in other languages. Situations that
-produce errors are handled differently in Go as we found out [in the previous
+no exceptions like you might find in other languages. Situations that produce
+errors are handled differently in Go as we found out [in the previous
 lesson](/basics/19-error). However, there is a difference between a bad
 situation 😮 and a catastrophic 🌊 🌋 🌪️ 🌩️situation.
 
 This distinction in Go is made with `panic`, but we'll get into that more in
-the [next lesson]() (coming soon!). Just know in order to recover from such a
-situation, we need to `recover` before the function ends, but in order to
-`recover` we must `defer`.
+the [next lesson](/basics/21-panic-recover). Just know in order to recover from
+such a situation, we need to `recover` before the function ends, but in order
+to `recover` we must `defer`.
 
 After this point we've covered all we need to know about `defer` so feel free
-to head over to the [next lesson]() (coming soon!) But if you come from a
-language that doesn't have a `defer` or if you're new to it all, the next topic
-has lots of examples of where we use `defer` in Go.
+to head over to the [next lesson](/basics/21-panic-recover) But if you come
+from a language that doesn't have a `defer` or if you're new to it all, the
+next topic has lots of examples of where we use `defer` in Go.
 
 ### Coding Time!
 

@@ -67,7 +67,7 @@ In languages that _don't_ support pointers, it's a moot _point_ 😹 to bring up
 "Pass by value 🆚 Pass by reference" because, well, you don't care! It get's
 into the function/method/procedure in any case and you just do your business
 with it all the same. It's usually collection types people get tripped up on,
-which we'll go over 👇 [down below](#pass-by-reference-pointer-in-depth). See
+which we'll go over 👇 {{< anchor-new-window "down below" "#pass-by-reference-pointer-in-depth" >}}. See
 what I did there? I made a pointer to another topic 😂
 
 ### Coding Time!

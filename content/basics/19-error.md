@@ -6,8 +6,8 @@ Draft: false
 
 🤖 🚨🚨 **ERROR** 🚨🚨 🤖 🚨🚨 **ERROR** 🚨🚨 🤖 This is not a drill we're
 going down❗ The story's 📖 coming to a close❗ The application 🖥️ is going to
-crash❗ -- Calm down ❗❗ This is no time to [panic]() (coming soon!). Like any
-Gopher worth their salt, we'll handle our `error` gracefully.
+crash❗ -- Calm down ❗❗ This is no time to [panic](/basics/21-panic-recover).
+Like any Gopher worth their salt, we'll handle our `error` gracefully.
 
 What's an `error` in Go and why should we handle it gracefully? Let's start
 with the first question. An `error` is a value like any other value (`int`,
