@@ -358,8 +358,8 @@ anchor-new-window "pack/unpack"
 
 When we use the pack operator `...` it will take all of the values and turn it
 into a slice of a type, for this we make a slice of int `[]int` and as we
-figured out in the previous lesson on [range](/basics/range/#by-value) we can
-loop through a slice nicely with `range`.
+figured out in the previous lesson on [range](/basics/11-range/#by-value) we
+can loop through a slice nicely with `range`.
 
 ```go
 // FuncVariadic is an example function. It takes in an arbitrary amount of
@@ -376,7 +376,8 @@ func FuncVariadic(varargsNums ...int) (sum int) {
 #### example_test.go
 
 Here we give the caller the ability to pass in no values, some values, or an
-entire slice with the unpack operator `...` We briefly looked at this on our lesson with [slice](/basics/slice/#append) We can see how convenient that it
+entire slice with the unpack operator `...` We briefly looked at this on our
+lesson with [slice](/basics/09-slice/#append) We can see how convenient that it
 for them, but for more complex functions we may need to do checks for no values
 or other edge cases.
 

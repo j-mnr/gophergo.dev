@@ -44,13 +44,13 @@ that with math? Well it was `10` then it was `10 * 10` then it was `10 * 10 *
 >}} {{< topower 10 2 >}} {{< topower 10 3 >}} we can raise 10 to a power of
 _how many digits we have_.
 
-Back to our original question, there are **2** values and **8** slots,
-how many numbers can we fit in a `byte`? {{< topower 2 8 >}} 👍 and what's
-_that_ number? Well funny you ask 🤨 _because_ the [Extended Ascii
-Table](https://www.asciitable.com/) has the exact amount that a `byte` can
-represent {{< topower 2 8 >}} or 256 values. 🤯 So that means **everything**
-not in those 256 values (0 is a value, that's why it only goes to 255)
-**cannot** be represented with a `byte` or a `uint8`, not even emojis 😢
+Back to our original question, there are **2** values and **8** slots, how many
+numbers can we fit in a `byte`? {{< topower 2 8 >}} 👍 and what's _that_
+number? Well funny you ask 🤨 _because_ the {{< anchor-new-window "Extended Ascii Table" "https://www.asciitable.com/" >}} has the exact amount
+that a `byte` can represent {{< topower 2 8 >}} or 256 values. 🤯 So that means
+**everything** not in those 256 values (0 is a value, that's why it only goes
+to 255) **cannot** be represented with a `byte` or a `uint8`, not even emojis
+😢
 
 ## Setup
 
@@ -91,8 +91,8 @@ confuses you, come back at a later time or look at other resources who might do
 a better job explaining, it's always good to have other inputs to fill in the
 gaps.
 
-The letter `a` according to the [Extended Ascii
-Table](https://www.asciitable.com/) is `97` in decimal. So the `byte` would look
+The letter `a` according to the {{< anchor-new-window "Extended Ascii Table"
+"https://www.asciitable.com/" >}} is `97` in decimal. So the `byte` would look
 like
 
 `0110 0001`
@@ -189,11 +189,11 @@ func ExampleByteAndRuneAreInt() {
 
 ## Byte Count
 
-We just had our lesson on [range](/basics/range/#range-through-string) and it
-shows that we will get `rune` types when we `range` through a `string`, so what
-happens when we do a normal `for` loop? We get `byte` types instead, this is
-usually bad for us 😬 because we want to count the amount of characters, _not_
-the amount of space they take up.
+We just had our lesson on [range](/basics/11-range/#range-through-string) and
+it shows that we will get `rune` types when we `range` through a `string`, so
+what happens when we do a normal `for` loop? We get `byte` types instead, this
+is usually bad for us 😬 because we want to count the amount of characters,
+_not_ the amount of space they take up.
 
 ### Coding Time!
 

@@ -59,9 +59,9 @@ for i := 0; i < 5; i++ {
 }
 ```
 
-and if you recall in the [slice](/basics/slice#append) lesson, when we learned
-about `append` we found how to get the length of a slice `len(mySlice)` so you
-can do the same for slices.
+and if you recall in the [slice](/basics/09-slice#append) lesson, when we
+learned about `append` we found how to get the length of a slice `len(mySlice)`
+so you can do the same for slices.
 
 ```go
 mySlice := []int{0, 1, 2, 3, 4}
@@ -80,8 +80,8 @@ There are major advantages for using the `range` keyword:
 
 ### Lexical Scoping
 
-Like the lesson on [if/else](/basics/if-else#scoped-in-if-statement) shows we
-can scope what we care about in the `if` block. The `range` keyword does the
+Like the lesson on [if/else](/basics/05-if-else#scoped-in-if-statement) shows
+we can scope what we care about in the `if` block. The `range` keyword does the
 same for our index/key and value.
 
 ### Extended
@@ -238,7 +238,7 @@ func ExampleRangeIndexAndValues() {
 We are now at a place where a simple `for` loop wouldn't help. How would we
 tell the for loop to go through every _key-value pair_ of a map with a simple
 number❓ Instead of that `range` makes it much easier for us and if you
-remember the lesson on [maps](/basics/map#basic-operations) they and slices
+remember the lesson on [maps](/basics/10-map/#basic-operations) they and slices
 share a lot of similarities. It's just using the right tool 🔧 for the right
 job 🔩, they both have a key to access a value. That's why we can use a `map`
 just like a `slice` of some type.
@@ -290,7 +290,7 @@ func ExampleRangeMap() {
 We're going to talk in-depth about runes (coming soon!), but it's good to know
 that by using `range`, a `string` will produce an index and a `rune` **not** a
 `byte`. This is for native support with
-[UTF-8](https://blog.hubspot.com/website/what-is-utf-8) strings, or more
+{{< anchor-new-window "UTF-8" "https://blog.hubspot.com/website/what-is-utf-8" >}} strings, or more
 broadly I could say strings that support **all** the languages. So you can
 write Go in whatever language you so please. 🥰
 
@@ -387,7 +387,7 @@ func ExampleRangeChannel() {
 We've talked about scoping before and we'll talk about it some more. Scoping is
 what allows certain variables to live 👶 and die 💀 in certain spaces. Scoping
 is _soooo_ important in programming that JS developers got so fed up with their
-`var` keyword [that they made two more](https://www.freecodecamp.org/news/understanding-let-const-and-var-keywords/), _just_ for scope.
+`var` keyword {{< anchor-new-window "that they made two more" "https://www.freecodecamp.org/news/understanding-let-const-and-var-keywords/" >}}, _just_ for scope.
 
 In Go we don't have those troubles, the language is very well designed, but
 what we do have is human minds 🧠 and without necessary information we may feel

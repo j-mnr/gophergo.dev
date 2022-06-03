@@ -7,7 +7,7 @@ Draft: false
 Time for maps! 🗺️ and just like maps we use to point to specific locations in
 the world, a `map` in Go is no different! We use a `key` to point to a `value`.
 In other languages they are called Dictionaries, Hash Tables, or Associative
-Arrays. [Wikipedia](https://en.wikipedia.org/wiki/Associative_array) provides
+Arrays. {{< anchor-new-window "Wikipedia" "https://en.wikipedia.org/wiki/Associative_array" >}} provides
 us with a showing of just how timeless ⏳ this data structure truly is.
 
 ## Setup
@@ -156,7 +156,7 @@ don't care about the order and just want to be able to grab a value from a
 given key (key-value pair). Well, what if we don't care about the order **and**
 we don't care about any value?
 
-Enter the [Set](https://en.wikipedia.org/wiki/Set_(abstract_data_type)). If you
+Enter the {{< anchor-new-window "Set" "https://en.wikipedia.org/wiki/Set_(abstract_data_type)" >}}. If you
 come from another programming language you are probably already aware what it
 is. A `set` has attributes of both a `slice` and a `map`. It only has values
 inside of it (like a slice), but it has no order (like a map).
@@ -171,7 +171,7 @@ find a `struct{}` somewhere, just know it's a placeholder. It only signals to
 the reader, us, that a `type` is required, but we don't use that `type` for
 anything, just the underlying structure.
 
-[Read why struct{} is soooo good!](https://dave.cheney.net/2014/03/25/the-empty-struct)
+{{< anchor-new-window "Read why struct{} is soooo good!" "https://dave.cheney.net/2014/03/25/the-empty-struct" >}}
 
 ### Coding Time!
 

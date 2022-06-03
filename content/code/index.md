@@ -5,4 +5,4 @@
 "https://twitter.com/ashleymcnamara" "Ashley McNamara"
 "https://creativecommons.org/licenses/by/4.0/" "100%" >}}
 
-## Why not **_Go_** 😹 checkout [exercism.org](https://exercism.org/tracks/go)
+## Why not **_Go_** 😹 checkout {{< anchor-new-window "exercism.org" "https://exercism.org/tracks/go" >}}

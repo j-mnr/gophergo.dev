@@ -11,10 +11,10 @@ But wait! There's more! 😲 They also have certain global functions specific to
 them! And to top it all off they come with a really nice optimization for
 strings.
 
-Also feel free to checkout the community driven [Slice
-Tricks](https://github.com/golang/go/wiki/SliceTricks)! And if you want more
-input from one of the creators of Go, Rob Pike, check out the [Go
-Blog](https://go.dev/blog/slices) on it!
+Also feel free to checkout the community driven {{< anchor-new-window
+"Slice Tricks" "https://github.com/golang/go/wiki/SliceTricks" >}}! And if
+you want more input from one of the creators of Go, Rob Pike, check out the {{<
+anchor-new-window "Go Blog" "https://go.dev/blog/slices" >}} on it!
 
 We'll take this 🥧 one _slice_ at a time 😹
 
@@ -107,8 +107,8 @@ need, you'll get that much.
 #### slices.go
 
 Here we introduce the unpacking operator `...` which is further explained in
-[functions](/basics/function/#variadic-arguments-varargs) So, don't worry
-we'll get to it!
+the [lesson on functions](/basics/13-function/#variadic-arguments-varargs) So,
+don't worry we'll get to it!
 
 ```go
 // SliceAppend shows how to put more elements into a slice even if we don't
@@ -264,7 +264,7 @@ you come from other programming languages you may be familiar with Lists. These
 are, in fact, very similar to Lists in other languages, the biggest feature and
 why they are called slice is because of how efficient the `slice` operation
 with the slice operator `:` is. What efficiency you may ask? Well I'll let
-[Rob](https://en.wikipedia.org/wiki/Rob_Pike) speak on it.
+{{< anchor-new-window "Rob" "https://en.wikipedia.org/wiki/Rob_Pike" >}} speak on it.
 
 > An important consequence of this slice-like design for strings is that
 > creating a substring is very efficient. All that needs to happen is the

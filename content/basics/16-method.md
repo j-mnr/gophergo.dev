@@ -317,7 +317,7 @@ code this up because you will have implemented your very first `interface`!
 🎉🎉
 
 I wanted to show off where a real world 🌐 example of a value receiver is
-useful. In order to satisfy the `Stringer interface` you must you a value
+useful. In order to satisfy the `Stringer interface` you must use a value
 receiver. And now you'll know how to make your `struct` pretty print. That is
 to say, have a nice formatted message that's easy to understand.
 

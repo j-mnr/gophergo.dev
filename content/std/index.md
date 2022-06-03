@@ -5,4 +5,4 @@
 "https://twitter.com/ashleymcnamara" "Ashley McNamara"
 "https://creativecommons.org/licenses/by/4.0/" "100%" >}}
 
-## In the meantime, **_Go_** 😹 look at the official docs on [go.dev](https://pkg.go.dev/std)
+## In the meantime, **_Go_** 😹 look at the official docs on {{< anchor-new-window "go.dev" "https://pkg.go.dev/std" >}}
