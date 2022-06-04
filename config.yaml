@@ -34,6 +34,7 @@ params:
     apple_touch_icon:  "/apple-touch-icon.png"
     safari_pinned_tab:  "/safari-pinned-tab.svg"
 
+  showPostNavLinks: true
   profileMode:
     enabled: true
     title: "Just Go for it!"

@@ -24,7 +24,7 @@
 </div>
 {{- end }}
 
-{{- $paginator := .Paginate (sort ((union .RegularPages .Sections).ByParam
+{{- $paginator := .Paginate (sort ( (union .RegularPages .Sections).ByParam
 "lesson") ) }}
 
 {{- if and .IsHome .Site.Params.homeInfoParams (eq $paginator.PageNumber 1) }}
