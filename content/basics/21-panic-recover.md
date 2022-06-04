@@ -103,11 +103,11 @@ We'll keep this example here just in case we ever want to see what we expect.
 
 ```go
 func ExamplePanicAfterDefer() {
-	// XXX: No way to test output of a panic. That's **not** something you can
+	// NOTE(jay): No way to test output of a panic. That's **not** something you can
 	// make an example out of, but we can at least have one to look at by
 	// uncommenting 👇 the line below.
 	// pnr.PanicAfterDefer()
-	// XXX: Would be Output:
+	// NOTE(jay): Would be Output:
 	// defer: Still print statement even with a panic
 	// panic: 💣 TIME TO BLOW UP!!!
 }
@@ -147,7 +147,7 @@ that our function is the last thing ran before the `return` statement? A
 // statement or else it won't work.
 func PanicKeepCalm() {
 	defer recuperate()
-	// XXX: This will not stop the panic
+	// NOTE(jay): This will not stop the panic
 	// recover()
 	panic("😱 AWWW 💩WE'RE GOING DOWN!")
 }
@@ -188,7 +188,7 @@ func (s *myStruct) CausePanic() string { return s.cantAccess }
 
 func PanicNilPointer() {
 	s := new(myStruct)
-	s = nil // XXX: Obviously dangerous, but it happens in mysterious ways.
+	s = nil // NOTE(jay): Obviously dangerous, but it happens in mysterious ways.
 	fmt.Println(s.CausePanic())
 }
 
@@ -277,11 +277,11 @@ our `example_test.go`
 
 ```go
 func ExamplePanicNilPointer() {
-	// XXX: No way to test output of a panic. That's **not** something you can
+	// NOTE(jay): No way to test output of a panic. That's **not** something you can
 	// make an example out of, but we can at least have one to look at by
 	// uncommenting 👇 the line below.
 	// pnr.PanicNilPointer()
-	// XXX: Would be Output:
+	// NOTE(jay): Would be Output:
 	// panic: runtime error: invalid memory address or nil pointer dereference [recovered]
 	//         panic: runtime error: invalid memory address or nil pointer dereference
 	// [signal SIGSEGV: segmentation violation code=0x1 addr=0x0 pc=0x4ef6f6]
@@ -447,7 +447,7 @@ func PanicAfterDefer() {
 // statement or else it won't work.
 func PanicKeepCalm() {
 	defer recuperate()
-	// XXX: This will not stop the panic
+	// NOTE(jay): This will not stop the panic
 	// recover()
 	panic("😱 AWWW 💩WE'RE GOING DOWN!")
 }
@@ -464,7 +464,7 @@ func (s *myStruct) CausePanic() string { return s.cantAccess }
 
 func PanicNilPointer() {
 	s := new(myStruct)
-	s = nil // XXX: Obviously dangerous, but it happens in mysterious ways.
+	s = nil // NOTE(jay): Obviously dangerous, but it happens in mysterious ways.
 	fmt.Println(s.CausePanic())
 }
 
@@ -496,11 +496,11 @@ import (
 )
 
 func ExamplePanicAfterDefer() {
-	// XXX: No way to test output of a panic. That's **not** something you can
+	// NOTE(jay): No way to test output of a panic. That's **not** something you can
 	// make an example out of, but we can at least have one to look at by
 	// uncommenting 👇 the line below.
 	// pnr.PanicAfterDefer()
-	// XXX: Would be Output:
+	// NOTE(jay): Would be Output:
 	// defer: Still print statement even with a panic
 	// panic: 💣 TIME TO BLOW UP!!!
 }
@@ -512,11 +512,11 @@ func ExamplePanicKeepCalm() {
 }
 
 func ExamplePanicNilPointer() {
-	// XXX: No way to test output of a panic. That's **not** something you can
+	// NOTE(jay): No way to test output of a panic. That's **not** something you can
 	// make an example out of, but we can at least have one to look at by
 	// uncommenting 👇 the line below.
 	// pnr.PanicNilPointer()
-	// XXX: Would be Output:
+	// NOTE(jay): Would be Output:
 	// panic: runtime error: invalid memory address or nil pointer dereference [recovered]
 	//         panic: runtime error: invalid memory address or nil pointer dereference
 	// [signal SIGSEGV: segmentation violation code=0x1 addr=0x0 pc=0x4ef6f6]

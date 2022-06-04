@@ -336,7 +336,7 @@ func PassCollections(slice []string, mp map[string]rune, ctCopy ChangeThings,
 	slice = nil
 	mp = nil
 	ctPtr = nil
-	// XXX: won't work
+	// NOTE(jay): won't work
 	// ctCopy = nil
 	//
 	// This makes it more obvious that we have don't have a pointer. A pointer
@@ -509,7 +509,7 @@ func PassCollections(slice []string, mp map[string]rune, ctCopy ChangeThings,
 	slice = nil
 	mp = nil
 	ctPtr = nil
-	// XXX: won't work
+	// NOTE(jay): won't work
 	// ctCopy = nil
 	//
 	// This makes it more obvious that we have don't have a pointer. A pointer

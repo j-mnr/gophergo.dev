@@ -206,7 +206,7 @@ type phoneNumberError string
 
 func (e phoneNumberError) Error() string {
 	// We need to explicitly convert e to a string here or else we'll get
-	// XXX: arg e causes a recursive Error method call.
+	// NOTE(jay): arg e causes a recursive Error method call.
 	return fmt.Sprint("phone number must have 10 digits: ", string(e))
 }
 
@@ -216,7 +216,7 @@ type InvalidRuneError rune
 
 func (e InvalidRuneError) Error() string {
 	// We need to explicitly convert e to a string here or else we'll get
-	// XXX: arg e causes a recursive Error method call.
+	// NOTE(jay): arg e causes a recursive Error method call.
 	return fmt.Sprintf("input rune is not a valid english letter: %q", string(e))
 }
 
@@ -605,7 +605,7 @@ type phoneNumberError string
 
 func (e phoneNumberError) Error() string {
 	// We need to explicitly convert e to a string here or else we'll get
-	// XXX: arg e causes a recursive Error method call.
+	// NOTE(jay): arg e causes a recursive Error method call.
 	return fmt.Sprint("phone number must have 10 digits: ", string(e))
 }
 
@@ -615,7 +615,7 @@ type InvalidRuneError rune
 
 func (e InvalidRuneError) Error() string {
 	// We need to explicitly convert e to a string here or else we'll get
-	// XXX: arg e causes a recursive Error method call.
+	// NOTE(jay): arg e causes a recursive Error method call.
 	return fmt.Sprintf("input rune is not a valid english letter: %q", string(e))
 }
 

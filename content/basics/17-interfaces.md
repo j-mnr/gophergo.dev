@@ -115,7 +115,7 @@ func (s Seal) Swim() { fmt.Println("Swims up to the surface. Arr! Arr! 🦭") }
 
 func ExampleWalker() {
 	t := interfaces.Walker(interfaces.Duck{})
-	// XXX: cannot convert (Seal literal) (value of type Seal) to
+	// NOTE(jay): cannot convert (Seal literal) (value of type Seal) to
 	// interfaces.Walker (Seal does not implement interfaces.Walker
 	// (missing method Walk))
 	// _ = interfaces.Walker(Seal{})
@@ -194,7 +194,7 @@ type WalkSwimFlyer interface {
 ```go
 func ExampleWalkSwimmer() {
 	t := interfaces.WalkSwimmer(interfaces.Person(0))
-	// XXX: cannot convert (Seal literal) (value of type Seal) to
+	// NOTE(jay): cannot convert (Seal literal) (value of type Seal) to
 	// interfaces.WalkSwimmer (Seal does not implement interfaces.WalkSwimmer
 	// (missing method Walk))
 	// _ = interfaces.WalkSwimmer(Seal{})
@@ -337,7 +337,7 @@ can swim.
 func SoarIntoTheClouds(f Flyer) {
 	fmt.Println("The clouds ☁️ look so good today!")
 	f.Fly()
- 	// XXX: Notice we **cannot** call the other duck or person methods
+ 	// NOTE(jay): Notice we **cannot** call the other duck or person methods
 	//  (type Flyer has no field or method Walk/Swim)
 	// f.Walk()
 	// f.Swim()
@@ -377,7 +377,7 @@ to random types without first checking, this is where
 // knows the Swim method into its concrete type, which allows us to gain access
 // to that type's other methods and fields.
 func InterfacesToConcreteType(s Swimmer) {
-	// XXX: s.isFlying undefined (type Swimmer has no field or method isFlying)
+	// NOTE(jay): s.isFlying undefined (type Swimmer has no field or method isFlying)
 	// This shows us that even if Duck had more methods or had any fields we only
 	// can use what is satisfied by the interface.
 	// s.isFlying
@@ -553,7 +553,7 @@ func GoForWalk(person Walker, duck Walker) {
 func SoarIntoTheClouds(f Flyer) {
 	fmt.Println("The clouds ☁️ look so good today!")
 	f.Fly()
- 	// XXX: Notice we **cannot** call the other duck or person methods
+ 	// NOTE(jay): Notice we **cannot** call the other duck or person methods
 	//  (type Flyer has no field or method Walk/Swim)
 	// f.Walk()
 	// f.Swim()
@@ -564,7 +564,7 @@ func SoarIntoTheClouds(f Flyer) {
 // knows the Swim method into its concrete type, which allows us to gain access
 // to that type's other methods and fields.
 func InterfacesToConcreteType(s Swimmer) {
-	// XXX: s.isFlying undefined (type Swimmer has no field or method isFlying)
+	// NOTE(jay): s.isFlying undefined (type Swimmer has no field or method isFlying)
 	// This shows us that even if Duck had more methods or had any fields we only
 	// can use what is satisfied by the interface.
 	// s.isFlying
@@ -631,7 +631,7 @@ func (s Seal) Swim() { fmt.Println("Swims up to the surface. Arr! Arr! 🦭") }
 
 func ExampleWalker() {
 	t := interfaces.Walker(interfaces.Duck{})
-	// XXX: cannot convert (Seal literal) (value of type Seal) to
+	// NOTE(jay): cannot convert (Seal literal) (value of type Seal) to
 	// interfaces.Walker (Seal does not implement interfaces.Walker
 	// (missing method Walk))
 	// _ = interfaces.Walker(Seal{})
@@ -641,7 +641,7 @@ func ExampleWalker() {
 
 func ExampleWalkSwimmer() {
 	t := interfaces.WalkSwimmer(interfaces.Person(0))
-	// XXX: cannot convert (Seal literal) (value of type Seal) to
+	// NOTE(jay): cannot convert (Seal literal) (value of type Seal) to
 	// interfaces.WalkSwimmer (Seal does not implement interfaces.WalkSwimmer
 	// (missing method Walk))
 	// _ = interfaces.WalkSwimmer(Seal{})
