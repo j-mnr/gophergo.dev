@@ -96,7 +96,7 @@ func privateFunc() {
 ```go
 // This will not work, uncomment it and see what error it gives you.
 // func ExampleprivateFunc() {
-// 	// XXX: privateFunc not exported by package functions
+// 	// NOTE(jay): privateFunc not exported by package functions
 // 	functions.privateFunc()
 // }
 ```
@@ -477,7 +477,7 @@ import (
 
 // This will not work, uncomment it and see what error it gives you.
 // func ExampleprivateFunc() {
-// 	// XXX: privateFunc not exported by package functions
+// 	// NOTE(jay): privateFunc not exported by package functions
 // 	functions.privateFunc()
 // }
 

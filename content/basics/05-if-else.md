@@ -154,7 +154,7 @@ func DeclareInIf() {
 	} else if i == 5 {
 		fmt.Println("We can reuse i for the entire if-else statement!")
 	}
-	// XXX: Since `i` was declared in the scope of the `if` statement, it doesn't
+	// NOTE(jay): Since `i` was declared in the scope of the `if` statement, it doesn't
 	// exist outside of that scope, so if we uncomment this, we will get an
 	// error: "Undeclared name: i"
 	// if i == 5 {
@@ -226,7 +226,7 @@ func DeclareInIf() {
 	} else if i == 5 {
 		fmt.Println("We can reuse i for the entire if-else statement!")
 	}
-	// XXX: Since `i` was declared in the scope of the `if` statement, it doesn't
+	// NOTE(jay): Since `i` was declared in the scope of the `if` statement, it doesn't
 	// exist outside of that scope, so if we uncomment this, we will get an
 	// error: "Undeclared name: i"
 	// if i == 5 {
