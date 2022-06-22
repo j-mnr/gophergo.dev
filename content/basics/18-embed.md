@@ -78,9 +78,9 @@ type GopherV3 struct {
 	Badge rune
 }
 
-// EmbedStruct is an example function that shows how to initialize both
+// Struct is an example function that shows how to initialize both
 // versions of embedded structs and how to access the embedded fields.
-func EmbedStruct() {
+func Struct() {
 	gala := GopherV2{
 		Gopher: Gopher{
 			Name:         "Gala",
@@ -124,8 +124,8 @@ func EmbedStruct() {
 #### example_test.go
 
 ```go
-func ExampleEmbedStruct() {
-	embed.EmbedStruct()
+func ExampleStruct() {
+	embed.Struct()
 	// Output:
 	// GopherV2: embed.GopherV2{Gopher:embed.Gopher{Name:"Gala", Age:24, IsCoding:false, privateField:"Embedding doesn't change access modifiers"}, Friends:[]string{"Gabby", "Gael", "Garth", "Gazsi"}, Ratings:map[string]int{"chocolate":9, "coffee":3, "tea":7}}
 	//
@@ -169,9 +169,9 @@ the motorcycle.
 // anything about the way we expect a struct to behave
 type City struct{ Residents []GopherV3 }
 
-// EmbedCity shows that structs with embedded fields act no differently with
+// Deep shows that structs with embedded fields act no differently with
 // the embedded fields.
-func EmbedCity() {
+func Deep() {
 	c := City{
 		Residents: []GopherV3{
 			{ // 👈 Notice we don't need to put GopherV3 here
@@ -247,8 +247,8 @@ func EmbedCity() {
 #### example_test.go
 
 ```go
-func ExampleEmbedCity() {
-	embed.EmbedCity()
+func ExampleDeep() {
+	embed.Deep()
 	// Output:
 	// {Residents:[{GopherV2:{Gopher:{Name:Gance Age:10 IsCoding:true privateField:Not accessible outside package.} Friends:[Guzz] Ratings:map[space:10]} Badge:128640} {GopherV2:{Gopher:{Name:Guuba Age:511 IsCoding:false privateField:Can be accessed in package.} Friends:[Ghorm Gokil] Ratings:map[death metal:10]} Badge:127755} {GopherV2:{Gopher:{Name:Gerry Age:88 IsCoding:true privateField:Put stuff here} Friends:[Gaqlyn Gicard Gosemary] Ratings:map[naps:10]} Badge:127881} {GopherV2:{Gopher:{Name:Gustion Age:21 IsCoding:true privateField:that you need to use} Friends:[Gidea Gno] Ratings:map[carbs:10]} Badge:127842} {GopherV2:{Gopher:{Name:Guna Age:255 IsCoding:false privateField:but other packages don't.} Friends:[Gouda] Ratings:map[haircuts:3]} Badge:127772}]}
 	//
@@ -305,10 +305,10 @@ func (g GopherV2) MudBath(m int) { fmt.Printf("V2:Sat in mud for %d mins", m) }
 
 func (g GopherV3) Greet() string { return "GOPHERV3 SAYS WHADDUP!!" }
 
-// EmbedInterface shows that we need a struct that will satisfy the entire
+// Interface shows that we need a struct that will satisfy the entire
 // interface, but we don't care if that struct or the embedded structs inside
 // of it satisfy the interface.
-func EmbedInterface(hbp HumanBearPig) {
+func Interface(hbp HumanBearPig) {
 	fmt.Println("It was a dark and rainy night. The moon 🌕 felt so bright.")
 	fmt.Println("A strange passerby. Avert my gaze, I try.")
 	fmt.Println(hbp.Greet())
@@ -323,8 +323,8 @@ func EmbedInterface(hbp HumanBearPig) {
 #### example_test.go
 
 ```go
-func ExampleEmbedInterface() {
-	embed.EmbedInterface(embed.Gopher{})
+func ExampleInterface() {
+	embed.Interface(embed.Gopher{})
 	// Output:
 	// It was a dark and rainy night. The moon 🌕 felt so bright.
 	// A strange passerby. Avert my gaze, I try.
@@ -336,8 +336,8 @@ func ExampleEmbedInterface() {
 	// Rolled around for 20 mins
 }
 
-func ExampleEmbedInterface_v2() {
-	embed.EmbedInterface(embed.GopherV2{})
+func ExampleInterface_v2() {
+	embed.Interface(embed.GopherV2{})
 	// Output:
 	// It was a dark and rainy night. The moon 🌕 felt so bright.
 	// A strange passerby. Avert my gaze, I try.
@@ -349,12 +349,12 @@ func ExampleEmbedInterface_v2() {
 	// V2:Sat in mud for 20 mins
 }
 
-func ExampleEmbedInterface_v3() {
-	embed.EmbedInterface(embed.GopherV3{})
+func ExampleInterface_v3() {
+	embed.Interface(embed.GopherV3{})
 	// Output:
 	// It was a dark and rainy night. The moon 🌕 felt so bright.
 	// A strange passerby. Avert my gaze, I try.
-	// GOPHERV3 SAYS WHADDUP
+	// GOPHERV3 SAYS WHADDUP!!
 	// The person yelled to me; suddenly something broke free.
 	// GOPHERV2 GRRRWAUGH!!
 	// I ran as fast I could, through the streets to the forests of wood.
@@ -402,9 +402,9 @@ type GopherV3 struct {
 	Badge rune
 }
 
-// EmbedStruct is an example function that shows how to initialize both
+// Struct is an example function that shows how to initialize both
 // versions of embedded structs and how to access the embedded fields.
-func EmbedStruct() {
+func Struct() {
 	gala := GopherV2{
 		Gopher: Gopher{
 			Name:         "Gala",
@@ -448,9 +448,9 @@ func EmbedStruct() {
 // anything about the way we expect a struct to behave
 type City struct{ Residents []GopherV3 }
 
-// EmbedCity shows that structs with embedded fields act no differently with
+// City shows that structs with embedded fields act no differently with
 // the embedded fields.
-func EmbedCity() {
+func City() {
 	c := City{
 		Residents: []GopherV3{
 			{ // 👈 Notice we don't need to put GopherV3 here
@@ -544,10 +544,10 @@ func (g GopherV2) MudBath(m int) { fmt.Printf("V2:Sat in mud for %d mins", m) }
 
 func (g GopherV3) Greet() string { return "GOPHERV3 SAYS WHADDUP!!" }
 
-// EmbedInterface shows that we need a struct that will satisfy the entire
+// Interface shows that we need a struct that will satisfy the entire
 // interface, but we don't care if that struct or the embedded structs inside
 // of it satisfy the interface.
-func EmbedInterface(hbp HumanBearPig) {
+func Interface(hbp HumanBearPig) {
 	fmt.Println("It was a dark and rainy night. The moon 🌕 felt so bright.")
 	fmt.Println("A strange passerby. Avert my gaze, I try.")
 	fmt.Println(hbp.Greet())
@@ -568,8 +568,8 @@ package embed_test
 
 import "basics/embed"
 
-func ExampleEmbedStruct() {
-	embed.EmbedStruct()
+func ExampleStruct() {
+	embed.Struct()
 	// Output:
 	// GopherV2: embed.GopherV2{Gopher:embed.Gopher{Name:"Gala", Age:24, IsCoding:false, privateField:"Embedding doesn't change access modifiers"}, Friends:[]string{"Gabby", "Gael", "Garth", "Gazsi"}, Ratings:map[string]int{"chocolate":9, "coffee":3, "tea":7}}
 	//
@@ -577,16 +577,16 @@ func ExampleEmbedStruct() {
 	// Three layers of embedding {GopherV2:{Gopher:{Name:Ground Age:57005 IsCoding:true privateField:Access granted} Friends:[Gunter] Ratings:map[embedding:10]} Badge:129327}
 }
 
-func ExampleEmbedCity() {
-	embed.EmbedCity()
+func ExampleCity() {
+	embed.City()
 	// Output:
 	// {Residents:[{GopherV2:{Gopher:{Name:Gance Age:10 IsCoding:true privateField:Not accessible outside package.} Friends:[Guzz] Ratings:map[space:10]} Badge:128640} {GopherV2:{Gopher:{Name:Guuba Age:511 IsCoding:false privateField:Can be accessed in package.} Friends:[Ghorm Gokil] Ratings:map[death metal:10]} Badge:127755} {GopherV2:{Gopher:{Name:Gerry Age:88 IsCoding:true privateField:Put stuff here} Friends:[Gaqlyn Gicard Gosemary] Ratings:map[naps:10]} Badge:127881} {GopherV2:{Gopher:{Name:Gustion Age:21 IsCoding:true privateField:that you need to use} Friends:[Gidea Gno] Ratings:map[carbs:10]} Badge:127842} {GopherV2:{Gopher:{Name:Guna Age:255 IsCoding:false privateField:but other packages don't.} Friends:[Gouda] Ratings:map[haircuts:3]} Badge:127772}]}
 	//
 	// Not accessible outside package. Can be accessed in package. Put stuff here that you need to use but other packages don't.
 }
 
-func ExampleEmbedInterface() {
-	embed.EmbedInterface(embed.Gopher{})
+func ExampleInterface() {
+	embed.Interface(embed.Gopher{})
 	// Output:
 	// It was a dark and rainy night. The moon 🌕 felt so bright.
 	// A strange passerby. Avert my gaze, I try.
@@ -598,8 +598,8 @@ func ExampleEmbedInterface() {
 	// Rolled around for 20 mins
 }
 
-func ExampleEmbedInterface_v2() {
-	embed.EmbedInterface(embed.GopherV2{})
+func ExampleInterface_v2() {
+	embed.Interface(embed.GopherV2{})
 	// Output:
 	// It was a dark and rainy night. The moon 🌕 felt so bright.
 	// A strange passerby. Avert my gaze, I try.
@@ -611,8 +611,8 @@ func ExampleEmbedInterface_v2() {
 	// V2:Sat in mud for 20 mins
 }
 
-func ExampleEmbedInterface_v3() {
-	embed.EmbedInterface(embed.GopherV3{})
+func ExampleInterface_v3() {
+	embed.Interface(embed.GopherV3{})
 	// Output:
 	// It was a dark and rainy night. The moon 🌕 felt so bright.
 	// A strange passerby. Avert my gaze, I try.

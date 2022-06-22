@@ -373,10 +373,10 @@ to random types without first checking, this is where
 #### interfaces.go
 
 ```go
-// InterfacesToConcreteType shows us how we would turn an interface that only
+// ToConcreteType shows us how we would turn an interface that only
 // knows the Swim method into its concrete type, which allows us to gain access
 // to that type's other methods and fields.
-func InterfacesToConcreteType(s Swimmer) {
+func ToConcreteType(s Swimmer) {
 	// NOTE(jay): s.isFlying undefined (type Swimmer has no field or method isFlying)
 	// This shows us that even if Duck had more methods or had any fields we only
 	// can use what is satisfied by the interface.
@@ -414,13 +414,13 @@ func InterfacesToConcreteType(s Swimmer) {
 #### example_test.go
 
 ```go
-func ExampleInterfacesToConcreteType() {
+func ExampleToConcreteType() {
 	fmt.Println("Put in Duck")
-	interfaces.InterfacesToConcreteType(interfaces.Duck{IsFlying: true})
+	interfaces.ToConcreteType(interfaces.Duck{IsFlying: true})
 	fmt.Println("Put in Person")
-	interfaces.InterfacesToConcreteType(interfaces.Person(0))
+	interfaces.ToConcreteType(interfaces.Person(0))
 	fmt.Println("Put in our own Swimmer (Seal)")
-	interfaces.InterfacesToConcreteType(Seal{})
+	interfaces.ToConcreteType(Seal{})
 	// Output:
 	// Put in Duck
 	// Looks like this is a Duck! 🦆
@@ -560,10 +560,10 @@ func SoarIntoTheClouds(f Flyer) {
 	fmt.Println("Feels good to be on Cloud Nine. 😎")
 }
 
-// InterfacesToConcreteType shows us how we would turn an interface that only
+// ToConcreteType shows us how we would turn an interface that only
 // knows the Swim method into its concrete type, which allows us to gain access
 // to that type's other methods and fields.
-func InterfacesToConcreteType(s Swimmer) {
+func ToConcreteType(s Swimmer) {
 	// NOTE(jay): s.isFlying undefined (type Swimmer has no field or method isFlying)
 	// This shows us that even if Duck had more methods or had any fields we only
 	// can use what is satisfied by the interface.
@@ -672,13 +672,13 @@ func ExampleSoarIntoTheClouds() {
 	// Feels good to be on Cloud Nine. 😎
 }
 
-func ExampleInterfacesToConcreteType() {
+func ExampleToConcreteType() {
 	fmt.Println("Put in Duck")
-	interfaces.InterfacesToConcreteType(interfaces.Duck{IsFlying: true})
+	interfaces.ToConcreteType(interfaces.Duck{IsFlying: true})
 	fmt.Println("Put in Person")
-	interfaces.InterfacesToConcreteType(interfaces.Person(0))
+	interfaces.ToConcreteType(interfaces.Person(0))
 	fmt.Println("Put in our own Swimmer (Seal)")
-	interfaces.InterfacesToConcreteType(Seal{})
+	interfaces.ToConcreteType(Seal{})
 	// Output:
 	// Put in Duck
 	// Looks like this is a Duck! 🦆

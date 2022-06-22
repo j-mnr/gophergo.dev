@@ -246,11 +246,11 @@ sCountries := []Country{
 #### structs.go
 
 ```go
-// StructBasic shows you how to initialize (make) structs, manipulate all the
+// Basic shows you how to initialize (make) structs, manipulate all the
 // values within a struct by getting and setting the values and use them in
 // other structs. We also return a `city` struct here to show you can give back
 // unexported types from exported functions.
-func StructBasic() city {
+func Basic() city {
 	// Make a gopher and have ALL fields set to the zero value.
 	var zero Gopher
 	// Make a gopher and set all fields to what we want them to be.
@@ -311,13 +311,13 @@ func StructBasic() city {
 #### example_test.go
 
 Here we can see we can _use_ an unexported `struct` 🤯 because the function
-`structs.StructBasic` returns it. Why do this? It means the person using your
+`structs.Basic` returns it. Why do this? It means the person using your
 code can't create a `city` _but_ they can get one pre-made and ready to be
 used.
 
 ```go
-func ExampleStructBasic() {
-	city := structs.StructBasic()
+func ExampleBasic() {
+	city := structs.Basic()
 	for _, g := range city.Gophers {
 		if g.Name == "Garfunkel" {
 			fmt.Printf("We found him: %s\n", city.GopherAddresses[g])
@@ -383,11 +383,11 @@ func New(name string, age int, isCoding bool, privateField string) Gopher {
 	}
 }
 
-// StructBasic shows you how to initialize (make) structs, manipulate all the
+// Basic shows you how to initialize (make) structs, manipulate all the
 // values within a struct by getting and setting the values and use them in
 // other structs. We also return a `city` struct here to show you can give back
 // unexported types from exported functions.
-func StructBasic() city {
+func Basic() city {
 	// Make a gopher and have ALL fields set to the zero value.
 	var zero Gopher
 	// Make a gopher and set all fields to what we want them to be.
@@ -482,8 +482,8 @@ func ExampleNew() {
 	// structs.Gopher{Name:"Jöt", Age:58, IsCoding:false, privateField:"once set, can't be changed."}
 }
 
-func ExampleStructBasic() {
-	city := structs.StructBasic()
+func ExampleBasic() {
+	city := structs.Basic()
 	for _, g := range city.Gophers {
 		if g.Name == "Garfunkel" {
 			fmt.Printf("We found him: %s\n", city.GopherAddresses[g])

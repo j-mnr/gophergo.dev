@@ -130,11 +130,11 @@ have a {{< anchor-new-window "fmt_test"
 #### functions.go
 
 ```go
-// FuncPublic is an example function, that is exported. It is always a good
+// Public is an example function, that is exported. It is always a good
 // idea to document your exported functions and variables, so that other
 // developers can know how to use your code! Run `go doc --all .` in your
 // terminal in this package and see what you get!
-func FuncPublic() {
+func Public() {
 	fmt.Println("This function is exported and can be called anywhere.")
 }
 ```
@@ -142,8 +142,8 @@ func FuncPublic() {
 #### example_test.go
 
 ```go
-func ExampleFuncPublic() {
-	functions.FuncPublic()
+func ExamplePublic() {
+	functions.Public()
 	// Output:
 	// This function is exported and can be called anywhere.
 }
@@ -172,9 +172,9 @@ though, so no big deal.
 #### functions.go
 
 ```go
-// FuncWithParams is an example function, that shows you how to pass in
+// WithParams is an example function, that shows you how to pass in
 // multiple arguments to a function and use them.
-func FuncWithParams(name string, value int, emoji rune) {
+func WithParams(name string, value int, emoji rune) {
 	fmt.Printf("%s looks like %s and is a %d/10", name, string(emoji), value)
 }
 ```
@@ -182,8 +182,8 @@ func FuncWithParams(name string, value int, emoji rune) {
 #### example_test.go
 
 ```go
-func ExampleFuncWithParams() {
-	functions.FuncWithParams("Mechanical Arm", 9, '🦾')
+func ExampleWithParams() {
+	functions.WithParams("Mechanical Arm", 9, '🦾')
 	// Output:
 	// Mechanical Arm looks like 🦾 and is a 9/10
 }
@@ -210,9 +210,9 @@ turn it Go style!
 #### functions.go
 
 ```go
-// FuncWithReturn is an example function on how to specify what type you want a
+// WithReturn is an example function on how to specify what type you want a
 // function to return.
-func FuncWithReturn() string {
+func WithReturn() string {
 	return "It's just this easy to return a type"
 }
 ```
@@ -220,8 +220,8 @@ func FuncWithReturn() string {
 #### example_test.go
 
 ```go
-func ExampleFuncWithReturn() {
-	fmt.Println(functions.FuncWithReturn())
+func ExampleWithReturn() {
+	fmt.Println(functions.WithReturn())
 	// Output:
 	// It's just this easy to return a type
 }
@@ -255,9 +255,9 @@ func Add(n1 int, n2 int) (int, bool) {
 #### functions.go
 
 ```go
-// FuncWithMultipleReturn is an example function that will return two types at
+// WithMultipleReturn is an example function that will return two types at
 // the same time.
-func FuncWithMultipleReturn() ([]int, bool) {
+func WithMultipleReturn() ([]int, bool) {
 	canDoMultipleReturns := true
 	return []int{1, 2, 3, 4, 5}, canDoMultipleReturns
 }
@@ -266,8 +266,8 @@ func FuncWithMultipleReturn() ([]int, bool) {
 #### example_test.go
 
 ```go
-func ExampleFuncWithMultipleReturn() {
-	fmt.Println(functions.FuncWithMultipleReturn())
+func ExampleWithMultipleReturn() {
+	fmt.Println(functions.WithMultipleReturn())
 	// Output:
 	// [1 2 3 4 5] true
 }
@@ -301,11 +301,11 @@ func Add(n1 int, n2 int) (sum int, gtThousand bool) {
 #### functions.go
 
 ```go
-// FuncWithNamedReturn is an example function that shows how you can name all
+// WithNamedReturn is an example function that shows how you can name all
 // of your parameters and all of your return types if you want to. You will
 // notice we don't have to specify the type over and over if they are the same
 // type. i.e. (email string, url string) == (email, url string)
-func FuncWithNamedReturn(name, scheme, host, path, query string) (email, url string) {
+func WithNamedReturn(name, scheme, host, path, query string) (email, url string) {
 	// Notice we don't use `:=` for email and url. The function already makes
 	// them for us when we named them up above.
 	email = name + "@" + host
@@ -319,8 +319,8 @@ func FuncWithNamedReturn(name, scheme, host, path, query string) (email, url str
 #### example_test.go
 
 ```go
-func ExampleFuncWithNamedReturn() {
-	fmt.Println(functions.FuncWithNamedReturn("Gamba",
+func ExampleWithNamedReturn() {
+	fmt.Println(functions.WithNamedReturn("Gamba",
 		"https://", "gophergo.dev", "/fun-with-funcs", "?isFun=yes&isEasy=yes"))
 	// Output:
 	// Gamba@gophergo.dev https://gophergo.dev/fun-with-funcs?isFun=yes&isEasy=yes
@@ -362,10 +362,10 @@ figured out in the previous lesson on [range](/basics/11-range/#by-value) we
 can loop through a slice nicely with `range`.
 
 ```go
-// FuncVariadic is an example function. It takes in an arbitrary amount of
+// Variadic is an example function. It takes in an arbitrary amount of
 // `int`s and allows you to use all of them, the way you see fit. This can be
 // seen as a more powerful version of `[]int`, and it works for all types.
-func FuncVariadic(varargsNums ...int) (sum int) {
+func Variadic(varargsNums ...int) (sum int) {
 	for _, n := range varargsNums {
 		sum += n
 	}
@@ -382,11 +382,11 @@ for them, but for more complex functions we may need to do checks for no values
 or other edge cases.
 
 ```go
-func ExampleFuncVariadic() {
-	fmt.Println(functions.FuncVariadic())
-	fmt.Println(functions.FuncVariadic(1, 2, 3))
+func ExampleVariadic() {
+	fmt.Println(functions.Variadic())
+	fmt.Println(functions.Variadic(1, 2, 3))
 	nums := []int{4, 5, 6, 7, 8, 9, 10, 11, 12}
-	fmt.Println(functions.FuncVariadic(nums...))
+	fmt.Println(functions.Variadic(nums...))
 	// Output:
 	// 0
 	// 6
@@ -411,38 +411,38 @@ func privateFunc() {
 	fmt.Println("This function can only be called from within this package.")
 }
 
-// FuncPublic is an example function, that is exported. It is always a good
+// Public is an example function, that is exported. It is always a good
 // idea to document your exported functions and variables, so that other
 // developers can know how to use your code! Run `go doc --all .` in your
 // terminal in this package and see what you get!
-func FuncPublic() {
+func Public() {
 	fmt.Println("This function is exported and can be called anywhere.")
 }
 
-// FuncWithParams is an example function, that shows you how to pass in
+// WithParams is an example function, that shows you how to pass in
 // multiple arguments to a function and use them.
-func FuncWithParams(name string, value int, emoji rune) {
+func WithParams(name string, value int, emoji rune) {
 	fmt.Printf("%s looks like %s and is a %d/10", name, string(emoji), value)
 }
 
-// FuncWithReturn is an example function on how to specify what type you want a
+// WithReturn is an example function on how to specify what type you want a
 // function to return.
-func FuncWithReturn() string {
+func WithReturn() string {
 	return "It's just this easy to return a type"
 }
 
-// FuncWithMultipleReturn is an example function that will return two types at
+// WithMultipleReturn is an example function that will return two types at
 // the same time.
-func FuncWithMultipleReturn() ([]int, bool) {
+func WithMultipleReturn() ([]int, bool) {
 	canDoMultipleReturns := true
 	return []int{1, 2, 3, 4, 5}, canDoMultipleReturns
 }
 
-// FuncWithNamedReturn is an example function that shows how you can name all
+// WithNamedReturn is an example function that shows how you can name all
 // of your parameters and all of your return types if you want to. You will
 // notice we don't have to specify the type over and over if they are the same
 // type. i.e. (email string, url string) == (email, url string)
-func FuncWithNamedReturn(name, scheme, host, path, query string) (email, url string) {
+func WithNamedReturn(name, scheme, host, path, query string) (email, url string) {
 	// Notice we don't use `:=` for email and url. The function already makes
 	// them for us when we named them up above.
 	email = name + "@" + host
@@ -452,10 +452,10 @@ func FuncWithNamedReturn(name, scheme, host, path, query string) (email, url str
 	// return email, url also works! And is more readable, so go with this. 👍
 }
 
-// FuncVariadic is an example function. It takes in an arbitrary amount of
+// Variadic is an example function. It takes in an arbitrary amount of
 // `int`s and allows you to use all of them, the way you see fit. This can be
 // seen as a more powerful version of `[]int`, and it works for all types.
-func FuncVariadic(varargsNums ...int) (sum int) {
+func Variadic(varargsNums ...int) (sum int) {
 	for _, n := range varargsNums {
 		sum += n
 	}
@@ -481,42 +481,42 @@ import (
 // 	functions.privateFunc()
 // }
 
-func ExampleFuncPublic() {
-	functions.FuncPublic()
+func ExamplePublic() {
+	functions.Public()
 	// Output:
 	// This function is exported and can be called anywhere.
 }
 
-func ExampleFuncWithParams() {
-	functions.FuncWithParams("Mechanical Arm", 9, '🦾')
+func ExampleWithParams() {
+	functions.WithParams("Mechanical Arm", 9, '🦾')
 	// Output:
 	// Mechanical Arm looks like 🦾 and is a 9/10
 }
 
-func ExampleFuncWithReturn() {
-	fmt.Println(functions.FuncWithReturn())
+func ExampleWithReturn() {
+	fmt.Println(functions.WithReturn())
 	// Output:
 	// It's just this easy to return a type
 }
 
-func ExampleFuncWithMultipleReturn() {
-	fmt.Println(functions.FuncWithMultipleReturn())
+func ExampleWithMultipleReturn() {
+	fmt.Println(functions.WithMultipleReturn())
 	// Output:
 	// [1 2 3 4 5] true
 }
 
-func ExampleFuncWithNamedReturn() {
-	fmt.Println(functions.FuncWithNamedReturn("Gamba",
+func ExampleWithNamedReturn() {
+	fmt.Println(functions.WithNamedReturn("Gamba",
 		"https://", "gophergo.dev", "/fun-with-funcs", "?isFun=yes&isEasy=yes"))
 	// Output:
 	// Gamba@gophergo.dev https://gophergo.dev/fun-with-funcs?isFun=yes&isEasy=yes
 }
 
-func ExampleFuncVariadic() {
-	fmt.Println(functions.FuncVariadic())
-	fmt.Println(functions.FuncVariadic(1, 2, 3))
+func ExampleVariadic() {
+	fmt.Println(functions.Variadic())
+	fmt.Println(functions.Variadic(1, 2, 3))
 	nums := []int{4, 5, 6, 7, 8, 9, 10, 11, 12}
-	fmt.Println(functions.FuncVariadic(nums...))
+	fmt.Println(functions.Variadic(nums...))
 	// Output:
 	// 0
 	// 6

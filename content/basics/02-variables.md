@@ -4,15 +4,13 @@ Title: "Variables"
 Draft: false
 ---
 
-A Variable is something that can inherently _**change**_
-
-To be variable _means_ to be adaptable or changeable. You may think of it as
-varied or versatile.
-
-Saying **I'm adaptable** is the same as saying **I'm variable**
+A Variable is something that can inherently _**change**_ 🧑 ➡️ 🧓 To be variable
+_means_ to be adaptable or changeable 👩 🔄 👨 You may think of it as varied or
+versatile; saying 🗨️  **I'm adaptable** is the same as saying🗨️  **I'm
+variable**
 
 We can take the types we learned about in the previous lesson and put them into
-something we name and can _**change**_ it's value. A variable! So in
+something we name and can _**change**_ the value of. A variable! So in
 programming, a variable is a type value with a name that can change it's
 value.
 
@@ -58,10 +56,10 @@ values? **Glad you asked!** 😁
 #### variables.go
 
 ```go
-// DeclareVarZero shows off all of the zero values or what might also be
+// Zero shows off all of the zero values or what might also be
 // thought of as Zero values for each type when they are not assigned
 // anything.
-func DeclareVarZero() {
+func Zero() {
 	var name string
 	var x int
 	var f float32
@@ -84,8 +82,8 @@ map zero value is: %+v`,
 #### example_test.go
 
 ```go
-func ExampleDeclareVarZero() {
-	variables.DeclareVarZero()
+func ExampleZero() {
+	variables.Zero()
 	// Output:
 	// string zero value is: ""
 	// int zero value is: 0
@@ -118,9 +116,9 @@ variables values that we want, in other words, we should initialize them.
 #### variables.go
 
 ```go
-// DeclareVarExplicit shows that we can explicitly type a variable to a specific
+// Explicit shows that we can explicitly type a variable to a specific
 // type if we wanted to.
-func DeclareVarExplicit() {
+func Explicit() {
 	// It works for all types: string, bool, int, float, rune...
 	var name string = "Jay"
 	// Emojis are unicode characters, they are supported in Go through runes
@@ -138,8 +136,8 @@ func DeclareVarExplicit() {
 #### example_test.go
 
 ```go
-func ExampleDeclareVarExplicit() {
-	variables.DeclareVarExplicit()
+func ExampleExplicit() {
+	variables.Explicit()
 	// Output:
 	// My Name's Jay! 😁,
 	// From 0 to 1000
@@ -163,9 +161,9 @@ experience you'll see it's obvious what `type` something is.
 #### variables.go
 
 ```go
-// DeclareVarImplicit shows that we don't need to declare what the type is as
+// Implicit shows that we don't need to declare what the type is as
 // long as we initialize it on the right.
-func DeclareVarImplicit() {
+func Implicit() {
 	// It works for all types: string, bool, int, float, rune...
 	var question = "Does anyone have any room for"
 	// Emojis are unicode characters, they are supported in Go through runes
@@ -182,8 +180,8 @@ func DeclareVarImplicit() {
 #### example_test.go
 
 ```go
-func ExampleDeclareVarImplicit() {
-	variables.DeclareVarImplicit()
+func ExampleImplicit() {
+	variables.Implicit()
 	// Output:
 	// Does anyone have any room for 🥧,
 	// More Pi 3.141590
@@ -243,10 +241,10 @@ package variables
 
 import "fmt"
 
-// DeclareVarZero shows off all of the zero values or what might also be
+// Zero shows off all of the zero values or what might also be
 // thought of as default values for each type when they are not assigned
 // anything.
-func DeclareVarZero() {
+func Zero() {
 	var name string
 	var x int
 	var f float32
@@ -265,9 +263,9 @@ map zero value is: %+v`,
 		name, x, f, isHard, r, string(r), slice, map_)
 }
 
-// DeclareVarExplicit shows that we can explicitly type a variable to a
+// Explicit shows that we can explicitly type a variable to a
 // specific type if we wanted to.
-func DeclareVarExplicit() {
+func Explicit() {
 	// It works for all types: string, bool, int, float, rune...
 	var name string = "Jay"
 	// Emojis are unicode characters, they are supported in Go through runes
@@ -281,9 +279,9 @@ func DeclareVarExplicit() {
 		isTrue)
 }
 
-// DeclareVarImplicit shows that we don't need to declare what the type is as
+// Implicit shows that we don't need to declare what the type is as
 // long as we initialize it on the right.
-func DeclareVarImplicit() {
+func Implicit() {
 	// It works for all types: string, bool, int, float, rune...
 	var question = "Does anyone have any room for"
 	// Emojis are unicode characters, they are supported in Go through runes
@@ -318,16 +316,16 @@ package variables_test
 
 import "basics/variables"
 
-func ExampleDeclareVarExplicit() {
-	variables.DeclareVarExplicit()
+func ExampleExplicit() {
+	variables.Explicit()
 	// Output:
 	// My Name's Jay! 😁,
 	// From 0 to 1000
 	// Given bool value: true
 }
 
-func ExampleDeclareVarImplicit() {
-	variables.DeclareVarImplicit()
+func ExampleImplicit() {
+	variables.Implicit()
 	// Output:
 	// Does anyone have any room for 🥧,
 	// More Pi 3.141590
@@ -335,8 +333,8 @@ func ExampleDeclareVarImplicit() {
 	//
 }
 
-func ExampleDeclareVarZero() {
-	variables.DeclareVarZero()
+func ExampleZero() {
+	variables.Zero()
 	// Output:
 	// string zero value is: ""
 	// int zero value is: 0
