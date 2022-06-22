@@ -66,7 +66,7 @@ statement is executed.
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
 #### defers.go
 
@@ -105,7 +105,7 @@ same as the books we remove book 3📕 and then book 2📗 to get book 1 📘
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
 #### defers.go
 
@@ -149,7 +149,7 @@ the big function `F` or where you declare it...? Let's find out 😏
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
 #### defers.go
 
@@ -193,7 +193,7 @@ Yeah, I told you 😵
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
 #### defers.go
 
@@ -252,7 +252,7 @@ next topic has lots of examples of where we use `defer` in Go.
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
 #### defers.go
 
@@ -302,7 +302,7 @@ meant more as a sample set to open your mind 🤯 to the possibilities of
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
 #### Closing A File
 
@@ -503,7 +503,7 @@ func ExampleNewAccount() {
 
 ## The Whole File
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-victorious.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-victorious.png "gopher-victorious by Egon Elbre")
 
 ```go
 package defers
@@ -699,7 +699,7 @@ func (a *account) Deposit(amount int64) (int64, error) {
 
 ## All Of The Outputs To Our Examples
 
-![https://twitter.com/egonelbre](/egon-elbre/typing-furiously.gif)
+![https://twitter.com/egonelbre](/egon-elbre/typing-furiously.gif "typing-furiously by Egon Elbre")
 
 ```go
 package defers_test

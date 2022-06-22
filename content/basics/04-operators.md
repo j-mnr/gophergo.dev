@@ -52,7 +52,7 @@ they get back. You've definitely been a comparison operator in your life.
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
 #### operators.go
 
@@ -180,7 +180,7 @@ negate sentences! That wouldn't 👈work well🙃 I just used not 👈twice 😂
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
 #### operators.go
 
@@ -303,7 +303,7 @@ We've made sure we never go past 2! Pretty cool right ⁉️ 😁
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
 #### operators.go
 
@@ -389,7 +389,7 @@ multiplying strings. The reason? Let's use an example: How do you multiply
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
 #### operators.go
 
@@ -481,7 +481,7 @@ so Let's Go! 😀
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
 #### operators.go
 
@@ -572,7 +572,7 @@ func ExampleOperatorsComparison() {
 
 ## The Whole File
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-victorious.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-victorious.png "gopher-victorious by Egon Elbre")
 
 ```go
 package operators
@@ -792,7 +792,7 @@ func OperatorBitwise() {
 
 ## All Of The Outputs To Our Examples
 
-![https://twitter.com/egonelbre](/egon-elbre/typing-furiously.gif)
+![https://twitter.com/egonelbre](/egon-elbre/typing-furiously.gif "typing-furiously by Egon Elbre")
 
 ```go
 package operators_test

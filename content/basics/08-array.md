@@ -55,7 +55,7 @@ index.
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
 #### array.go
 
@@ -128,7 +128,7 @@ get them, or in dev speak `[0][1]Rooms`
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
 #### array.go
 
@@ -157,7 +157,7 @@ func ExampleMatrix() {
 
 ## The Whole File
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-victorious.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-victorious.png "gopher-victorious by Egon Elbre")
 
 ```go
 package array
@@ -200,7 +200,7 @@ func Matrix() {
 
 ## All Of The Outputs To Our Examples
 
-![https://twitter.com/egonelbre](/egon-elbre/typing-furiously.gif)
+![https://twitter.com/egonelbre](/egon-elbre/typing-furiously.gif "typing-furiously by Egon Elbre")
 
 ```go
 package array_test

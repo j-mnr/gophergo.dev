@@ -54,7 +54,7 @@ pair you put in; lots of time 🕗 wasted.
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
 #### contants.go
 
@@ -139,7 +139,7 @@ therefore have underlying types that can be converted.
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
 #### constants.go
 
@@ -198,7 +198,7 @@ func ExamplePrint() {
 
 ## The Whole File
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-victorious.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-victorious.png "gopher-victorious by Egon Elbre")
 
 ```go
 package constants
@@ -270,7 +270,7 @@ func Print(s myString) { fmt.Println(s) }
 
 ## All Of The Outputs To Our Examples
 
-![https://twitter.com/egonelbre](/egon-elbre/typing-furiously.gif)
+![https://twitter.com/egonelbre](/egon-elbre/typing-furiously.gif "typing-furiously by Egon Elbre")
 
 ```go
 package constants_test

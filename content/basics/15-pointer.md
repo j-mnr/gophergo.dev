@@ -72,7 +72,7 @@ what I did there? I made a pointer to another topic 😂
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
 #### pointer.go
 
@@ -117,7 +117,7 @@ to your house and changes your mood from bored 🥱 to happy 😄
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
 #### pointer.go
 
@@ -163,7 +163,7 @@ of these addresses, just so they aren't so arcane 🧙 and magical 🪄
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
 With the `fmt` package we've been using for so long there is a way to get the
 address (aka the pointer) to any value with the formatting directive `%p`, so
@@ -291,7 +291,7 @@ by Rob Pike on {{< anchor-new-window "The Go Blog" "https://go.dev/blog/slices"
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
 #### pointer.go
 
@@ -429,7 +429,7 @@ literal: %#v
 
 ## The Whole File
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-victorious.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-victorious.png "gopher-victorious by Egon Elbre")
 
 ```go
 package pointer
@@ -520,7 +520,7 @@ func PassCollections(slice []string, mp map[string]rune, ctCopy ChangeThings,
 
 ## All Of The Outputs To Our Examples
 
-![https://twitter.com/egonelbre](/egon-elbre/typing-furiously.gif)
+![https://twitter.com/egonelbre](/egon-elbre/typing-furiously.gif "typing-furiously by Egon Elbre")
 
 ```go
 package pointer_test

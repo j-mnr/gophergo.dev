@@ -82,7 +82,7 @@ learned about.
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
 #### method.go
 
@@ -121,7 +121,7 @@ As we learned in the [last lesson](/basics/15-pointer) pointers **change**
 things, and when you pass by value you make a copy of that thing.
 
 Said again a method is making our `Gopher` the star of the show
-![https://twitter.com/egonelbre](/egon-elbre/gopher-smiling-blushing.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-smiling-blushing.png "gopher-smiling-blushing by Egon Elbre")
 because we're focusing on them and the inputs are secondary to our `Gopher`.
 
 Now why would we want to change our `Gopher`? (Pointer Receiver) and why would
@@ -148,7 +148,7 @@ happens! 🏃
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
 #### method.go
 
@@ -244,7 +244,7 @@ situation.
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
 #### method.go
 
@@ -323,7 +323,7 @@ to say, have a nice formatted message that's easy to understand.
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
 #### method.go
 
@@ -358,7 +358,7 @@ func ExampleGopher_String() {
 
 ## The Whole File
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-victorious.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-victorious.png "gopher-victorious by Egon Elbre")
 
 ```go
 package method
@@ -425,7 +425,7 @@ func (g Gopher) String() string {
 
 ## All Of The Outputs To Our Examples
 
-![https://twitter.com/egonelbre](/egon-elbre/typing-furiously.gif)
+![https://twitter.com/egonelbre](/egon-elbre/typing-furiously.gif "typing-furiously by Egon Elbre")
 
 ```go
 package method_test

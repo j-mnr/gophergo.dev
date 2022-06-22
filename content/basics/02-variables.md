@@ -37,7 +37,7 @@ package variables_test
 
 ## Explicit Declaration and Zero Values
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-wondering.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-wondering.png "gopher-wondering by Egon Elbre")
 
 In Go, everything has a `type` and the compiler (the thing that
 makes your program into something your computer can use) _needs_ to know what
@@ -53,7 +53,7 @@ values? **Glad you asked!** 😁
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
 #### variables.go
 
@@ -99,7 +99,7 @@ func ExampleDeclareVarZero() {
 
 ## Initialization
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-wondering.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-wondering.png "gopher-wondering by Egon Elbre")
 
 Initialization is a part of developer jargon. It means to make something. Let's
 look at an example, if you here
@@ -113,7 +113,7 @@ variables values that we want, in other words, we should initialize them.
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
 #### variables.go
 
@@ -149,7 +149,7 @@ func ExampleDeclareVarExplicit() {
 
 ## Implicit Declaration
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-wondering.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-wondering.png "gopher-wondering by Egon Elbre")
 
 Go's compiler is pretty smart and it knows what `type` your variable is
 depending on what the right hand side says. We can use this to our advantage!
@@ -158,7 +158,7 @@ experience you'll see it's obvious what `type` something is.
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
 #### variables.go
 
@@ -194,18 +194,18 @@ func ExampleDeclareVarImplicit() {
 
 ## Assignment Operator
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-wondering.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-wondering.png "gopher-wondering by Egon Elbre")
 
 There is an even faster, easier, and more idomatic way of declaring a variable.
 `:=` is the assignment operator, which **I** call the gopher operator because
 if this 👉 **:)** is a smiley face then this 👉 **:=** is two beady eyes and
 some buck teeth. Remind you of anything cute, blue, and furry?
 
-![https://twitter.com/egonelbre](/egon-elbre/aww.gif)
+![https://twitter.com/egonelbre](/egon-elbre/aww.gif "aww by Egon Elbre")
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
 #### variables.go
 
@@ -237,7 +237,7 @@ func ExampleAssignmentOperator() {
 
 ## The Whole File
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-victorious.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-victorious.png "gopher-victorious by Egon Elbre")
 ```go
 package variables
 
@@ -311,7 +311,7 @@ func AssignmentOperator() {
 
 ## All Of The Outputs To Our Examples
 
-![https://twitter.com/egonelbre](/egon-elbre/typing-furiously.gif)
+![https://twitter.com/egonelbre](/egon-elbre/typing-furiously.gif "typing-furiously by Egon Elbre")
 
 ```go
 package variables_test
