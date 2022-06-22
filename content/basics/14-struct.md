@@ -46,15 +46,17 @@ package CHANGEME_test
 
 You know what else is a `struct`? A Gopher.
 
-{{< cc-img "/maria-letta/characters/36.svg" "characters-36"
-"https://github.com/MariaLetta/free-gophers-pack/blob/master/characters/svg/36.svg"
-"https://instagram.com/maria_letta_art" "Maria Letta"
-"https://github.com/MariaLetta/free-gophers-pack/blob/master/LICENSE"  100px >}}
-{{< cc-img "/maria-letta/characters/27.svg" "characters-27"
-"https://github.com/MariaLetta/free-gophers-pack/blob/master/characters/svg/27.svg"
-"https://instagram.com/maria_letta_art" "Maria Letta"
-"https://github.com/MariaLetta/free-gophers-pack/blob/master/LICENSE"  100px >}}
+{{< figure src="/maria-letta/characters/36.svg" alt="characters-36"
+attr=`[characters-36](https://github.com/MariaLetta/free-gophers-pack/blob/master/characters/svg/36.svg) by
+[Maria Letta](https://instagram.com/maria_letta_art)-
+[License](https://github.com/MariaLetta/free-gophers-pack/blob/master/LICENSE)`
+width=100px >}}
 
+{{< figure src="/maria-letta/characters/27.svg" alt="characters-27"
+attr=`[characters-27](https://github.com/MariaLetta/free-gophers-pack/blob/master/characters/svg/27.svg) by
+[Maria Letta](https://instagram.com/maria_letta_art)-
+[License](https://github.com/MariaLetta/free-gophers-pack/blob/master/LICENSE)`
+width=100px >}}
 
 That means you and I can be represented as a `struct`. So what basic things
 make up a gopher? 🤔 We have a name, we have an age, and there's a really good
@@ -62,7 +64,7 @@ chance we'll be coding. So let's do it! 😁
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
 You'll notice how nice and neat 🤩 everything lines up. I love ❤️ how it looks
 but I wasn't the one who did it. If you haven't found it already, Go comes with
@@ -135,7 +137,7 @@ It is idiomatic Go to have `New` as a constructor name or have the name of the
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
 #### structs.go
 
@@ -239,7 +241,7 @@ sCountries := []Country{
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
 #### structs.go
 
@@ -341,7 +343,7 @@ func ExampleStructBasic() {
 
 ## The Whole File
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-victorious.png)
+![https://twitter.com/egonelbre](/egon-elbre/gopher-victorious.png "gopher-victorious by Egon Elbre")
 
 ```go
 package structs
@@ -445,7 +447,7 @@ func StructBasic() city {
 
 ## All Of The Outputs To Our Examples
 
-![https://twitter.com/egonelbre](/egon-elbre/typing-furiously.gif)
+![https://twitter.com/egonelbre](/egon-elbre/typing-furiously.gif "typing-furiously by Egon Elbre")
 
 ```go
 package structs_test

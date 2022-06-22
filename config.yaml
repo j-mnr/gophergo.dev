@@ -40,7 +40,7 @@ params:
     title: "Just Go for it!"
     subtitle: "Pick an area to explore"
     imageUrl: "/ashley-mcnamara/GoCommunity.png"
-    imageTitle: "Go Community"
+    imageTitle: Go Community
     buttons:
       - name: Basics
         url: "/basics"
