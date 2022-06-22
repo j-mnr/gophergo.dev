@@ -86,9 +86,9 @@ just make some other statement that has nothing to do with the topic at hand!
 #### switches.go
 
 ```go
-// SwitchBasic shows how to switch what logic to perform depending on a case
+// Basic shows how to switch what logic to perform depending on a case
 // and if that none of the criteria are met we can perform some default logic.
-func SwitchBasic() {
+func Basic() {
 	i := 0
 	switch i {
 	case 1:
@@ -106,8 +106,8 @@ func SwitchBasic() {
 #### example_test.go
 
 ```go
-func ExampleSwitchBasic() {
-	switches.SwitchBasic()
+func ExampleBasic() {
+	switches.Basic()
 	// Output:
 	// i does not have a matching case.
 }
@@ -162,9 +162,9 @@ fmt` for this to work. Don't worry about it for now, we'll understand more on
 importing later.
 
 ```go
-// SwitchMultiple shows that we can perform the same logic for multiple cases
+// Multiple shows that we can perform the same logic for multiple cases
 // using the same `case` keyword by comma separating the values.
-func SwitchMultiple() {
+func Multiple() {
 	month := time.August
 	switch month {
 	case time.December, time.January, time.February:
@@ -185,8 +185,8 @@ cases!
 #### example_test.go
 
 ```go
-func ExampleSwitchMultiple() {
-	switches.SwitchMultiple()
+func ExampleMultiple() {
+	switches.Multiple()
 	// Output:
 	// Must have some Summer flare.
 }
@@ -229,10 +229,10 @@ There is no comparison with `if/else` in this case. It can't do it 🤷
 #### switches.go
 
 ```go
-// SwitchType shows us that we can do type assertions using switch statements!
+// Type shows us that we can do type assertions using switch statements!
 // This is particularly useful when getting JSON data with no idea what's
 // inside.
-func SwitchType(i interface{}) {
+func Type(i interface{}) {
 	switch t := i.(type) {
 		case int:
 			fmt.Printf("You seem like an %T-eresting type.\n", t)
@@ -249,11 +249,11 @@ func SwitchType(i interface{}) {
 #### example_test.go
 
 ```go
-func ExampleSwitchType() {
-	switches.SwitchType(true)
-	switches.SwitchType(8)
-	switches.SwitchType([]string{"some", "strings"})
-	switches.SwitchType(struct{}{})
+func ExampleType() {
+	switches.Type(true)
+	switches.Type(8)
+	switches.Type([]string{"some", "strings"})
+	switches.Type(struct{}{})
 	// Output:
 	// You bool! I knew it was you all along.
 	// You seem like an int-eresting type.
@@ -306,10 +306,10 @@ case apple == "🍌":
 #### switches.go
 
 ```go
-// SwitchNoValue shows that you don't have to give a value to the `switch`
+// NoValue shows that you don't have to give a value to the `switch`
 // statement, but instead perform true or false (bool) assertions on a given
 // value.
-func SwitchNoValue() {
+func NoValue() {
 	// This will get your current month! So this test may fail, see if you can't
 	// update it to make it pass! 😁
 	t := time.Now().Month()
@@ -329,8 +329,8 @@ func SwitchNoValue() {
 #### example_test.go
 
 ```go
-func ExampleSwitchNoValue() {
-	switches.SwitchNoValue()
+func ExampleNoValue() {
+	switches.NoValue()
 	// Output:
 	// Looks like it's Spring!
 }
@@ -355,10 +355,10 @@ useful, but if you find a use let me know! 😁 👍
 #### switches.go
 
 ```go
-// SwitchFallthrough shows off the **very** rarely used `fallthrough` keyword
+// Fallthrough shows off the **very** rarely used `fallthrough` keyword
 // in Go. If you're using `fallthrough` there's probably a better solution to
 // your problem.
-func SwitchFallthrough() {
+func Fallthrough() {
 	switch "three" {
 	case "three":
 		fmt.Println("Floor number three")
@@ -378,8 +378,8 @@ func SwitchFallthrough() {
 #### example_test.go
 
 ```go
-func ExampleSwitchFallthrough() {
-	switches.SwitchFallthrough()
+func ExampleFallthrough() {
+	switches.Fallthrough()
 	// Output:
 	// Floor number three
 	// Floor number two
@@ -400,9 +400,9 @@ import (
 	"time"
 )
 
-// SwitchBasic shows how to switch what logic to perform depending on a case
+// Basic shows how to switch what logic to perform depending on a case
 // and if that none of the criteria are met we can perform some default logic.
-func SwitchBasic() {
+func Basic() {
 	i := 0
 	switch i {
 	case 1:
@@ -416,9 +416,9 @@ func SwitchBasic() {
 	}
 }
 
-// SwitchMultiple shows that we can perform the same logic for multiple cases
+// Multiple shows that we can perform the same logic for multiple cases
 // using the same `case` keyword by comma separating the values.
-func SwitchMultiple() {
+func Multiple() {
 	month := time.August
 	switch month {
 	case time.December, time.January, time.February:
@@ -432,10 +432,10 @@ func SwitchMultiple() {
 	}
 }
 
-// SwitchType shows us that we can do type assertions using switch statements!
+// Type shows us that we can do type assertions using switch statements!
 // This is particularly useful when getting JSON data with no idea what's
 // inside.
-func SwitchType(i interface{}) {
+func Type(i interface{}) {
 	switch t := i.(type) {
 	case int:
 		fmt.Printf("You seem like an %T-eresting type.\n", t)
@@ -448,10 +448,10 @@ func SwitchType(i interface{}) {
 	}
 }
 
-// SwitchNoValue shows that you don't have to give a value to the `switch`
+// NoValue shows that you don't have to give a value to the `switch`
 // statement, but instead perform true or false (bool) assertions on a given
 // value.
-func SwitchNoValue() {
+func NoValue() {
 	// This will get the current month. So this test may fail, see if you can't
 	// update the test with the correct string to make it pass! 😁
 	t := time.Now().Month()
@@ -467,10 +467,10 @@ func SwitchNoValue() {
 	}
 }
 
-// SwitchFallthrough shows off the **very** rarely used `fallthrough` keyword
+// Fallthrough shows off the **very** rarely used `fallthrough` keyword
 // in Go. If you're using `fallthrough` there's probably a better solution to
 // your problem.
-func SwitchFallthrough() {
+func Fallthrough() {
 	switch "three" {
 	case "three":
 		fmt.Println("Floor number three")
@@ -496,23 +496,23 @@ package switches_test
 
 import "basics/switches"
 
-func ExampleSwitchBasic() {
-	switches.SwitchBasic()
+func ExampleBasic() {
+	switches.Basic()
 	// Output:
 	// i does not have a matching case.
 }
 
-func ExampleSwitchMultiple() {
-	switches.SwitchMultiple()
+func ExampleMultiple() {
+	switches.Multiple()
 	// Output:
 	// Must have some Summer flare.
 }
 
-func ExampleSwitchType() {
-	switches.SwitchType(true)
-	switches.SwitchType(8)
-	switches.SwitchType([]string{"some", "strings"})
-	switches.SwitchType(struct{}{})
+func ExampleType() {
+	switches.Type(true)
+	switches.Type(8)
+	switches.Type([]string{"some", "strings"})
+	switches.Type(struct{}{})
 	// Output:
 	// You bool! I knew it was you all along.
 	// You seem like an int-eresting type.
@@ -520,14 +520,14 @@ func ExampleSwitchType() {
 	// We've never seen a struct {} like this.
 }
 
-func ExampleSwitchNoValue() {
-	switches.SwitchNoValue()
+func ExampleNoValue() {
+	switches.NoValue()
 	// Output:
 	// Looks like it's Spring!
 }
 
-func ExampleSwitchFallthrough() {
-	switches.SwitchFallthrough()
+func ExampleFallthrough() {
+	switches.Fallthrough()
 	// Output:
 	// Floor number three
 	// Floor number two

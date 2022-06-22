@@ -75,10 +75,10 @@ you made it do it or not, a `defer` statement will **always** be ran.
 #### panic_recover.go
 
 ```go
-// PanicAfterDefer shows that even if a panic occurs in a function a `defer`
+// AfterDefer shows that even if a panic occurs in a function a `defer`
 // statement will **always** execute. This is to make sure system resources are
 // cleaned up and why we can `recover` in the first place.
-func PanicAfterDefer() {
+func AfterDefer() {
 	defer fmt.Println("defer: Still print statement even with a panic")
 	panic("💣 TIME TO BLOW UP!!!")
 }
@@ -102,11 +102,11 @@ And then put it in `main()` to see we actually get `defer` output!
 We'll keep this example here just in case we ever want to see what we expect.
 
 ```go
-func ExamplePanicAfterDefer() {
+func ExampleAfterDefer() {
 	// NOTE(jay): No way to test output of a panic. That's **not** something you can
 	// make an example out of, but we can at least have one to look at by
 	// uncommenting 👇 the line below.
-	// pnr.PanicAfterDefer()
+	// pnr.AfterDefer()
 	// NOTE(jay): Would be Output:
 	// defer: Still print statement even with a panic
 	// panic: 💣 TIME TO BLOW UP!!!
@@ -142,10 +142,10 @@ that our function is the last thing ran before the `return` statement? A
 #### panic_recover.go
 
 ```go
-// PanicKeepCalm shows how we can `recover` from a `panic` by using a `defer`
+// KeepCalm shows how we can `recover` from a `panic` by using a `defer`
 // statement that calls `recover()`. You **must** put recover in a `defer`
 // statement or else it won't work.
-func PanicKeepCalm() {
+func KeepCalm() {
 	defer recuperate()
 	// NOTE(jay): This will not stop the panic
 	// recover()
@@ -162,8 +162,8 @@ func recuperate() {
 #### example_test.go
 
 ```go
-func ExamplePanicKeepCalm() {
-	pnr.PanicKeepCalm()
+func ExampleKeepCalm() {
+	pnr.KeepCalm()
 	// Output:
 	// recovered from: 😱 AWWW 💩WE'RE GOING DOWN!
 }
@@ -186,13 +186,13 @@ type myStruct struct{ cantAccess string }
 
 func (s *myStruct) CausePanic() string { return s.cantAccess }
 
-func PanicNilPointer() {
+func NilPointer() {
 	s := new(myStruct)
 	s = nil // NOTE(jay): Obviously dangerous, but it happens in mysterious ways.
 	fmt.Println(s.CausePanic())
 }
 
-func PanicNewMap() {
+func NewMap() {
 	m := new(map[string]string)
 	(*m)["nil map"] = "causes panic!"
 	// We actually want:
@@ -200,7 +200,7 @@ func PanicNewMap() {
 	// ma["not nil"] = "works"
 }
 
-func PanicIndexOut() {
+func IndexOut() {
 	daBomb := []string{"set", "us", "up", "da bomb."}
 	fmt.Println(daBomb[len(daBomb)])
 	// We actually want:
@@ -210,7 +210,7 @@ func PanicIndexOut() {
 
 ## Understanding Panic Stack Trace
 
-Let's cause a panic with `pnr.PanicIndexOut()` to get an index out of range.
+Let's cause a panic with `pnr.IndexOut()` to get an index out of range.
 
 ```text
 panic: runtime error: index out of range [4] with length 4
@@ -276,11 +276,11 @@ our `example_test.go`
 #### example_test.go
 
 ```go
-func ExamplePanicNilPointer() {
+func ExampleNilPointer() {
 	// NOTE(jay): No way to test output of a panic. That's **not** something you can
 	// make an example out of, but we can at least have one to look at by
 	// uncommenting 👇 the line below.
-	// pnr.PanicNilPointer()
+	// pnr.NilPointer()
 	// NOTE(jay): Would be Output:
 	// panic: runtime error: invalid memory address or nil pointer dereference [recovered]
 	//         panic: runtime error: invalid memory address or nil pointer dereference
@@ -295,9 +295,9 @@ func ExamplePanicNilPointer() {
 	//         /usr/lib/go/src/runtime/panic.go:838 +0x207
 	// basics/panic-recover.(*myStruct).CausePanic(...)
 	//         /home/jay/basics/panic-recover/panic_recover.go:25
-	// basics/panic-recover.PanicNilPointer()
+	// basics/panic-recover.NilPointer()
 	//         /home/jay/basics/panic-recover/panic_recover.go:30 +0x16
-	// basics/panic-recover_test.ExamplePanicNilPointer()
+	// basics/panic-recover_test.ExampleNilPointer()
 	//         /home/jay/basics/panic-recover/example_test.go:18 +0x17
 	// testing.runExample({{0x5201b1, 0x13}, 0x527dd0, {0x0, 0x0}, 0x0})
 	//         /usr/lib/go/src/testing/run_example.go:63 +0x28d
@@ -370,9 +370,9 @@ panic({0x5027e0, 0x5ef9f0})
         /usr/lib/go/src/runtime/panic.go:838 +0x207
 basics/panic-recover.(*myStruct).CausePanic(...)
         /home/jay/basics/panic-recover/panic_recover.go:25
-basics/panic-recover.PanicNilPointer()
+basics/panic-recover.NilPointer()
         /home/jay/basics/panic-recover/panic_recover.go:30 +0x16
-basics/panic-recover_test.ExamplePanicNilPointer()
+basics/panic-recover_test.ExampleNilPointer()
         /home/jay/basics/panic-recover/example_test.go:18 +0x17
 ```
 
@@ -434,18 +434,18 @@ import (
 	"fmt"
 )
 
-// PanicAfterDefer shows that even if a panic occurs in a function a `defer`
+// AfterDefer shows that even if a panic occurs in a function a `defer`
 // statement will **always** execute. This is to make sure system resources are
 // cleaned up and why we can `recover` in the first place.
-func PanicAfterDefer() {
+func AfterDefer() {
 	defer fmt.Println("defer: Still print statement even with a panic")
 	panic("💣 TIME TO BLOW UP!!!")
 }
 
-// PanicKeepCalm shows how we can `recover` from a `panic` by using a `defer`
+// KeepCalm shows how we can `recover` from a `panic` by using a `defer`
 // statement that calls `recover()`. You **must** put recover in a `defer`
 // statement or else it won't work.
-func PanicKeepCalm() {
+func KeepCalm() {
 	defer recuperate()
 	// NOTE(jay): This will not stop the panic
 	// recover()
@@ -462,13 +462,13 @@ type myStruct struct{ cantAccess string }
 
 func (s *myStruct) CausePanic() string { return s.cantAccess }
 
-func PanicNilPointer() {
+func NilPointer() {
 	s := new(myStruct)
 	s = nil // NOTE(jay): Obviously dangerous, but it happens in mysterious ways.
 	fmt.Println(s.CausePanic())
 }
 
-func PanicNewMap() {
+func NewMap() {
 	m := new(map[string]string)
 	(*m)["nil map"] = "causes panic!"
 	// We actually want:
@@ -476,7 +476,7 @@ func PanicNewMap() {
 	// ma["not nil"] = "works"
 }
 
-func PanicIndexOut() {
+func IndexOut() {
 	daBomb := []string{"set", "us", "up", "da bomb."}
 	fmt.Println(daBomb[len(daBomb)])
 	// We actually want:
@@ -495,27 +495,27 @@ import (
 	pnr "basics/panic-recover"
 )
 
-func ExamplePanicAfterDefer() {
+func ExampleAfterDefer() {
 	// NOTE(jay): No way to test output of a panic. That's **not** something you can
 	// make an example out of, but we can at least have one to look at by
 	// uncommenting 👇 the line below.
-	// pnr.PanicAfterDefer()
+	// pnr.AfterDefer()
 	// NOTE(jay): Would be Output:
 	// defer: Still print statement even with a panic
 	// panic: 💣 TIME TO BLOW UP!!!
 }
 
-func ExamplePanicKeepCalm() {
-	pnr.PanicKeepCalm()
+func ExampleKeepCalm() {
+	pnr.KeepCalm()
 	// Output:
 	// recovered from: 😱 AWWW 💩WE'RE GOING DOWN!
 }
 
-func ExamplePanicNilPointer() {
+func ExampleNilPointer() {
 	// NOTE(jay): No way to test output of a panic. That's **not** something you can
 	// make an example out of, but we can at least have one to look at by
 	// uncommenting 👇 the line below.
-	// pnr.PanicNilPointer()
+	// pnr.NilPointer()
 	// NOTE(jay): Would be Output:
 	// panic: runtime error: invalid memory address or nil pointer dereference [recovered]
 	//         panic: runtime error: invalid memory address or nil pointer dereference
@@ -530,9 +530,9 @@ func ExamplePanicNilPointer() {
 	//         /usr/lib/go/src/runtime/panic.go:838 +0x207
 	// basics/panic-recover.(*myStruct).CausePanic(...)
 	//         /home/jay/basics/panic-recover/panic_recover.go:25
-	// basics/panic-recover.PanicAnatomy()
+	// basics/panic-recover.Anatomy()
 	//         /home/jay/basics/panic-recover/panic_recover.go:30 +0x16
-	// basics/panic-recover_test.ExamplePanicAnatomy()
+	// basics/panic-recover_test.ExampleAnatomy()
 	//         /home/jay/basics/panic-recover/example_test.go:18 +0x17
 	// testing.runExample({{0x5201b1, 0x13}, 0x527dd0, {0x0, 0x0}, 0x0})
 	//         /usr/lib/go/src/testing/run_example.go:63 +0x28d

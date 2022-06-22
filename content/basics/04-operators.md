@@ -57,9 +57,9 @@ they get back. You've definitely been a comparison operator in your life.
 #### operators.go
 
 ```go
-// OperatorsComparison shows how to compare values in programming. This is
+// Comparison shows how to compare values in programming. This is
 // essential part of development and for control flow.
-func OperatorsComparison() {
+func Comparison() {
 	const (
 		trueVal  = true
 		falseVal = false
@@ -109,8 +109,8 @@ func OperatorsComparison() {
 #### example_test.go
 
 ```go
-func ExampleOperatorsComparison() {
-	operators.OperatorsComparison()
+func ExampleComparison() {
+	operators.Comparison()
 	// Output:
 	// trueVal == falseVal: false
 	// Is trueVal equal to falseVal? false
@@ -185,60 +185,64 @@ negate sentences! That wouldn't 👈work well🙃 I just used not 👈twice 😂
 #### operators.go
 
 ```go
-// OperatorsComparison shows how to compare values in programming. This is
-// essential part of development and for control flow.
-func OperatorsComparison() {
-	const (
-		trueVal  = true
-		falseVal = false
-	)
-	fmt.Printf("trueVal == falseVal: %t\n"+
-		"Is trueVal equal to falseVal? false\n",
-		trueVal == falseVal)
-	fmt.Printf("trueVal != falseVal: %t\n"+
-		"Is trueVal NOT equal to falseVal? true\n",
-		trueVal != falseVal)
+// Logical shows how to introduce more granular logic into your
+// program with the logical operators.
+func Logical() {
+	theAnswer := '*'
+	toTheUniverse := 42
+	percentC := 42
+	percentD := 42
+	// BOTH statements must evaluate to the `bool` true or it will output false.
+	fmt.Printf("Is the answer to the universe as rune %c or as int %d? %t\n",
+		percentC, percentD, theAnswer == 42 && toTheUniverse == '*')
+	fmt.Printf("Is 84 NOT equal to 84 AND something true? %t\n",
+		84 != 84 && true)
 	fmt.Println()
 
-	const (
-		name1 = "Goober"
-		name2 = "Goomba"
-	)
-	fmt.Printf("name1 == name2: %t\nIs name1 equal to name2? false\n",
-		name1 == name2)
-	fmt.Printf("name1 != name2: %t\nIs name1 NOT equal to name2? true\n",
-		name1 != name2)
+	this := "Some Value"
+	that := "Other Value"
+	lastRuneThis := this[len(this)-1]
+	lastRuneThat := that[len(that)-1]
+	// One of the statements must be true for the output to be true.
+	fmt.Printf("Is one of these statements true?\n"+
+		`1. %q == "Some Value" OR 2. %q == "DOESN'T MATTER"`+
+		"?\nAnswer: %t\n", this, that,
+		this == "Some Value" || that == "DOESN'T MATTER")
+
+	fmt.Printf("If the second one is true?\n"+
+		`1. %q == "FALSE" OR 2. %q == "Other Value"`+
+		"?\nAnswer: %t\n", this, that,
+		this == "Some Value" || that == "DOESN'T MATTER")
+
+	fmt.Printf("How many can we use?\n"+
+		"1. %q == %q OR 2. %c == %c OR 3. %d == %d OR 4. %c == %c\n Answer: %t\n",
+		this, that, this[0], that[0], 64, 640, lastRuneThis, lastRuneThat,
+		this == that || this[0] == that[0] || 42+24 == 640 || lastRuneThis == lastRuneThat)
 	fmt.Println()
 
-	const (
-		bigNum  = 100000
-		lilNum1 = 10
-		lilNum2 = 10
-	)
-	fmt.Printf("lilNum1 == lilNum2: %t\nIs lilNum1 equal to lilNum2? true\n",
-		lilNum1 == lilNum2)
-	fmt.Printf("lilNum1 != lilNum2: %t\nIs lilNum1 NOT equal to lilNum2? false\n",
-		lilNum1 != lilNum2)
-	fmt.Println()
-
-	fmt.Printf("lilNum1 < bigNum: %t\nIs lilNum1 less than bigNum? true\n",
-		lilNum1 < bigNum)
-	fmt.Printf("bigNum > lilNum2: %t\nIs bigNum greater than lilNum2? true\n",
-		bigNum > lilNum2)
+	goodFood := true
+	badSmell := false
+	fmt.Printf("Would you eat goodFood? %t\nWhat if it smelled bad? %t\n",
+		goodFood, badSmell)
 	fmt.Printf(
-		"lilNum1 <= lilNum2: %t\nIs lilNum1 less than or equal to lilNum2? true\n",
-		lilNum1 <= lilNum2)
-	fmt.Printf("lilNum1 >= lilNum2: %t\n"+
-		"Is lilNum1 greater than or equal to lilNum2? true\n",
-		lilNum1 >= lilNum2)
+		"Would you eat NOT goodFood? %t\nWhat if it did NOT smell bad? %t\n",
+		!goodFood, !badSmell)
+
+	fmt.Printf(
+		"🤔 What if it was NOT goodFood, but it did NOT smellBad? %t\n",
+		!goodFood || !badSmell)
+
+	fmt.Printf(
+		"🤔 What if it was goodFood AND it did NOT smellBad? %t\n",
+		goodFood && !badSmell)
 }
 ```
 
 #### example_test.go
 
 ```go
-func ExampleOperatorsLogical() {
-	operators.OperatorsLogical()
+func ExampleLogical() {
+	operators.Logical()
 	// Output:
 	// Is the answer to the universe as rune * or as int 42? true
 	// Is 84 NOT equal to 84 AND something true? false
@@ -308,9 +312,9 @@ We've made sure we never go past 2! Pretty cool right ⁉️ 😁
 #### operators.go
 
 ```go
-// OperatorsArithmetic shows that all of the operators you know and love ❤️ from
+// Arithmetic shows that all of the operators you know and love ❤️ from
 // math class 🫠 still work the same as in class.
-func OperatorsArithmetic() {
+func Arithmetic() {
 	var (
 		myInt     = 21
 		myFloat   = 6.28
@@ -352,8 +356,8 @@ func OperatorsArithmetic() {
 #### example_test.go
 
 ```go
-func ExampleOperatorsArithmetic() {
-	operators.OperatorsArithmetic()
+func ExampleArithmetic() {
+	operators.Arithmetic()
 	// Output:
 	// nine plus ten does NOT equal twenty-one
 	// 9 + 10 != 21: true
@@ -394,9 +398,9 @@ multiplying strings. The reason? Let's use an example: How do you multiply
 #### operators.go
 
 ```go
-// OperatorsString shows the only operator that works with the `string` type,
+// String shows the only operator that works with the `string` type,
 // which is the `+` operator or concatenation
-func OperatorsString() {
+func String() {
 	const blt = "Bacon🥓Lettuce🥬Tomato🍅"
 	var (
 		t  = "Tomato🍅"
@@ -415,8 +419,8 @@ func OperatorsString() {
 #### example_test.go
 
 ```go
-func ExampleOperatorsString() {
-	operators.OperatorsString()
+func ExampleString() {
+	operators.String()
 	// Output:
 	// Bacon🥓Lettuce🥬Tomato🍅 == Bacon🥓Lettuce🥬Tomato🍅: true
 	// Is blt equal to bl+t? true
@@ -436,7 +440,7 @@ operators are going to make sense.
 These operators are _rarely_ used in Backend applications. They are useful when
 you are trying to squeeeeeze out every single iota of performance. Efficiency
 matters with things like games 🎮 or cryptography🔑, creating compilers, or
-even creating a database engines. So if you're looking to get into those fields
+even creating database engines. So if you're looking to get into those fields
 you might want to look into this deeper and listen 👂 up!
 
 You'll notice in Go we can represent numbers in their binary format by
@@ -486,10 +490,10 @@ so Let's Go! 😀
 #### operators.go
 
 ```go
-// OperatorBitwise shows how to manipulate the bits of integer types:
+// Bitwise shows how to manipulate the bits of integer types:
 // `int`, int8`, `int16`, `int32`, `int64`,
 // `uint`, uint8`, `uint16`, `uint32`, `uint64`,
-func OperatorBitwise() {
+func Bitwise() {
 	// bitwise AND -- & -- works just like logical AND -- &&
 	// BOTH statements must be true to output true otherwise it's false
 	// BOTH numbers must be one to output one otherwise it's zero
@@ -541,32 +545,37 @@ func OperatorBitwise() {
 #### example_test.go
 
 ```go
-func ExampleOperatorsComparison() {
-	operators.OperatorsComparison()
-	// Output:
-	// trueVal == falseVal: false
-	// Is trueVal equal to falseVal? false
-	// trueVal != falseVal: true
-	// Is trueVal NOT equal to falseVal? true
+func ExampleBitwise() {
+	operators.Bitwise()
+	//Output:
+	// 1011111101 &
+	// 1101010011 ==
+	// 1001010001
+	// Bonus as an int 593
 	//
-	// name1 == name2: false
-	// Is name1 equal to name2? false
-	// name1 != name2: true
-	// Is name1 NOT equal to name2? true
+	// 1111100000 |
+	// 0000011111 ==
+	// 1111111111
+	// Bonus as an int 1023
 	//
-	// lilNum1 == lilNum2: true
-	// Is lilNum1 equal to lilNum2? true
-	// lilNum1 != lilNum2: false
-	// Is lilNum1 NOT equal to lilNum2? false
+	// 010111110000 ^
+	// 101011110000 ==
+	// 111100000000
+	// Bonus as an int 3840
 	//
-	// lilNum1 < bigNum: true
-	// Is lilNum1 less than bigNum? true
-	// bigNum > lilNum2: true
-	// Is bigNum greater than lilNum2? true
-	// lilNum1 <= lilNum2: true
-	// Is lilNum1 less than or equal to lilNum2? true
-	// lilNum1 >= lilNum2: true
-	// Is lilNum1 greater than or equal to lilNum2? true
+	// 111111111111 &^
+	// 000001111000 ==
+	// 111110000111
+	// Bonus as an int 3975
+	//
+	// Shift all bits one left
+	// 0100100101 << 1 ==
+	// 1001001010
+	// Bonus as an int 586
+	// Shift all bits two right
+	// 0100100101 >> 2 ==
+	// 0001001001
+	// Bonus as an int 73
 }
 ```
 
@@ -581,9 +590,9 @@ import (
 	"fmt"
 )
 
-// OperatorsComparison shows how to compare values in programming. This is
+// Comparison shows how to compare values in programming. This is
 // essential part of development and for control flow.
-func OperatorsComparison() {
+func Comparison() {
 	const (
 		trueVal  = true
 		falseVal = false
@@ -629,9 +638,9 @@ func OperatorsComparison() {
 		lilNum1 >= lilNum2)
 }
 
-// OperatorsLogical shows how to introduce more granular logic into your
+// Logical shows how to introduce more granular logic into your
 // program with the logical operators.
-func OperatorsLogical() {
+func Logical() {
 	theAnswer := '*'
 	toTheUniverse := 42
 	percentC := 42
@@ -681,9 +690,9 @@ func OperatorsLogical() {
 		goodFood && !badSmell)
 }
 
-// OperatorsArithmetic shows that all of the operators you know and love ❤️ from
+// Arithmetic shows that all of the operators you know and love ❤️ from
 // math class 🫠 still work the same as in class.
-func OperatorsArithmetic() {
+func Arithmetic() {
 	var (
 		myInt     = 21
 		myFloat   = 6.28
@@ -721,9 +730,9 @@ func OperatorsArithmetic() {
 		myInt, myInt, myInt%21)
 }
 
-// OperatorsString shows the only operator that works with the `string` type,
+// String shows the only operator that works with the `string` type,
 // which is the `+` operator or concatenation
-func OperatorsString() {
+func String() {
 	const blt = "Bacon🥓Lettuce🥬Tomato🍅"
 	var (
 		t  = "Tomato🍅"
@@ -738,10 +747,10 @@ func OperatorsString() {
 		blt, bl, blt == bl)
 }
 
-// OperatorBitwise shows how to manipulate the bits of integer types:
+// Bitwise shows how to manipulate the bits of integer types:
 // `int`, int8`, `int16`, `int32`, `int64`,
 // `uint`, uint8`, `uint16`, `uint32`, `uint64`,
-func OperatorBitwise() {
+func Bitwise() {
 	// bitwise AND -- & -- works just like logical AND -- &&
 	// BOTH statements must be true to output true otherwise it's false
 	// BOTH numbers must be one to output one otherwise it's zero
@@ -799,8 +808,8 @@ package operators_test
 
 import "basics/operators"
 
-func ExampleOperatorsComparison() {
-	operators.OperatorsComparison()
+func ExampleComparison() {
+	operators.Comparison()
 	// Output:
 	// trueVal == falseVal: false
 	// Is trueVal equal to falseVal? false
@@ -827,8 +836,8 @@ func ExampleOperatorsComparison() {
 	// Is lilNum1 greater than or equal to lilNum2? true
 }
 
-func ExampleOperatorsLogical() {
-	operators.OperatorsLogical()
+func ExampleLogical() {
+	operators.Logical()
 	// Output:
 	// Is the answer to the universe as rune * or as int 42? true
 	// Is 84 NOT equal to 84 AND something true? false
@@ -851,8 +860,8 @@ func ExampleOperatorsLogical() {
 	// 🤔 What if it was goodFood AND it did NOT smellBad? true
 }
 
-func ExampleOperatorsArithmetic() {
-	operators.OperatorsArithmetic()
+func ExampleArithmetic() {
+	operators.Arithmetic()
 	// Output:
 	// nine plus ten does NOT equal twenty-one
 	// 9 + 10 != 21: true
@@ -872,8 +881,8 @@ func ExampleOperatorsArithmetic() {
 	// What whole number remains when I try to divide 21 by 21? 0
 }
 
-func ExampleOperatorsString() {
-	operators.OperatorsString()
+func ExampleString() {
+	operators.String()
 	// Output:
 	// Bacon🥓Lettuce🥬Tomato🍅 == Bacon🥓Lettuce🥬Tomato🍅: true
 	// Is blt equal to bl+t? true
@@ -881,8 +890,8 @@ func ExampleOperatorsString() {
 	// Is blt NOT equal to bl? true
 }
 
-func ExampleOperatorBitwise() {
-	operators.OperatorBitwise()
+func ExampleBitwise() {
+	operators.Bitwise()
 	//Output:
 	// 1011111101 &
 	// 1101010011 ==

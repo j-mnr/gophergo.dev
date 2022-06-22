@@ -71,9 +71,9 @@ statement is executed.
 #### defers.go
 
 ```go
-// DeferRunAtEnd shows that using the `defer` keyword will make that function
+// RunAtEnd shows that using the `defer` keyword will make that function
 // run at the very end of our function.
-func DeferRunAtEnd() {
+func RunAtEnd() {
 	defer fmt.Println("defer: this is the first line, but the last output.")
 	fmt.Println("This is the second line, but first to be printed.")
 	fmt.Println("A couple of more lines for good measure.")
@@ -84,8 +84,8 @@ func DeferRunAtEnd() {
 #### example_test.go
 
 ```go
-func ExampleDeferRunAtEnd() {
-	defers.DeferRunAtEnd()
+func ExampleRunAtEnd() {
+	defers.RunAtEnd()
 	// Output:
 	// This is the second line, but first to be printed.
 	// A couple of more lines for good measure.
@@ -110,9 +110,9 @@ same as the books we remove book 3📕 and then book 2📗 to get book 1 📘
 #### defers.go
 
 ```go
-// DeferLIFO shows that if using multiple defers they work in a Last In First
+// LIFO shows that if using multiple defers they work in a Last In First
 // Out (LIFO) fashion.
-func DeferLIFO() {
+func LIFO() {
 	defer fmt.Println("First In. Third Out")
 	fmt.Println("Random line 1")
 	fmt.Println("Random line 2")
@@ -125,8 +125,8 @@ func DeferLIFO() {
 #### example_test.go
 
 ```go
-func ExampleDeferLIFO() {
-	defers.DeferLIFO()
+func ExampleLIFO() {
+	defers.LIFO()
 	// Output:
 	// Random line 1
 	// Random line 2
@@ -154,10 +154,10 @@ the big function `F` or where you declare it...? Let's find out 😏
 #### defers.go
 
 ```go
-// DeferArgumentsEvaluated shows the arguments passed to a `defer`'s function
+// ArgumentsEvaluated shows the arguments passed to a `defer`'s function
 // are immediately evaluated and not evaluated at the end of the function's
 // lifetime
-func DeferArgumentsEvaluated() {
+func ArgumentsEvaluated() {
 	whatWillIBe := 42
 	defer fmt.Println("Number in defer:", whatWillIBe)
 	whatWillIBe = 9001
@@ -168,8 +168,8 @@ func DeferArgumentsEvaluated() {
 #### example_test.go
 
 ```go
-func ExampleDeferArgumentsEvaluated() {
-	defers.DeferArgumentsEvaluated()
+func ExampleArgumentsEvaluated() {
+	defers.ArgumentsEvaluated()
 	// Output:
 	// Number at end of function: 9001
 	// Number in defer: 42
@@ -198,18 +198,18 @@ Yeah, I told you 😵
 #### defers.go
 
 ```go
-// DeferNamedReturn shows that before we return a named value, if we change it
+// NamedReturn shows that before we return a named value, if we change it
 // in a deferred function, it will change it before returning the value.
-// Compare with DeferReturn.
-func DeferNamedReturn() (gi string) {
+// Compare with Return.
+func NamedReturn() (gi string) {
 	gi = "Golden Idol"
 	defer indianaJones(&gi)
 	return gi
 }
 
-// DeferReturn shows that depending on the scope, in the function or out of the
-// function, the return value will change. Compare with DeferNamedReturn.
-func DeferReturn() string {
+// Return shows that depending on the scope, in the function or out of the
+// function, the return value will change. Compare with NamedReturn.
+func Return() string {
 	gi := "Golden Idol"
 	defer indianaJones(&gi)
 	return gi
@@ -221,13 +221,13 @@ func indianaJones(s *string) { *s = "Bag of sand" }
 #### example_test.go
 
 ```go
-func ExampleDeferNamedReturn() {
-	fmt.Println(defers.DeferNamedReturn())
+func ExampleNamedReturn() {
+	fmt.Println(defers.NamedReturn())
 	// Output: Bag of sand
 }
 
-func ExampleDeferReturn() {
-	fmt.Println(defers.DeferReturn())
+func ExampleReturn() {
+	fmt.Println(defers.Return())
 	// Output: Golden Idol
 }
 ```
@@ -257,9 +257,9 @@ next topic has lots of examples of where we use `defer` in Go.
 #### defers.go
 
 ```go
-// DeferRecoverPanic shows how to recover from a panic by using a `defer`
+// RecoverPanic shows how to recover from a panic by using a `defer`
 // statement and the `recover` keyword that will be covered in the next lesson.
-func DeferRecoverPanic(calmdown bool) {
+func RecoverPanic(calmdown bool) {
 	if calmdown {
 		defer recuperate()
 	}
@@ -281,10 +281,10 @@ func recuperate() {
 #### example_test.go
 
 ```go
-func ExampleDeferRecoverPanic() {
+func ExampleRecoverPanic() {
 	// NOTE(jay): Uncomment this if you're a brave soul 🫣
-	// defers.DeferRecoverPanic(false)
-	defers.DeferRecoverPanic(true)
+	// defers.RecoverPanic(false)
+	defers.RecoverPanic(true)
 	// Output: Recovered from: WE'RE ALL GOING DOWN, THIS IS THE END!!!
 }
 ```
@@ -309,9 +309,9 @@ meant more as a sample set to open your mind 🤯 to the possibilities of
 ##### defers.go
 
 ```go
-// DeferFileClose shows that we **always close** file descriptors after we open
+// FileClose shows that we **always close** file descriptors after we open
 // them.
-func DeferFileClose() {
+func FileClose() {
 	f, err := os.OpenFile("example.txt", os.O_RDWR|os.O_CREATE, 0744)
 	if err != nil {
 		fmt.Println(err)
@@ -336,8 +336,8 @@ func closeFile(f *os.File) {
 ##### example_test.go
 
 ```go
-func ExampleDeferFileClose() {
-	defers.DeferFileClose()
+func ExampleFileClose() {
+	defers.FileClose()
 	f, err := os.Open("example.txt")
 	if err != nil {
 		fmt.Println(err)
@@ -355,10 +355,10 @@ func ExampleDeferFileClose() {
 ##### defers.go
 
 ```go
-// DeferTempFileRemoveClose shows that with a temp file (and temp directories)
+// TempFileRemoveClose shows that with a temp file (and temp directories)
 // we should clean up after ourselves by removing the file and closing the file
 // descriptor.... **Always remove and close** temp file descriptors.
-func DeferTempFileRemoveClose() {
+func TempFileRemoveClose() {
 	f, err := os.CreateTemp(".", "tempfile")
 	if err != nil {
 		fmt.Println(err)
@@ -379,8 +379,8 @@ func removeFile(f *os.File) {
 ##### example_test.go
 
 ```go
-func ExampleDeferTempFileRemoveClose() {
-	defers.DeferTempFileRemoveClose()
+func ExampleTempFileRemoveClose() {
+	defers.TempFileRemoveClose()
 	// Output:
 	// closing
 	// removing
@@ -392,9 +392,9 @@ func ExampleDeferTempFileRemoveClose() {
 ##### defers.go
 
 ```go
-// DeferHTTPBodyClose shows that we **always close** our `*http.Response` body
+// HTTPBodyClose shows that we **always close** our `*http.Response` body
 // after it successfully completes.
-func DeferHTTPBodyClose() {
+func HTTPBodyClose() {
 	res, err := http.Get("https://gophergo.dev")
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "error: %v\n", err)
@@ -412,8 +412,8 @@ func DeferHTTPBodyClose() {
 ##### example_test.go
 
 ```go
-func ExampleDeferHTTPBodyClose() {
-	defers.DeferHTTPBodyClose()
+func ExampleHTTPBodyClose() {
+	defers.HTTPBodyClose()
 	// Output: Does the first 4KiB of data have Gopher Go in it? true
 }
 ```
@@ -423,10 +423,10 @@ func ExampleDeferHTTPBodyClose() {
 ##### defers.go
 
 ```go
-// DeferCancelContext shows a contrived way of canceling a context. Though it
+// CancelContext shows a contrived way of canceling a context. Though it
 // is a toy example, it is still very important that you **always cancel** your
 // context after you're done using it.
-func DeferCancelContext(d time.Duration) {
+func CancelContext(d time.Duration) {
 	ctx := context.Background()
 	ctx, cancel := context.WithTimeout(ctx, 10*time.Millisecond)
 	defer cancel()
@@ -443,9 +443,9 @@ func DeferCancelContext(d time.Duration) {
 ##### example_test.go
 
 ```go
-func ExampleDeferCancelContext() {
-	defers.DeferCancelContext(300 * time.Millisecond)
-	defers.DeferCancelContext(5 * time.Millisecond)
+func ExampleCancelContext() {
+	defers.CancelContext(300 * time.Millisecond)
+	defers.CancelContext(5 * time.Millisecond)
 	// Output:
 	// You're too slow!!!
 	// Don't forget to cancel!
@@ -520,18 +520,18 @@ import (
 	"time"
 )
 
-// DeferRunAtEnd shows that using the `defer` keyword will make that function
+// RunAtEnd shows that using the `defer` keyword will make that function
 // run at the very end of our function.
-func DeferRunAtEnd() {
+func RunAtEnd() {
 	defer fmt.Println("defer: this is the first line, but the last output.")
 	fmt.Println("This is the second line, but first to be printed.")
 	fmt.Println("A couple of more lines for good measure.")
 	fmt.Println("Never hurt anyone.")
 }
 
-// DeferLIFO shows that if using multiple defers they work in a Last In First
+// LIFO shows that if using multiple defers they work in a Last In First
 // Out (LIFO) fashion.
-func DeferLIFO() {
+func LIFO() {
 	defer fmt.Println("First In. Third Out")
 	fmt.Println("Random line 1")
 	fmt.Println("Random line 2")
@@ -540,28 +540,28 @@ func DeferLIFO() {
 	defer fmt.Println("Third In. First Out")
 }
 
-// DeferArgumentsEvaluated shows the arguments passed to a `defer`'s function
+// ArgumentsEvaluated shows the arguments passed to a `defer`'s function
 // are immediately evaluated and not evaluated at the end of the function's
 // lifetime
-func DeferArgumentsEvaluated() {
+func ArgumentsEvaluated() {
 	whatWillIBe := 42
 	defer fmt.Println("Number in defer:", whatWillIBe)
 	whatWillIBe = 9001
 	fmt.Println("Number at end of function:", whatWillIBe)
 }
 
-// DeferNamedReturn shows that before we return a named value, if we change it
+// NamedReturn shows that before we return a named value, if we change it
 // in a deferred function, it will change it before returning the value.
-// Compare with DeferReturn.
-func DeferNamedReturn() (gi string) {
+// Compare with Return.
+func NamedReturn() (gi string) {
 	gi = "Golden Idol"
 	defer indianaJones(&gi)
 	return gi
 }
 
-// DeferReturn shows that depending on the scope, in the function or out of the
-// function, the return value will change. Compare with DeferNamedReturn.
-func DeferReturn() string {
+// Return shows that depending on the scope, in the function or out of the
+// function, the return value will change. Compare with NamedReturn.
+func Return() string {
 	gi := "Golden Idol"
 	defer indianaJones(&gi)
 	return gi
@@ -569,9 +569,9 @@ func DeferReturn() string {
 
 func indianaJones(s *string) { *s = "Bag of sand" }
 
-// DeferRecoverPanic shows how to recover from a panic by using a `defer`
+// RecoverPanic shows how to recover from a panic by using a `defer`
 // statement and the `recover` keyword that will be covered in the next lesson.
-func DeferRecoverPanic(calmdown bool) {
+func RecoverPanic(calmdown bool) {
 	if calmdown {
 		defer recuperate()
 	}
@@ -589,9 +589,9 @@ func recuperate() {
 	}
 }
 
-// DeferFileClose shows that we **always close** file descriptors after we open
+// FileClose shows that we **always close** file descriptors after we open
 // them.
-func DeferFileClose() {
+func FileClose() {
 	f, err := os.OpenFile("example.txt", os.O_RDWR|os.O_CREATE, 0744)
 	if err != nil {
 		fmt.Println(err)
@@ -612,10 +612,10 @@ func closeFile(f *os.File) {
 	}
 }
 
-// DeferTempFileRemoveClose shows that with a temp file (and temp directories)
+// TempFileRemoveClose shows that with a temp file (and temp directories)
 // we should clean up after ourselves by removing the file and closing the file
 // descriptor.... **Always remove and close** temp file descriptors.
-func DeferTempFileRemoveClose() {
+func TempFileRemoveClose() {
 	f, err := os.CreateTemp(".", "tempfile")
 	if err != nil {
 		fmt.Println(err)
@@ -632,9 +632,9 @@ func removeFile(f *os.File) {
 	}
 }
 
-// DeferHTTPBodyClose shows that we **always close** our `*http.Response` body
+// HTTPBodyClose shows that we **always close** our `*http.Response` body
 // after it successfully completes.
-func DeferHTTPBodyClose() {
+func HTTPBodyClose() {
 	res, err := http.Get("https://gophergo.dev")
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "error: %v\n", err)
@@ -648,10 +648,10 @@ func DeferHTTPBodyClose() {
 		bytes.Contains(buf, []byte("Gopher Go")))
 }
 
-// DeferCancelContext shows a contrived way of canceling a context. Though it
+// CancelContext shows a contrived way of canceling a context. Though it
 // is a toy example, it is still very important that you **always cancel** your
 // context after you're done using it.
-func DeferCancelContext(d time.Duration) {
+func CancelContext(d time.Duration) {
 	ctx := context.Background()
 	ctx, cancel := context.WithTimeout(ctx, 10*time.Millisecond)
 	defer cancel()
@@ -712,8 +712,8 @@ import (
 	"time"
 )
 
-func ExampleDeferRunAtEnd() {
-	defers.DeferRunAtEnd()
+func ExampleRunAtEnd() {
+	defers.RunAtEnd()
 	// Output:
 	// This is the second line, but first to be printed.
 	// A couple of more lines for good measure.
@@ -721,8 +721,8 @@ func ExampleDeferRunAtEnd() {
 	// defer: this is the first line, but the last output.
 }
 
-func ExampleDeferLIFO() {
-	defers.DeferLIFO()
+func ExampleLIFO() {
+	defers.LIFO()
 	// Output:
 	// Random line 1
 	// Random line 2
@@ -732,34 +732,34 @@ func ExampleDeferLIFO() {
 	// First In. Third Out
 }
 
-func ExampleDeferArgumentsEvaluated() {
-	defers.DeferArgumentsEvaluated()
+func ExampleArgumentsEvaluated() {
+	defers.ArgumentsEvaluated()
 	// Output:
 	// Number at end of function: 9001
 	// Number in defer: 42
 }
 
-func ExampleDeferNamedReturn() {
-	fmt.Println(defers.DeferNamedReturn())
+func ExampleNamedReturn() {
+	fmt.Println(defers.NamedReturn())
 	// Output: Bag of sand
 }
 
-func ExampleDeferReturn() {
-	fmt.Println(defers.DeferReturn())
+func ExampleReturn() {
+	fmt.Println(defers.Return())
 	// Output: Golden Idol
 }
 
-func ExampleDeferRecoverPanic() {
+func ExampleRecoverPanic() {
 	// NOTE(jay): Uncomment this if you're a brave soul 🫣
-	// defers.DeferRecoverPanic(false)
-	defers.DeferRecoverPanic(true)
+	// defers.RecoverPanic(false)
+	defers.RecoverPanic(true)
 	// Output: Recovered from: WE'RE ALL GOING DOWN, THIS IS THE END!!!
 }
 
 // Honorable Mentions /////////////////////////////////////////////////////////
 
-func ExampleDeferFileClose() {
-	defers.DeferFileClose()
+func ExampleFileClose() {
+	defers.FileClose()
 	f, err := os.Open("example.txt")
 	if err != nil {
 		fmt.Println(err)
@@ -771,21 +771,21 @@ func ExampleDeferFileClose() {
 	// Reading contents of example.txt: 👋 🌏
 }
 
-func ExampleDeferTempFileRemoveClose() {
-	defers.DeferTempFileRemoveClose()
+func ExampleTempFileRemoveClose() {
+	defers.TempFileRemoveClose()
 	// Output:
 	// closing
 	// removing
 }
 
-func ExampleDeferHTTPBodyClose() {
-	defers.DeferHTTPBodyClose()
+func ExampleHTTPBodyClose() {
+	defers.HTTPBodyClose()
 	// Output: Does the first 4KiB of data have Gopher Go in it? true
 }
 
-func ExampleDeferCancelContext() {
-	defers.DeferCancelContext(300 * time.Millisecond)
-	defers.DeferCancelContext(5 * time.Millisecond)
+func ExampleCancelContext() {
+	defers.CancelContext(300 * time.Millisecond)
+	defers.CancelContext(5 * time.Millisecond)
 	// Output:
 	// You're too slow!!!
 	// Don't forget to cancel!

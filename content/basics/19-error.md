@@ -67,10 +67,10 @@ let's start with the easier approach and use what's in the language.
 #### errs.go
 
 ```go
-// ErrorNew returns an error based on the way we want it to be made. Which can
+// New returns an error based on the way we want it to be made. Which can
 // be done with the standard `errors` package or for more formatting options
 // the `fmt` package. If the way is not recognized nil is returned.
-func ErrorNew(way string) error {
+func New(way string) error {
 	switch way {
 	case "fmt":
 		return fmt.Errorf("we can use fmt to have formatting verbs: %q", way)
@@ -89,13 +89,13 @@ Notice the `type` shown with our `%#v` formatting verb is an
 familiar?](/basics/14-struct/#example_testgo-1) 😏
 
 ```go
-func ExampleErrorNew() {
+func ExampleNew() {
 	fmt.Printf(
 		"%v\n%#v\n%#v\n%+v\n",
-		errs.ErrorNew("fmt"),
-		errs.ErrorNew("fmt"),
-		errs.ErrorNew("errors"),
-		errs.ErrorNew("🤷"),
+		errs.New("fmt"),
+		errs.New("fmt"),
+		errs.New("errors"),
+		errs.New("🤷"),
 	)
 	// Output:
 	// we can use fmt to have formatting verbs: "fmt"
@@ -145,10 +145,10 @@ func (e realError) Error() string {
 	return "this is a real error that can be returned if something goes wrong"
 }
 
-// ErrorCustom shows that implementing the builtin error interface is very easy
+// Custom shows that implementing the builtin error interface is very easy
 // to do and can be used to return custom errors instead of the most common
 // unexported `errorString` struct in the `errors` package.
-func ErrorCustom() error {
+func Custom() error {
 	return realError(true)
 }
 ```
@@ -160,8 +160,8 @@ The same way `fmt.Println` and friends use the `String() string` method of a
 us automatically. 👌 Nice touch Go 👍
 
 ```go
-func ExampleErrorCustom() {
-	if err := errs.ErrorCustom(); err != nil {
+func ExampleCustom() {
+	if err := errs.Custom(); err != nil {
 		fmt.Println(err)
 	}
 	// Output: this is a real error that can be returned if something goes wrong
@@ -238,10 +238,10 @@ func (w UndeadWarrior) Bearer() string {
 
 func (w UndeadWarrior) String() string { return w.Bearer() }
 
-// ErrorManyCustoms shows how to deal with many custom errors in a single
+// ManyCustoms shows how to deal with many custom errors in a single
 // function and shows that errors are just values that are returned by also
 // returning a bearer which is very similar in behavior to an error.
-func ErrorManyCustoms(n uint32, phoneNo string, ltr rune) (bearer, error) {
+func ManyCustoms(n uint32, phoneNo string, ltr rune) (bearer, error) {
 	if n > uint32(math.Pow(2, 31)) {
 		return nil, TooBigError(n)
 	}
@@ -267,18 +267,18 @@ Here we drive the point home that we return both `bearer` and `error` which are
 two unexported interfaces with eerily similar methods to each other.
 
 ```go
-func ExampleErrorManyCustoms() {
-	if _, err := errs.ErrorManyCustoms(
+func ExampleManyCustoms() {
+	if _, err := errs.ManyCustoms(
 		uint32(math.Pow(2, 32)-1), "(555)867-5309", 'A'); err != nil {
 		fmt.Println(err)
 	}
-	if _, err := errs.ErrorManyCustoms(0xff, "(555)67-5309", 'z'); err != nil {
+	if _, err := errs.ManyCustoms(0xff, "(555)67-5309", 'z'); err != nil {
 		fmt.Println(err)
 	}
-	if _, err := errs.ErrorManyCustoms(0b1, "(555)867-5309", '🤪'); err != nil {
+	if _, err := errs.ManyCustoms(0b1, "(555)867-5309", '🤪'); err != nil {
 		fmt.Println(err)
 	}
-	bearer, err := errs.ErrorManyCustoms(0o7, "(555)867-5309", 'G')
+	bearer, err := errs.ManyCustoms(0o7, "(555)867-5309", 'G')
 	if err != nil {
 		panic(err)
 	}
@@ -364,10 +364,10 @@ func (e CallError) Miss() bool {
 	return false
 }
 
-// ErrorExtendBasic shows how to extend the simple error interface to have more
+// ExtendBasic shows how to extend the simple error interface to have more
 // functionality using composition and embedding the error interface into our
 // new ConnectionError.
-func ErrorExtendBasic(phoneNo string) ConnectionError {
+func ExtendBasic(phoneNo string) ConnectionError {
 	return CallError{Number: phoneNo}
 }
 ```
@@ -375,11 +375,11 @@ func ErrorExtendBasic(phoneNo string) ConnectionError {
 #### example_test.go
 
 ```go
-func ExampleErrorExtendBasic() {
-	if err := errs.ErrorExtendBasic("555-212-4958").(errs.ConnectionError); err != nil {
+func ExampleExtendBasic() {
+	if err := errs.ExtendBasic("555-212-4958").(errs.ConnectionError); err != nil {
 		fmt.Printf("%#v\n%s\n", err, err)
 	}
-	if err := errs.ErrorExtendBasic("777-390-9911").(errs.ConnectionError); err != nil {
+	if err := errs.ExtendBasic("777-390-9911").(errs.ConnectionError); err != nil {
 		fmt.Printf("%#v\n%v\n", err, err)
 		if err.Miss() {
 			fmt.Println("Call again...")
@@ -435,11 +435,11 @@ create. This is one of those play with it to realize it things.
 #### errs.go
 
 ```go
-// ErrorWrapOtherErrors shows how to put an error inside of another error. This
+// WrapOtherErrors shows how to put an error inside of another error. This
 // is very helpful when you have many moving parts in your application. We want
 // to know **where** the error originated and what places it went along the
 // way.
-func ErrorWrapOtherErrors() error {
+func WrapOtherErrors() error {
 	if err := pkgBufioCall(); err != nil {
 		return pkgHTTPCall(pkgJSONCall(pkgZipCall(err)))
 	}
@@ -469,8 +469,8 @@ Here we use another of the standard library package `errors` functions `Unwrap`
 to show what the process was like as we unwrap the `error`.
 
 ```go
-func ExampleErrorWrapOtherErrors() {
-	if err := errs.ErrorWrapOtherErrors(); err != nil {
+func ExampleWrapOtherErrors() {
+	if err := errs.WrapOtherErrors(); err != nil {
 		fmt.Println("Wrapped error:", err)
 		for err != nil {
 			err = errors.Unwrap(err)
@@ -513,10 +513,10 @@ nil`
 #### errs.go
 
 ```go
-// ErrorNotNil shows that a nil error value does not equal nil. In other words
+// NotNil shows that a nil error value does not equal nil. In other words
 // setting an error to nil and returning that error will not give you nil. It
 // shows the idiomatic Go way of returning nothing if there is no error.
-func ErrorNotNil(doItWrong bool) error {
+func NotNil(doItWrong bool) error {
 	// var incorrect *CallError = nil 👈 Same as below, but this is wrong because
 	// nil is the zero value, but try this explicit form out if you want.
 	var incorrect *CallError
@@ -533,12 +533,12 @@ Here we can see the `type` is a pointer to `errs.CallError` `struct` and it's
 _value_ is `nil`.
 
 ```go
-func ExampleErrorNotNil() {
-	if err := errs.ErrorNotNil(true); err != nil {
+func ExampleNotNil() {
+	if err := errs.NotNil(true); err != nil {
 		fmt.Printf("YAH GOOFED! %#v", err)
 	}
 
-	if err := errs.ErrorNotNil(false); err != nil {
+	if err := errs.NotNil(false); err != nil {
 		fmt.Println("Never going to see this")
 	}
 	// Output:
@@ -559,10 +559,10 @@ import (
 	"math"
 )
 
-// ErrorNew returns an error based on the way we want it to be made. Which can
+// New returns an error based on the way we want it to be made. Which can
 // be done with the standard `errors` package or for more formatting options
 // the `fmt` package. If the way is not recognized nil is returned.
-func ErrorNew(way string) error {
+func New(way string) error {
 	switch way {
 	case "fmt":
 		return fmt.Errorf("we can use fmt to have formatting verbs: %q", way)
@@ -584,10 +584,10 @@ func (e realError) Error() string {
 	return "this is a real error that can be returned if something goes wrong"
 }
 
-// ErrorCustom shows that implementing the builtin error interface is very easy
+// Custom shows that implementing the builtin error interface is very easy
 // to do and can be used to return custom errors instead of the most common
 // unexported `errorString` struct in the `errors` package.
-func ErrorCustom() error {
+func Custom() error {
 	return realError(true)
 }
 
@@ -637,10 +637,10 @@ func (w UndeadWarrior) Bearer() string {
 
 func (w UndeadWarrior) String() string { return w.Bearer() }
 
-// ErrorManyCustoms shows how to deal with many custom errors in a single
+// ManyCustoms shows how to deal with many custom errors in a single
 // function and shows that errors are just values that are returned by also
 // returning a bearer which is very similar in behavior to an error.
-func ErrorManyCustoms(n uint32, phoneNo string, ltr rune) (bearer, error) {
+func ManyCustoms(n uint32, phoneNo string, ltr rune) (bearer, error) {
 	if n > uint32(math.Pow(2, 31)) {
 		return nil, TooBigError(n)
 	}
@@ -703,18 +703,18 @@ func (e CallError) Miss() bool {
 	return false
 }
 
-// ErrorExtendBasic shows how to extend the simple error interface to have more
+// ExtendBasic shows how to extend the simple error interface to have more
 // functionality using composition and embedding the error interface into our
 // new ConnectionError.
-func ErrorExtendBasic(phoneNo string) ConnectionError {
+func ExtendBasic(phoneNo string) ConnectionError {
 	return CallError{Number: phoneNo}
 }
 
-// ErrorWrapOtherErrors shows how to put an error inside of another error. This
+// WrapOtherErrors shows how to put an error inside of another error. This
 // is very helpful when you have many moving parts in your application. We want
 // to know **where** the error originated and what places it went along the
 // way.
-func ErrorWrapOtherErrors() error {
+func WrapOtherErrors() error {
 	if err := pkgBufioCall(); err != nil {
 		return pkgHTTPCall(pkgJSONCall(pkgZipCall(err)))
 	}
@@ -737,10 +737,10 @@ func pkgBufioCall() error {
 	return errors.New("bufio.Scanner: token too long")
 }
 
-// ErrorNotNil shows that a nil error value does not equal nil. In other words
+// NotNil shows that a nil error value does not equal nil. In other words
 // setting an error to nil and returning that error will not give you nil. It
 // shows the idiomatic Go way of returning nothing if there is no error.
-func ErrorNotNil(doItWrong bool) error {
+func NotNil(doItWrong bool) error {
 	// var incorrect *CallError = nil 👈 Same as below, but this is wrong because
 	// nil is the zero value, but just to show you can do the above as well.
 	var incorrect *CallError
@@ -765,13 +765,13 @@ import (
 	"math"
 )
 
-func ExampleErrorNew() {
+func ExampleNew() {
 	fmt.Printf(
 		"%v\n%#v\n%#v\n%+v\n",
-		errs.ErrorNew("fmt"),
-		errs.ErrorNew("fmt"),
-		errs.ErrorNew("errors"),
-		errs.ErrorNew("🤷"),
+		errs.New("fmt"),
+		errs.New("fmt"),
+		errs.New("errors"),
+		errs.New("🤷"),
 	)
 	// Output:
 	// we can use fmt to have formatting verbs: "fmt"
@@ -780,25 +780,25 @@ func ExampleErrorNew() {
 	// <nil>
 }
 
-func ExampleErrorCustom() {
-	if err := errs.ErrorCustom(); err != nil {
+func ExampleCustom() {
+	if err := errs.Custom(); err != nil {
 		fmt.Println(err)
 	}
 	// Output: this is a real error that can be returned if something goes wrong
 }
 
-func ExampleErrorManyCustoms() {
-	if _, err := errs.ErrorManyCustoms(
+func ExampleManyCustoms() {
+	if _, err := errs.ManyCustoms(
 		uint32(math.Pow(2, 32)-1), "(555)867-5309", 'A'); err != nil {
 		fmt.Println(err)
 	}
-	if _, err := errs.ErrorManyCustoms(0xff, "(555)67-5309", 'z'); err != nil {
+	if _, err := errs.ManyCustoms(0xff, "(555)67-5309", 'z'); err != nil {
 		fmt.Println(err)
 	}
-	if _, err := errs.ErrorManyCustoms(0b1, "(555)867-5309", '🤪'); err != nil {
+	if _, err := errs.ManyCustoms(0b1, "(555)867-5309", '🤪'); err != nil {
 		fmt.Println(err)
 	}
-	bearer, err := errs.ErrorManyCustoms(0o7, "(555)867-5309", 'G')
+	bearer, err := errs.ManyCustoms(0o7, "(555)867-5309", 'G')
 	if err != nil {
 		panic(err)
 	}
@@ -810,11 +810,11 @@ func ExampleErrorManyCustoms() {
 	// Rise if you would. For that is our curse.
 }
 
-func ExampleErrorExtendBasic() {
-	if err := errs.ErrorExtendBasic("555-212-4958").(errs.ConnectionError); err != nil {
+func ExampleExtendBasic() {
+	if err := errs.ExtendBasic("555-212-4958").(errs.ConnectionError); err != nil {
 		fmt.Printf("%#v\n%s\n", err, err)
 	}
-	if err := errs.ErrorExtendBasic("777-390-9911").(errs.ConnectionError); err != nil {
+	if err := errs.ExtendBasic("777-390-9911").(errs.ConnectionError); err != nil {
 		fmt.Printf("%#v\n%v\n", err, err)
 		if err.Miss() {
 			fmt.Println("Call again...")
@@ -830,8 +830,8 @@ func ExampleErrorExtendBasic() {
 	// Call again...
 }
 
-func ExampleErrorWrapOtherErrors() {
-	if err := errs.ErrorWrapOtherErrors(); err != nil {
+func ExampleWrapOtherErrors() {
+	if err := errs.WrapOtherErrors(); err != nil {
 		fmt.Println("Wrapped error:", err)
 		for err != nil {
 			err = errors.Unwrap(err)
@@ -846,12 +846,12 @@ func ExampleErrorWrapOtherErrors() {
 	// Unwrapping error: <nil>
 }
 
-func ExampleErrorNotNil() {
-	if err := errs.ErrorNotNil(true); err != nil {
+func ExampleNotNil() {
+	if err := errs.NotNil(true); err != nil {
 		fmt.Printf("YAH GOOFED! %#v", err)
 	}
 
-	if err := errs.ErrorNotNil(false); err != nil {
+	if err := errs.NotNil(false); err != nil {
 		fmt.Println("Never going to see this")
 	}
 	// Output:

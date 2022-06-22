@@ -49,8 +49,8 @@ think about how many elements we want in it, we just declare it.
 #### slices.go
 
 ```go
-// SliceBasic shows how to create a slice and how to set and get values in it.
-func SliceBasic() {
+// Basic shows how to create a slice and how to set and get values in it.
+func Basic() {
 	// Don't add a number between the
 	// `[]` brackets and we `make` slices if we
 	// want to have a capacity and length
@@ -73,8 +73,8 @@ func SliceBasic() {
 #### example_test.go
 
 ```go
-func ExampleSliceBasic() {
-	slices.SliceBasic()
+func ExampleBasic() {
+	slices.Basic()
 	// Output:
 	// empty: [  ]
 	// full: [|set zeroeth value| |set first value| |set second value|]
@@ -111,9 +111,9 @@ the [lesson on functions](/basics/13-function/#variadic-arguments-varargs) So,
 don't worry we'll get to it!
 
 ```go
-// SliceAppend shows how to put more elements into a slice even if we don't
+// Append shows how to put more elements into a slice even if we don't
 // have the capacity for it using `append`.
-func SliceAppend() {
+func Append() {
 	// Why wouldn't I do this always?
 	var slice []string
 	// Good Question! Lets answer it!
@@ -139,8 +139,8 @@ func SliceAppend() {
 #### example_test.go
 
 ```go
-func ExampleSliceAppend() {
-	slices.SliceAppend()
+func ExampleAppend() {
+	slices.Append()
 	// Output:
 	// capacity: 0
 	// length: 0
@@ -172,9 +172,9 @@ values.
 #### slices.go
 
 ```go
-// SliceCopy shows how to copy one slice into another slice using the builtin
+// Copy shows how to copy one slice into another slice using the builtin
 // `copy` function.
-func SliceCopy() {
+func Copy() {
 	// src is short for source
 	srcSlice := make([]int, 10)
 	fmt.Println("empty srcSlice:", srcSlice)
@@ -194,8 +194,8 @@ func SliceCopy() {
 #### example_test.go
 
 ```go
-func ExampleSliceCopy() {
-	slices.SliceCopy()
+func ExampleCopy() {
+	slices.Copy()
 	// Output:
 	// empty srcSlice: [0 0 0 0 0 0 0 0 0 0]
 	// full srcSlice: [0 1 2 3 4 5 6 7 8 9]
@@ -228,9 +228,9 @@ understand what `panic`, `recover`, and `defer` are doing. For now copy and
 paste and come back later after learning about `panic`, `recover` and `defer`.
 
 ```go
-// SliceIndexOutOfRangePanic shows us what happens when we try to access an
+// IndexOutOfRangePanic shows us what happens when we try to access an
 // index that does not exist in a slice.
-func SliceIndexOutOfRangePanic() {
+func IndexOutOfRangePanic() {
 	defer func() {
 		if r := recover(); r != nil {
 			fmt.Println("slice paniced!\n", r)
@@ -248,8 +248,8 @@ func SliceIndexOutOfRangePanic() {
 #### example_test.go
 
 ```go
-func ExampleSliceIndexOutOfRangePanic() {
-	slices.SliceIndexOutOfRangePanic()
+func ExampleIndexOutOfRangePanic() {
+	slices.IndexOutOfRangePanic()
 	// Output:
 	// slice paniced!
 	//  runtime error: index out of range [-1]
@@ -280,10 +280,10 @@ with the slice operator `:` is. What efficiency you may ask? Well I'll let
 #### slices.go
 
 ```go
-// SliceSlices shows us why a slice is called a slice and that's because we can
+// ReasonForName shows us why a slice is called a slice and that's because we can
 // take slices (pieces) of a slice depending on our needs using the `:` slice
 // operator.
-func SliceSlices() {
+func ReasonForName() {
 	var slice = []string{"zero", "one", "two", "three", "four", "five"}
 	fmt.Printf("sliceUpToThirdIndex: %v\nlength: %d capacity: %d\n",
 		slice,
@@ -315,8 +315,8 @@ func SliceSlices() {
 #### example_test.go
 
 ```go
-func ExampleSliceSlices() {
-	slices.SliceSlices()
+func ExampleReasonForName() {
+	slices.ReasonForName()
 	// Output:
 	// sliceUpToThirdIndex: [zero one two three four five]
 	// length: 6 capacity: 6
@@ -346,16 +346,16 @@ more if you want. So don't be intimidated, you got this! 💪😤
 #### slices.go
 
 ```go
-// SliceMatrix shows how to make a matrix also known as a 2d array, but still
+// Matrix shows how to make a matrix also known as a 2d array, but still
 // have the flexibility of slices!
-func SliceMatrix() {
+func Matrix() {
 	// We will allocate three slices in a slice
 	matrix := make([][]int, 3)
 	fmt.Println("matrix empty:", matrix)
 	for i := 0; i < 3; i++ {
-		innerSliceLen := i + 1
-		matrix[i] = make([]int, innerSliceLen)
-		for j := 0; j < innerSliceLen; j++ {
+		innerLen := i + 1
+		matrix[i] = make([]int, innerLen)
+		for j := 0; j < innerLen; j++ {
 			matrix[i][j] = i + j
 		}
 	}
@@ -370,8 +370,8 @@ func SliceMatrix() {
 #### example_test.go
 
 ```go
-func ExampleSliceMatrix() {
-	slices.SliceMatrix()
+func ExampleMatrix() {
+	slices.Matrix()
 	// Output:
 	// matrix empty: [[] [] []]
 	// matrix full: [[0] [1 2] [2 3 4]]
@@ -388,8 +388,8 @@ package slices
 
 import "fmt"
 
-// SliceBasic shows how to create a slice and how to set and get values in it.
-func SliceBasic() {
+// Basic shows how to create a slice and how to set and get values in it.
+func Basic() {
 	// Don't add a number between the
 	// `[]` brackets and we `make` slices if we
 	// want to have a capacity and length
@@ -408,9 +408,9 @@ func SliceBasic() {
 	fmt.Println("Can be declared inline", inline)
 }
 
-// SliceAppend shows how to put more elements into a slice even if we don't
+// Append shows how to put more elements into a slice even if we don't
 // have the capacity for it using `append`.
-func SliceAppend() {
+func Append() {
 	// Why wouldn't I do this always?
 	var slice []string
 	// Good Question! Lets answer it!
@@ -432,9 +432,9 @@ func SliceAppend() {
 	fmt.Println("slice:", slice)
 }
 
-// SliceCopy shows how to copy one slice into another slice using the builtin
+// Copy shows how to copy one slice into another slice using the builtin
 // `copy` function.
-func SliceCopy() {
+func Copy() {
 	// src is short for source
 	srcSlice := make([]int, 10)
 	fmt.Println("empty srcSlice:", srcSlice)
@@ -450,9 +450,9 @@ func SliceCopy() {
 	fmt.Println("full dstSlice:", dstSlice)
 }
 
-// SliceIndexOutOfRangePanic shows us what happens when we try to access an
+// IndexOutOfRangePanic shows us what happens when we try to access an
 // index that does not exist in a slice.
-func SliceIndexOutOfRangePanic() {
+func IndexOutOfRangePanic() {
 	defer func() {
 		if r := recover(); r != nil {
 			fmt.Println("slice paniced!\n", r)
@@ -466,10 +466,10 @@ func SliceIndexOutOfRangePanic() {
 	}
 }
 
-// SliceSlices shows us why a slice is called a slice and that's because we can
+// ReasonForName shows us why a slice is called a slice and that's because we can
 // take slices (pieces) of a slice depending on our needs using the `:` slice
 // operator.
-func SliceSlices() {
+func ReasonForName() {
 	var slice = []string{"zero", "one", "two", "three", "four", "five"}
 	fmt.Printf("sliceUpToThirdIndex: %v\nlength: %d capacity: %d\n",
 		slice,
@@ -497,16 +497,16 @@ func SliceSlices() {
 	fmt.Println(s[4:], "to the", s[:3], "for substrings")
 }
 
-// SliceMatrix shows how to make a matrix also known as a 2d array, but still
+// Matrix shows how to make a matrix also known as a 2d array, but still
 // have the flexibility of slices!
-func SliceMatrix() {
+func Matrix() {
 	// We will allocate three slices in a slice
 	matrix := make([][]int, 3)
 	fmt.Println("matrix empty:", matrix)
 	for i := 0; i < 3; i++ {
-		innerSliceLen := i + 1
-		matrix[i] = make([]int, innerSliceLen)
-		for j := 0; j < innerSliceLen; j++ {
+		innerLen := i + 1
+		matrix[i] = make([]int, innerLen)
+		for j := 0; j < innerLen; j++ {
 			matrix[i][j] = i + j
 		}
 	}
@@ -527,8 +527,8 @@ package slices_test
 
 import "basics/slices"
 
-func ExampleSliceBasic() {
-	slices.SliceBasic()
+func ExampleBasic() {
+	slices.Basic()
 	// Output:
 	// empty: [  ]
 	// full: [|set zeroeth value| |set first value| |set second value|]
@@ -538,8 +538,8 @@ func ExampleSliceBasic() {
 	// Can be declared inline [0 1 2 3 4]
 }
 
-func ExampleSliceAppend() {
-	slices.SliceAppend()
+func ExampleAppend() {
+	slices.Append()
 	// Output:
 	// capacity: 0
 	// length: 0
@@ -553,8 +553,8 @@ func ExampleSliceAppend() {
 	// slice: [append a single value append multiple values `...` is used to put all the values in at the same time]
 }
 
-func ExampleSliceCopy() {
-	slices.SliceCopy()
+func ExampleCopy() {
+	slices.Copy()
 	// Output:
 	// empty srcSlice: [0 0 0 0 0 0 0 0 0 0]
 	// full srcSlice: [0 1 2 3 4 5 6 7 8 9]
@@ -562,15 +562,15 @@ func ExampleSliceCopy() {
 	// full dstSlice: [0 1 2 3 4 5 6 7 8 9]
 }
 
-func ExampleSliceIndexOutOfRangePanic() {
-	slices.SliceIndexOutOfRangePanic()
+func ExampleIndexOutOfRangePanic() {
+	slices.IndexOutOfRangePanic()
 	// Output:
 	// slice paniced!
 	//  runtime error: index out of range [-1]
 }
 
-func ExampleSliceSlices() {
-	slices.SliceSlices()
+func ExampleReasonForName() {
+	slices.ReasonForName()
 	// Output:
 	// sliceUpToThirdIndex: [zero one two three four five]
 	// length: 6 capacity: 6
@@ -583,8 +583,8 @@ func ExampleSliceSlices() {
 	// Efficiency to the Max for substrings
 }
 
-func ExampleSliceMatrix() {
-	slices.SliceMatrix()
+func ExampleMatrix() {
+	slices.Matrix()
 	// Output:
 	// matrix empty: [[] [] []]
 	// matrix full: [[0] [1 2] [2 3 4]]
