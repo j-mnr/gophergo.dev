@@ -79,7 +79,7 @@ generator ⚡ we just call our function again.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### closure.go
+#### `closure.go`
 
 ```go
 // AsGenerator is an example of the idea of closures. The state of the
@@ -95,7 +95,7 @@ func AsGenerator() func() int {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleAsGenerator() {
@@ -152,7 +152,7 @@ One way to do that is with closures.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### closure.go
+#### `closure.go`
 
 ```go
 // ForAccessingData shows we can access variables that do not belong to the
@@ -178,7 +178,7 @@ func ForAccessingData() {
 // }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleForAccessingData() {
@@ -225,7 +225,7 @@ that we can add more routes 🛖 and add that functionality just as easy.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### closure.go
+#### `closure.go`
 
 ```go
 // MyS is used for showing off examples with closures and accessing
@@ -250,7 +250,7 @@ func AsMiddleware(myFunc func(strct *MyS, n *int)) func(strct *MyS, n *int) {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleAsMiddleware() {
@@ -291,7 +291,7 @@ data to our own `HandlerFunc`. How would we do it? 🤔 You guessed it! Closures
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### closure.go
+#### `closure.go`
 
 ```go
 // ForAccessingMoreData is an example of feeding values to a function that
@@ -307,7 +307,7 @@ func ForAccessingMoreData(strct MyS) func(http.ResponseWriter, *http.Request) {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 Here we `import httptest` to get the actual body from the response to see the
 output. It's not important to know how to test right now, but if you're
@@ -354,7 +354,7 @@ We're doing what we've been doing since lesson 0. Making functions.
 Here we look at how to `map` runes into other runes in a `string` and how to
 search through sorted slices.
 
-#### closure.go
+#### `closure.go`
 
 ```go
 // ForStandardLibrary is an example of when the standard library will
@@ -394,7 +394,7 @@ func ForStandardLibrary() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleForStandardLibrary() {
@@ -443,7 +443,7 @@ and how we can call the other functions declared as variables in
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### closure.go
+#### `closure.go`
 
 ```go
 // AvoidCallbackHell is an example of how, in Go, there is no such thing
@@ -498,7 +498,7 @@ var DoWork3 = func(f float32) string {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleAvoidCallbackHell() {

@@ -119,7 +119,7 @@ know _for sure_ that will happen?
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### ranges.go
+#### `ranges.go`
 
 ```go
 // Index shows us how to grab the index of each element in a slice.
@@ -135,7 +135,7 @@ func Index() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleIndex() {
@@ -167,7 +167,7 @@ stating to Go
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### ranges.go
+#### `ranges.go`
 
 ```go
 // Values shows that we can ignore the index using a range loop if we
@@ -181,7 +181,7 @@ func Values() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleValues() {
@@ -202,7 +202,7 @@ For completeness, what if we are going to use both the index and the value in a
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### ranges.go
+#### `ranges.go`
 
 ```go
 // IndexAndValues shows how to grab both the index and the value of each
@@ -218,7 +218,7 @@ func IndexAndValues() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleIndexAndValues() {
@@ -253,7 +253,7 @@ is **not** guaranteed.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### ranges.go
+#### `ranges.go`
 
 ```go
 // Map shows that we can loop through the entries of a map (key and value)
@@ -270,7 +270,7 @@ func Map() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleMap() {
@@ -298,7 +298,7 @@ write Go in whatever language you so please. 🥰
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### ranges.go
+#### `ranges.go`
 
 ```go
 // String shows that we can get the index and rune value of each character
@@ -310,7 +310,7 @@ func String() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleString() {
@@ -345,7 +345,7 @@ to soak it all in 🧽
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### ranges.go
+#### `ranges.go`
 
 ```go
 // Channel shows that we can grab values from a channel until it is
@@ -367,7 +367,7 @@ func Channel() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleChannel() {
@@ -401,7 +401,7 @@ value in my collection. This is better explained with code, so...
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### ranges.go
+#### `ranges.go`
 
 ```go
 // ScopedValues shows that you get copies of the values of all of the
@@ -459,7 +459,7 @@ func ScopedValues() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleScopedValues() {

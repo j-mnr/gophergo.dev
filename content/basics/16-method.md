@@ -84,7 +84,7 @@ learned about.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### method.go
+#### `method.go`
 
 ```go
 type Gopher struct {
@@ -99,7 +99,7 @@ func New(name string, isCoding bool, favNumber int) *Gopher {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleNew() {
@@ -150,7 +150,7 @@ happens! 🏃
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### method.go
+#### `method.go`
 
 ```go
 // DoesNotChangeFavNumber is a value receiver method that does not change the
@@ -173,7 +173,7 @@ func (g *Gopher) DoesChangeFavNumber(favNumber int) {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleGopher_DoesChangeFavNumber() {
@@ -246,7 +246,7 @@ situation.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### method.go
+#### `method.go`
 
 ```go
 // StartCoding is a pointer receiver method that starts the Gopher to coding.
@@ -262,7 +262,7 @@ func StartCoding(g *Gopher) { g.isCoding = true }
 func StopCoding(g *Gopher) { g.isCoding = false }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleStartCoding() {
@@ -325,7 +325,7 @@ to say, have a nice formatted message that's easy to understand.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### method.go
+#### `method.go`
 
 ```go
 // String satisfies the fmt.Stringer interface and will be used anytime we try
@@ -344,7 +344,7 @@ func (g Gopher) String() string {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleGopher_String() {

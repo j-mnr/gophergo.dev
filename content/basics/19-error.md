@@ -64,7 +64,7 @@ let's start with the easier approach and use what's in the language.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### errs.go
+#### `errs.go`
 
 ```go
 // New returns an error based on the way we want it to be made. Which can
@@ -82,7 +82,7 @@ func New(way string) error {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 Notice the `type` shown with our `%#v` formatting verb is an
 `errors.errorString` `struct` aka another packages unexported `type` [sound
@@ -131,7 +131,7 @@ before and we'll do it again! 💪😤
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### errs.go
+#### `errs.go`
 
 ```go
 // realError is a living, breathing, 100% real error. It is important to
@@ -153,7 +153,7 @@ func Custom() error {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 The same way `fmt.Println` and friends use the `String() string` method of a
 `type` if it has one, an `error` with the `Error() string` method is called for
@@ -189,7 +189,7 @@ how to deal with values, we know how to deal with errors.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### errs.go
+#### `errs.go`
 
 ```go
 // TooBigError is an exported error that will tell the caller if the number
@@ -261,7 +261,7 @@ func ManyCustoms(n uint32, phoneNo string, ltr rune) (bearer, error) {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 Here we drive the point home that we return both `bearer` and `error` which are
 two unexported interfaces with eerily similar methods to each other.
@@ -317,7 +317,7 @@ don't worry as we're about to make our own extended custom `error`!
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### errs.go
+#### `errs.go`
 
 ```go
 // ConnectionError extends the behavior of a basic error with more methods that
@@ -372,7 +372,7 @@ func ExtendBasic(phoneNo string) ConnectionError {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleExtendBasic() {
@@ -432,7 +432,7 @@ create. This is one of those play with it to realize it things.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### errs.go
+#### `errs.go`
 
 ```go
 // WrapOtherErrors shows how to put an error inside of another error. This
@@ -463,7 +463,7 @@ func pkgBufioCall() error {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 Here we use another of the standard library package `errors` functions `Unwrap`
 to show what the process was like as we unwrap the `error`.
@@ -510,7 +510,7 @@ nil`
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### errs.go
+#### `errs.go`
 
 ```go
 // NotNil shows that a nil error value does not equal nil. In other words
@@ -527,7 +527,7 @@ func NotNil(doItWrong bool) error {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 Here we can see the `type` is a pointer to `errs.CallError` `struct` and it's
 _value_ is `nil`.

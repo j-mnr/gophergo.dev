@@ -53,7 +53,7 @@ values? **Glad you asked!** 😁
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### variables.go
+#### `variables.go`
 
 ```go
 // Zero shows off all of the zero values or what might also be
@@ -79,7 +79,7 @@ map zero value is: %+v`,
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleZero() {
@@ -113,7 +113,7 @@ variables values that we want, in other words, we should initialize them.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### variables.go
+#### `variables.go`
 
 ```go
 // Explicit shows that we can explicitly type a variable to a specific
@@ -133,7 +133,7 @@ func Explicit() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleExplicit() {
@@ -158,7 +158,7 @@ experience you'll see it's obvious what `type` something is.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### variables.go
+#### `variables.go`
 
 ```go
 // Implicit shows that we don't need to declare what the type is as
@@ -177,7 +177,7 @@ func Implicit() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleImplicit() {
@@ -205,7 +205,7 @@ some buck teeth. Remind you of anything cute, blue, and furry?
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### variables.go
+#### `variables.go`
 
 ```go
 // AssignmentOperator shows the preferred and idomatic way of declaring
@@ -221,7 +221,7 @@ func AssignmentOperator() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleAssignmentOperator() {

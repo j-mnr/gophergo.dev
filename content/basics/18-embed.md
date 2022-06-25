@@ -45,7 +45,7 @@ reusable code that can be composed into a larger `struct`.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### embed.go
+#### `embed.go`
 
 ```go
 // Gopher is an example struct to show off embedding
@@ -121,7 +121,7 @@ func Struct() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleStruct() {
@@ -162,7 +162,7 @@ the motorcycle.
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 {.myclass}
 
-#### embed.go
+#### `embed.go`
 
 ```go
 // City is a struct showing structs with embedded fields doesn't change
@@ -244,7 +244,7 @@ func Deep() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleDeep() {
@@ -280,7 +280,7 @@ pre-built components.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### embed.go
+#### `embed.go`
 
 ```go
 type Human interface{ Greet() string }
@@ -320,7 +320,7 @@ func Interface(hbp HumanBearPig) {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleInterface() {

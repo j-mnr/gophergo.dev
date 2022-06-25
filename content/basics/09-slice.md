@@ -46,7 +46,7 @@ think about how many elements we want in it, we just declare it.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre" "gopher-heart-eyes by Egon Elbre")
 
-#### slices.go
+#### `slices.go`
 
 ```go
 // Basic shows how to create a slice and how to set and get values in it.
@@ -70,7 +70,7 @@ func Basic() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleBasic() {
@@ -104,7 +104,7 @@ need, you'll get that much.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### slices.go
+#### `slices.go`
 
 Here we introduce the unpacking operator `...` which is further explained in
 the [lesson on functions](/basics/13-function/#variadic-arguments-varargs) So,
@@ -136,7 +136,7 @@ func Append() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleAppend() {
@@ -169,7 +169,7 @@ values.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### slices.go
+#### `slices.go`
 
 ```go
 // Copy shows how to copy one slice into another slice using the builtin
@@ -191,7 +191,7 @@ func Copy() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleCopy() {
@@ -221,7 +221,7 @@ outside of the capacity, you're going to have a bad time ⏰
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### slices.go
+#### `slices.go`
 
 I don't like showing off things we haven't learned yet, but later we will
 understand what `panic`, `recover`, and `defer` are doing. For now copy and
@@ -245,7 +245,7 @@ func IndexOutOfRangePanic() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleIndexOutOfRangePanic() {
@@ -277,7 +277,7 @@ with the slice operator `:` is. What efficiency you may ask? Well I'll let
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### slices.go
+#### `slices.go`
 
 ```go
 // ReasonForName shows us why a slice is called a slice and that's because we can
@@ -312,7 +312,7 @@ func ReasonForName() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleReasonForName() {
@@ -343,7 +343,7 @@ more if you want. So don't be intimidated, you got this! 💪😤
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### slices.go
+#### `slices.go`
 
 ```go
 // Matrix shows how to make a matrix also known as a 2d array, but still
@@ -367,7 +367,7 @@ func Matrix() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleMatrix() {

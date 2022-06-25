@@ -54,7 +54,7 @@ they get back. You've definitely been a comparison operator in your life.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### operators.go
+#### `operators.go`
 
 ```go
 // Comparison shows how to compare values in programming. This is
@@ -106,7 +106,7 @@ func Comparison() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleComparison() {
@@ -182,7 +182,7 @@ negate sentences! That wouldn't 👈work well🙃 I just used not 👈twice 😂
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### operators.go
+#### `operators.go`
 
 ```go
 // Logical shows how to introduce more granular logic into your
@@ -238,7 +238,7 @@ func Logical() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleLogical() {
@@ -309,7 +309,7 @@ We've made sure we never go past 2! Pretty cool right ⁉️ 😁
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### operators.go
+#### `operators.go`
 
 ```go
 // Arithmetic shows that all of the operators you know and love ❤️ from
@@ -353,7 +353,7 @@ func Arithmetic() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleArithmetic() {
@@ -395,7 +395,7 @@ multiplying strings. The reason? Let's use an example: How do you multiply
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### operators.go
+#### `operators.go`
 
 ```go
 // String shows the only operator that works with the `string` type,
@@ -416,7 +416,7 @@ func String() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleString() {
@@ -487,7 +487,7 @@ so Let's Go! 😀
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### operators.go
+#### `operators.go`
 
 ```go
 // Bitwise shows how to manipulate the bits of integer types:
@@ -542,7 +542,7 @@ func Bitwise() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleBitwise() {

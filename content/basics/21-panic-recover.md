@@ -72,7 +72,7 @@ you made it do it or not, a `defer` statement will **always** be ran.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### panic_recover.go
+#### `panic_recover.go`
 
 ```go
 // AfterDefer shows that even if a panic occurs in a function a `defer`
@@ -84,7 +84,7 @@ func AfterDefer() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 Some things just can't have good output. To see this in action we need to go to
 our `cmd/main.go` made _all_ the way back on [lesson
@@ -139,7 +139,7 @@ that our function is the last thing ran before the `return` statement? A
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### panic_recover.go
+#### `panic_recover.go`
 
 ```go
 // KeepCalm shows how we can `recover` from a `panic` by using a `defer`
@@ -159,7 +159,7 @@ func recuperate() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleKeepCalm() {
@@ -179,7 +179,7 @@ popular _nil pointer_ or _index out of bounds_ runtime errors. 🙃
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### panic_recover.go
+#### `panic_recover.go`
 
 ```go
 type myStruct struct{ cantAccess string }
@@ -273,7 +273,7 @@ our `example_test.go`
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleNilPointer() {

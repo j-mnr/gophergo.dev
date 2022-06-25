@@ -68,7 +68,7 @@ statement is executed.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### defers.go
+#### `defers.go`
 
 ```go
 // RunAtEnd shows that using the `defer` keyword will make that function
@@ -81,7 +81,7 @@ func RunAtEnd() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleRunAtEnd() {
@@ -107,7 +107,7 @@ same as the books we remove book 3📕 and then book 2📗 to get book 1 📘
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### defers.go
+#### `defers.go`
 
 ```go
 // LIFO shows that if using multiple defers they work in a Last In First
@@ -122,7 +122,7 @@ func LIFO() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleLIFO() {
@@ -151,7 +151,7 @@ the big function `F` or where you declare it...? Let's find out 😏
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### defers.go
+#### `defers.go`
 
 ```go
 // ArgumentsEvaluated shows the arguments passed to a `defer`'s function
@@ -165,7 +165,7 @@ func ArgumentsEvaluated() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleArgumentsEvaluated() {
@@ -195,7 +195,7 @@ Yeah, I told you 😵
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### defers.go
+#### `defers.go`
 
 ```go
 // NamedReturn shows that before we return a named value, if we change it
@@ -218,7 +218,7 @@ func Return() string {
 func indianaJones(s *string) { *s = "Bag of sand" }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleNamedReturn() {
@@ -254,7 +254,7 @@ next topic has lots of examples of where we use `defer` in Go.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### defers.go
+#### `defers.go`
 
 ```go
 // RecoverPanic shows how to recover from a panic by using a `defer`
@@ -278,7 +278,7 @@ func recuperate() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleRecoverPanic() {
@@ -306,7 +306,7 @@ meant more as a sample set to open your mind 🤯 to the possibilities of
 
 #### Closing A File
 
-##### defers.go
+##### `defers.go`
 
 ```go
 // FileClose shows that we **always close** file descriptors after we open
@@ -333,7 +333,7 @@ func closeFile(f *os.File) {
 }
 ```
 
-##### example_test.go
+##### `example_test.go`
 
 ```go
 func ExampleFileClose() {
@@ -352,7 +352,7 @@ func ExampleFileClose() {
 
 #### Removing Temporary Files
 
-##### defers.go
+##### `defers.go`
 
 ```go
 // TempFileRemoveClose shows that with a temp file (and temp directories)
@@ -376,7 +376,7 @@ func removeFile(f *os.File) {
 }
 ```
 
-##### example_test.go
+##### `example_test.go`
 
 ```go
 func ExampleTempFileRemoveClose() {
@@ -389,7 +389,7 @@ func ExampleTempFileRemoveClose() {
 
 #### Closing HTTP Response Bodies
 
-##### defers.go
+##### `defers.go`
 
 ```go
 // HTTPBodyClose shows that we **always close** our `*http.Response` body
@@ -409,7 +409,7 @@ func HTTPBodyClose() {
 }
 ```
 
-##### example_test.go
+##### `example_test.go`
 
 ```go
 func ExampleHTTPBodyClose() {
@@ -420,7 +420,7 @@ func ExampleHTTPBodyClose() {
 
 #### Cancel Context
 
-##### defers.go
+##### `defers.go`
 
 ```go
 // CancelContext shows a contrived way of canceling a context. Though it
@@ -440,7 +440,7 @@ func CancelContext(d time.Duration) {
 }
 ```
 
-##### example_test.go
+##### `example_test.go`
 
 ```go
 func ExampleCancelContext() {
@@ -454,7 +454,7 @@ func ExampleCancelContext() {
 
 #### Mutex Locks
 
-##### defers.go
+##### `defers.go`
 
 ```go
 // account acts as a bank account with a balance
@@ -490,7 +490,7 @@ func (a *account) Deposit(amount int64) (int64, error) {
 }
 ```
 
-##### example_test.go
+##### `example_test.go`
 
 ```go
 func ExampleNewAccount() {
