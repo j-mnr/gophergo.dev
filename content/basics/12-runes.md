@@ -117,7 +117,7 @@ Always has been 🔫🧑‍🚀 )
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### runes.go
+#### `runes.go`
 
 ```go
 // ByteAndRuneAreInt shows that we can compare characters to their integer
@@ -166,7 +166,7 @@ func ByteAndRuneAreInt() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleByteAndRuneAreInt() {
@@ -199,7 +199,7 @@ _not_ the amount of space they take up.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### runes.go
+#### `runes.go`
 
 ```go
 // ByteCount shows how to get the amount of bytes in a string and using a for
@@ -217,7 +217,7 @@ func ByteCount() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ⚠️ Attention ⚠️ Some lines look like they end in a blank space `string: ` but
 it's a non-printing ASCII character. It would be best to copy and paste this
@@ -267,7 +267,7 @@ runes in the string.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### runes.go
+#### `runes.go`
 
 ```go
 import (
@@ -297,7 +297,7 @@ func RuneCount() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleRuneCount() {
@@ -335,7 +335,7 @@ package has a function just for that!
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### runes.go
+#### `runes.go`
 
 ```go
 // ByteToRuneForLoop shows what the range keyword does by counting the amount
@@ -350,7 +350,7 @@ func ByteToRuneForLoop() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleByteToRuneForLoop() {

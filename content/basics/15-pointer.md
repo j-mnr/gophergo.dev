@@ -74,7 +74,7 @@ what I did there? I made a pointer to another topic 😂
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### pointer.go
+#### `pointer.go`
 
 ```go
 // PassByValue passes an int by value. When an integer is passed by value it is
@@ -86,7 +86,7 @@ func PassByValue(intVal int) {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExamplePassByValue() {
@@ -119,7 +119,7 @@ to your house and changes your mood from bored 🥱 to happy 😄
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### pointer.go
+#### `pointer.go`
 
 ```go
 // PassByReference passes a pointer to the function. This value is an address,
@@ -134,7 +134,7 @@ func PassByReference(intPointer *int) {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExamplePassByReference() {
@@ -170,7 +170,7 @@ address (aka the pointer) to any value with the formatting directive `%p`, so
 remember **p for pointer**! Or if you already have a pointer you can use
 `fmt.Println(myPtr)` and you can see the address too!
 
-#### pointer.go
+#### `pointer.go`
 
 ```go
 // PassMoreByReferences shows you that you can pass all of the other primitive
@@ -207,7 +207,7 @@ Something like **1234** Square Road. The address `0xc0001a4000` is the same as
 `1234` It's where I go if I want to find the string's actual value.
 
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExamplePassMoreByReferences() {
@@ -293,7 +293,7 @@ by Rob Pike on {{< anchor-new-window "The Go Blog" "https://go.dev/blog/slices"
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### pointer.go
+#### `pointer.go`
 
 ```go
 type ChangeThings struct {
@@ -345,7 +345,7 @@ func PassCollections(slice []string, mp map[string]rune, ctCopy ChangeThings,
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExamplePassCollections() {

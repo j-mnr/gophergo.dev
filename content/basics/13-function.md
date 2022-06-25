@@ -79,7 +79,7 @@ We don't know what each of those calls are doing but it reads like a story.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### functions.go
+#### `functions.go`
 
 ```go
 // privateFunc is an example function, that is not exported. It is not always
@@ -91,7 +91,7 @@ func privateFunc() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 // This will not work, uncomment it and see what error it gives you.
@@ -127,7 +127,7 @@ have a {{< anchor-new-window "fmt_test"
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### functions.go
+#### `functions.go`
 
 ```go
 // Public is an example function, that is exported. It is always a good
@@ -139,7 +139,7 @@ func Public() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExamplePublic() {
@@ -169,7 +169,7 @@ though, so no big deal.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### functions.go
+#### `functions.go`
 
 ```go
 // WithParams is an example function, that shows you how to pass in
@@ -179,7 +179,7 @@ func WithParams(name string, value int, emoji rune) {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleWithParams() {
@@ -207,7 +207,7 @@ turn it Go style!
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### functions.go
+#### `functions.go`
 
 ```go
 // WithReturn is an example function on how to specify what type you want a
@@ -217,7 +217,7 @@ func WithReturn() string {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleWithReturn() {
@@ -252,7 +252,7 @@ func Add(n1 int, n2 int) (int, bool) {
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### functions.go
+#### `functions.go`
 
 ```go
 // WithMultipleReturn is an example function that will return two types at
@@ -263,7 +263,7 @@ func WithMultipleReturn() ([]int, bool) {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleWithMultipleReturn() {
@@ -298,7 +298,7 @@ func Add(n1 int, n2 int) (sum int, gtThousand bool) {
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### functions.go
+#### `functions.go`
 
 ```go
 // WithNamedReturn is an example function that shows how you can name all
@@ -316,7 +316,7 @@ func WithNamedReturn(name, scheme, host, path, query string) (email, url string)
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleWithNamedReturn() {
@@ -354,7 +354,7 @@ anchor-new-window "pack/unpack"
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### functions.go
+#### `functions.go`
 
 When we use the pack operator `...` it will take all of the values and turn it
 into a slice of a type, for this we make a slice of int `[]int` and as we
@@ -373,7 +373,7 @@ func Variadic(varargsNums ...int) (sum int) {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 Here we give the caller the ability to pass in no values, some values, or an
 entire slice with the unpack operator `...` We briefly looked at this on our

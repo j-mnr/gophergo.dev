@@ -41,7 +41,7 @@ got ourselves a new crystal ball! 🔮
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### if_else.go
+#### `if_else.go`
 
 ```go
 // IfElse shows you how to control the flow of logic in your application using
@@ -64,7 +64,7 @@ func IfElse() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleIfElse() {
@@ -86,7 +86,7 @@ bring my umbrella 🌂 `else` it must be freezing so I'll need a heavy coat 🧥
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### if_else.go
+#### `if_else.go`
 
 ```go
 // ElseIf shows you that you can branch you logic as many times as you want
@@ -107,7 +107,7 @@ func ElseIf() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleElseIf() {
@@ -143,7 +143,7 @@ our code when we can.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### if_else.go
+#### `if_else.go`
 
 ```go
 // DeclareInIf shows you that if you want your variable to be scoped to just an
@@ -163,7 +163,7 @@ func DeclareInIf() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleDeclareInIf() {

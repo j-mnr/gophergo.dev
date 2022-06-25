@@ -85,7 +85,7 @@ type Exerciser interface{ Exercise(activity string) (hours float32) }
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### interfaces.go
+#### `interfaces.go`
 
 ```go
 // Walker is the interface that wraps the basic Walk method.
@@ -99,7 +99,7 @@ type Flyer interface{ Fly() }
 ```
 
 
-#### example_test.go
+#### `example_test.go`
 
 There is no good way to test a pure definition of a behavior (aka an
 `interface`) 🤷 There's no logic. But! We can at least see how we can tell if
@@ -171,7 +171,7 @@ interfaces together with embedding, so let's _Go_ 😹 check it out.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### interfaces.go
+#### `interfaces.go`
 
 ```go
 // WalkSwimmer is the interface that groups the basic Walk and Swim methods.
@@ -189,7 +189,7 @@ type WalkSwimFlyer interface {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleWalkSwimmer() {
@@ -264,7 +264,7 @@ Absolutely Gorgeous, isn't it? 🤩 I can't stress it enough, Go supports
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### interfaces.go
+#### `interfaces.go`
 
 ```go
 // Person is a new type and it can satisfy all of our interfaces, the type system
@@ -298,7 +298,7 @@ func GoForWalk(person Walker, duck Walker) {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleGoForWalk() {
@@ -330,7 +330,7 @@ can swim.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### interfaces.go
+#### `interfaces.go`
 
 ```go
 // SoarIntoTheClouds will take the Flyer and put them sky high into the clouds.
@@ -345,7 +345,7 @@ func SoarIntoTheClouds(f Flyer) {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleSoarIntoTheClouds() {
@@ -370,7 +370,7 @@ to random types without first checking, this is where
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### interfaces.go
+#### `interfaces.go`
 
 ```go
 // ToConcreteType shows us how we would turn an interface that only
@@ -411,7 +411,7 @@ func ToConcreteType(s Swimmer) {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleToConcreteType() {
@@ -449,7 +449,7 @@ we wanted, this is the power of **composition**
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### interfaces.go
+#### `interfaces.go`
 
 ```go
 // VisitWaterPark takes in a type that can both walk and swim **and** a type
@@ -468,7 +468,7 @@ func VisitWaterPark(ws WalkSwimmer, wsf WalkSwimFlyer) {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleVisitWaterPark() {

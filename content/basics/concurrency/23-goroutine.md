@@ -146,7 +146,7 @@ the trunk 🪵 the whole thing falls.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### goroutine.go
+#### `goroutine.go`
 
 ```go
 // WillNotWait shows us what it means to be asynchronous. In Go we spin up
@@ -161,7 +161,7 @@ func WillNotWait() {
 func toofast() { fmt.Println("We'll never see this... without waiting") }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleWillNotWait() {
@@ -224,7 +224,7 @@ with creating a concurrent function 🥳🎉🥳🎉🥳🎉
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### goroutine.go
+#### `goroutine.go`
 
 ```go
 // SwitchToOther shows us how to artificially allow the goroutine we spawn to
@@ -238,7 +238,7 @@ func SwitchToOther() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleSwitchToOther() {
@@ -265,7 +265,7 @@ goroutine.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### goroutine.go
+#### `goroutine.go`
 
 ```go
 func AcceptableTypes(val any) {
@@ -305,7 +305,7 @@ func AcceptableTypes(val any) {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleAcceptableTypes() {
@@ -351,7 +351,7 @@ they won't solve your life. They just make concurrency trivially easy 😍 in Go
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### goroutine.go
+#### `goroutine.go`
 
 ```go
 // NoOrder shows that asynchronous truly means there is no determined order.
@@ -372,7 +372,7 @@ func NoOrder() {
 func processData(comingFrom string) { fmt.Println("coming from:", comingFrom) }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 Use `go test -run NoOrder` to just see the output for the `NoOrder` example.
 

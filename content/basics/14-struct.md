@@ -74,7 +74,7 @@ for you. Your text-editor is likely smart enough to do that for you with a
 shortcut, why not look around the interwebs for it? Search _"format go code
 <YOUR-TEXT-EDITOR/IDE-HERE>"_ 😉
 
-#### structs.go
+#### `structs.go`
 
 ```go
 // Gopher is a public struct that can be made outside of the package. It
@@ -139,7 +139,7 @@ It is idiomatic Go to have `New` as a constructor name or have the name of the
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### structs.go
+#### `structs.go`
 
 ```go
 // New is a constructor of a gopher, since New is exported (because it is
@@ -155,7 +155,7 @@ func New(name string, age int, isCoding bool, privateField string) gopher {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleNew() {
@@ -243,7 +243,7 @@ sCountries := []Country{
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### structs.go
+#### `structs.go`
 
 ```go
 // Basic shows you how to initialize (make) structs, manipulate all the
@@ -308,7 +308,7 @@ func Basic() city {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 Here we can see we can _use_ an unexported `struct` 🤯 because the function
 `structs.Basic` returns it. Why do this? It means the person using your

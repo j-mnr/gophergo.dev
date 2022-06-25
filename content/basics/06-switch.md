@@ -83,7 +83,7 @@ just make some other statement that has nothing to do with the topic at hand!
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### switches.go
+#### `switches.go`
 
 ```go
 // Basic shows how to switch what logic to perform depending on a case
@@ -103,7 +103,7 @@ func Basic() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleBasic() {
@@ -155,7 +155,7 @@ a flexible manner. This is great engineering! 😉
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### switches.go
+#### `switches.go`
 
 We need to add the line `import time` to the top of our file, next to `import
 fmt` for this to work. Don't worry about it for now, we'll understand more on
@@ -182,7 +182,7 @@ func Multiple() {
 Feel free to play around with the month and run `go test` to hit the other
 cases!
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleMultiple() {
@@ -226,7 +226,7 @@ There is no comparison with `if/else` in this case. It can't do it 🤷
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### switches.go
+#### `switches.go`
 
 ```go
 // Type shows us that we can do type assertions using switch statements!
@@ -246,7 +246,7 @@ func Type(i interface{}) {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleType() {
@@ -303,7 +303,7 @@ case apple == "🍌":
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### switches.go
+#### `switches.go`
 
 ```go
 // NoValue shows that you don't have to give a value to the `switch`
@@ -326,7 +326,7 @@ func NoValue() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleNoValue() {
@@ -352,7 +352,7 @@ useful, but if you find a use let me know! 😁 👍
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### switches.go
+#### `switches.go`
 
 ```go
 // Fallthrough shows off the **very** rarely used `fallthrough` keyword
@@ -375,7 +375,7 @@ func Fallthrough() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleFallthrough() {

@@ -74,7 +74,7 @@ This is one of those features you just have to play with to understand. So....
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### for_loop.go
+#### `for_loop.go`
 
 ```go
 // ForLoop shows how to initialize and run through a for loop. The structure of
@@ -94,7 +94,7 @@ func ForLoop() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleForLoop() {
@@ -138,7 +138,7 @@ able to `do while` or something else -- You know what? Let's just not.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### for_loop.go
+#### `for_loop.go`
 
 ```go
 // WhileLoop shows how to create a while loop in Go by just using a for loop. A
@@ -157,7 +157,7 @@ func WhileLoop() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleWhileLoop() {
@@ -206,7 +206,7 @@ func main() {
 to see it print continuous statements out. Press Control + C to interrupt the
 programs execution 💀
 
-#### for_loop.go
+#### `for_loop.go`
 
 ```go
 // ForeverLoop shows how to create a loop that will never stop running if there
@@ -225,7 +225,7 @@ func ForeverLoop() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleForeverLoop() {
@@ -273,7 +273,7 @@ stuff in there.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### for_loop.go
+#### `for_loop.go`
 
 ```go
 // ContinueBreakLoop shows how we can skip logic downwards by using a continue
@@ -297,7 +297,7 @@ func ContinueBreakLoop() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleContinueBreakLoop() {

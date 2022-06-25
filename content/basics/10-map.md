@@ -69,7 +69,7 @@ use a `slice`.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### maps.go
+#### `maps.go`
 
 ```go
 // Basic shows how to make a new map and how to add and remove keys and
@@ -90,7 +90,7 @@ func Basic() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleBasic() {
@@ -113,7 +113,7 @@ can do something with it.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### maps.go
+#### `maps.go`
 
 ```go
 // ValueExists shows how to check if a value exists in a given map or not.
@@ -135,7 +135,7 @@ func ValueExists() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleValueExists() {
@@ -177,7 +177,7 @@ anything, just the underlying structure.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### maps.go
+#### `maps.go`
 
 ```go
 // AsSet demonstrates how to create a `set` data structure -- an unordered
@@ -211,7 +211,7 @@ func AsSet() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleAsSet() {

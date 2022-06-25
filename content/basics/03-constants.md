@@ -56,7 +56,7 @@ pair you put in; lots of time 🕗 wasted.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### contants.go
+#### `contants.go`
 
 ```go
 // Stuck is an untyped string
@@ -95,7 +95,7 @@ const (
 // const me = struct{ name string }{name: "Jay"}
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleStuck() {
@@ -141,7 +141,7 @@ therefore have underlying types that can be converted.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### constants.go
+#### `constants.go`
 
 ```go
 // UntypedConst shows that constants can have values that will be automatically
@@ -159,7 +159,7 @@ func UntypedConst() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleUntypedConst() {
@@ -174,7 +174,7 @@ This may still be a little confusing as I've pulled in something from the
 standard library, that we're not familiar with yet **and** it's math 😬 So
 let's do one more! This time _we'll_ make our own `type` 😄
 
-#### constants.go
+#### `constants.go`
 
 ```go
 const UntypedString = "I fit wherever the underlying type of something is a string!"
@@ -186,7 +186,7 @@ type myString string
 func Print(s myString) { fmt.Println(s) }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExamplePrint() {

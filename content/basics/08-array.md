@@ -57,7 +57,7 @@ index.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### array.go
+#### `array.go`
 
 ```go
 // Arrays shows all the ways to make and manipulate arrays in Go.
@@ -83,7 +83,7 @@ func Arrays() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleArrays() {
@@ -130,7 +130,7 @@ get them, or in dev speak `[0][1]Rooms`
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### array.go
+#### `array.go`
 
 ```go
 // Matrix shows how to make a 2-dimensional array (a matrix) in Go.
@@ -145,7 +145,7 @@ func Matrix() {
 }
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 func ExampleMatrix() {
