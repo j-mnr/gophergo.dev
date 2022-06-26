@@ -8,9 +8,9 @@ Precious gems ⚪ tucked deep inside; created in closed off environments. Yes
 that's right **Closures!!!!**  What...? 🤨 You were thinking pearls? Well, they
 might as well be with how useful closures are! 😁 But before we get ahead of
 ourselves, what is a closure? 🤔 Essentially it's a function and that's it.
-Simple right? [We've already covered those](/basics/13-function). Now the thing
-that trips up **_plenty_** of developers, new and old, is Go supports first
-class functions.
+Simple right? We've [already covered those](/basics/13-function). Now the
+thing that trips up **_plenty_** of developers, new and old, is Go supports
+first class functions.
 
 If you're unfamiliar with first-class functions -- Strap in and put on a helmet
 ⛑️ -- because I'm about to blow your mind 🤯
@@ -115,7 +115,7 @@ func ExampleAsGenerator() {
 ## Accessing Data Safely
 
 If you're familiar with first-class functions then the above example is
-trivial, but if you're new. It may feel like straight 🪄 magic. So let's break
+trivial, but if you're new. It may feel like absolute  magic 🪄. So let's break
 down closures a little bit more. Again, a closure is just a function. Why it
 gets the name closure is dependent _where_ we place 🤲 that function. When we
 place it _inside_ of another function we create a little environment 🏞️ that it
@@ -524,6 +524,139 @@ func ExampleAvoidCallbackHell() {
 }
 ```
 
+## Gotcha!! 🪤
+
+If you're unfamiliar with what a "gotcha" is. In programming, when you expect a
+certain thing to happen because you've built an intuition for it, but something
+unexpected 😨 happens, you got, got. In other words... _Gotcha!_ 😈
+
+Imagine if you tried pulling open your front door 🚪 that you've always pulled
+open and one day it just won't open. You pull with all 🦵 your strength 💪 and
+it doesn't budge. Then you push it slightly and it creaks open ... _Gotcha!_ 😈
+
+It's time ⏲️ I must admit, not everything can be perfect and this is one of
+those instances where the behavior _wants_ to be intuitive, but it falls short.
+🤷 It leads to plenty of confusion and bugs 🐞 in a Go program. What I'm
+speaking about is whether the **reference** or the **value** is captured by a
+closure 🦪
+
+Many times you can avoid this in Go, by **not** using closures and instead
+using an anonymous function with a parameter, but sometimes you just have to
+redeclare your variable. Many times you may see this 👉 `someVal := someVal`
+this is known as shadowing 🥷 and it's to get around this unintuitive behavior.
+
+The behavior I'm talking about is expecting the value of a variable to be
+captured in a closure, when in fact the pointer (reference) to it is captured.
+Trust me when I say you've already experienced this or will in the future. This
+is unintuitive because Go doesn't actually hide away pointers like many other
+programming languages do. Go also boasts no magic under the hood 🚗 and it
+succeeds at that in **plenty** of instances. However, in this instance, we have
+what looks like `someValue`, being treated like `*somePointer` 🤷 Can't win 'em
+all I suppose.
+
+Let's understand what's happening so we can be aware of it, avoid it, **and**
+how we can fix it 🔧 😁
+
+### Coding Time!
+
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
+
+#### `closure.go`
+
+```go
+// Gotcha shows that closures will grab from outside of their environment, but
+// closures have no control of those variables having their values changed.
+func Gotcha() {
+	limit := 4
+	funcs := make([]func(), limit)
+	for gotcha := 0; gotcha < limit; gotcha++ {
+		funcs[gotcha] = func() {
+			fmt.Printf("number: %d and pointer: %p\n", gotcha, &gotcha)
+		}
+	}
+	for i := 0; i < limit; i++ {
+		funcs[i]()
+	}
+}
+
+// GotchaFix shows a deeper understanding of closures and how we can avoid the
+// very common beginner mistake of
+func GotchaFix() {
+	limit := 4
+	funcs := make([]func(), limit)
+	for gotcha := 0; gotcha < limit; gotcha++ {
+		// NOTE(jay): this is known as shadowing. This is confusing and is normally
+		// avoided if possible. The explanation is we are creating a new variable
+		// scoped inside of the for loop and therefore this `gotcha` won't change
+		// only the `gotcha` on the for loop scope will change.
+		//
+		// This also works and you could put gotcha2 in place of gotcha in the
+		// closure if it helps your understanding.
+		//
+		// gotcha2 := gotcha
+		gotcha := gotcha
+
+		// 👇 This also works and it's less confusing for the uninitiated. Again,
+		// we are creating a new variable `gotcha2` inside of the for loop, that is
+		// the same as the `gotcha` on the for loop scope.
+		// gotcha2 := gotcha
+		funcs[gotcha] = func() {
+			fmt.Printf("number: %d and pointer: %p\n", gotcha, &gotcha)
+		}
+	}
+
+	// Instead of using a closure we can use an anonymous function which has a
+	// parameter passed in.
+	funcs2 := make([]func(int), limit)
+	for gotcha := 0; gotcha < limit; gotcha++ {
+		funcs2[gotcha] = func(i int) {
+			fmt.Printf("number: %d and pointer: %p\n", i, &i)
+		}
+	}
+
+	fmt.Println("fix 1:")
+	for i := 0; i < limit; i++ {
+		funcs[i]()
+	}
+	fmt.Println("fix 2:")
+	for i := 0; i < limit; i++ {
+		funcs2[i](i)
+	}
+}
+```
+
+#### `example_test.go`
+
+```go
+func ExampleGotcha() {
+	// XXX(jay): These tests will never pass because the pointers will never be
+	// the same each time we run the tests! The gotcha still happens though!
+	closure.Gotcha()
+	// Output:
+	// number: 4 and pointer: 0xc000016490
+	// number: 4 and pointer: 0xc000016490
+	// number: 4 and pointer: 0xc000016490
+	// number: 4 and pointer: 0xc000016490
+}
+
+func ExampleGotchaFix() {
+	// XXX(jay): These tests will never pass because the pointers will never be
+	// the same each time we run the tests! The fix works, though!
+	closure.GotchaFix()
+	// Output:
+	// fix 1:
+	// number: 0 and pointer: 0xc0000164a8
+	// number: 1 and pointer: 0xc0000164b0
+	// number: 2 and pointer: 0xc0000164b8
+	// number: 3 and pointer: 0xc0000164c0
+	// fix 2:
+	// number: 0 and pointer: 0xc0000164c8
+	// number: 1 and pointer: 0xc0000164d0
+	// number: 2 and pointer: 0xc0000164d8
+	// number: 3 and pointer: 0xc0000164e0
+}
+```
+
 ## The Whole File
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-victorious.png "gopher-victorious by Egon Elbre")
@@ -692,6 +825,66 @@ var DoWork2 = func(sum int) float32 {
 var DoWork3 = func(f float32) string {
 	return fmt.Sprintf("%0.4f", f)
 }
+
+// Gotcha shows that closures will grab from outside of their environment, but
+// closures have no control of those variables having their values changed.
+func Gotcha() {
+	limit := 4
+	funcs := make([]func(), limit)
+	for gotcha := 0; gotcha < limit; gotcha++ {
+		funcs[gotcha] = func() {
+			fmt.Printf("number: %d and pointer: %p\n", gotcha, &gotcha)
+		}
+	}
+	for i := 0; i < limit; i++ {
+		funcs[i]()
+	}
+}
+
+// GotchaFix shows a deeper understanding of closures and how we can avoid the
+// very common beginner mistake of
+func GotchaFix() {
+	limit := 4
+	funcs := make([]func(), limit)
+	for gotcha := 0; gotcha < limit; gotcha++ {
+		// NOTE(jay): this is known as shadowing. This is confusing and is normally
+		// avoided if possible. The explanation is we are creating a new variable
+		// scoped inside of the for loop and therefore this `gotcha` won't change
+		// only the `gotcha` on the for loop scope will change.
+		//
+		// This also works and you could put gotcha2 in place of gotcha in the
+		// closure if it helps your understanding.
+		//
+		// gotcha2 := gotcha
+		gotcha := gotcha
+
+		// 👇 This also works and it's less confusing for the uninitiated. Again,
+		// we are creating a new variable `gotcha2` inside of the for loop, that is
+		// the same as the `gotcha` on the for loop scope.
+		// gotcha2 := gotcha
+		funcs[gotcha] = func() {
+			fmt.Printf("number: %d and pointer: %p\n", gotcha, &gotcha)
+		}
+	}
+
+	// Instead of using a closure we can use an anonymous function which has a
+	// parameter passed in.
+	funcs2 := make([]func(int), limit)
+	for gotcha := 0; gotcha < limit; gotcha++ {
+		funcs2[gotcha] = func(i int) {
+			fmt.Printf("number: %d and pointer: %p\n", i, &i)
+		}
+	}
+
+	fmt.Println("fix 1:")
+	for i := 0; i < limit; i++ {
+		funcs[i]()
+	}
+	fmt.Println("fix 2:")
+	for i := 0; i < limit; i++ {
+		funcs2[i](i)
+	}
+}
 ```
 
 ## All Of The Outputs To Our Examples
@@ -791,5 +984,33 @@ func ExampleAvoidCallbackHell() {
 	//       226.1947
 	// Some padding for final result:
 	//       226.1947
+}
+
+func ExampleGotcha() {
+	// XXX(jay): These tests will never pass because the pointers will never be
+	// the same each time we run the tests! The gotcha still happens though!
+	closure.Gotcha()
+	// Output:
+	// number: 4 and pointer: 0xc000016490
+	// number: 4 and pointer: 0xc000016490
+	// number: 4 and pointer: 0xc000016490
+	// number: 4 and pointer: 0xc000016490
+}
+
+func ExampleGotchaFix() {
+	// XXX(jay): These tests will never pass because the pointers will never be
+	// the same each time we run the tests! The fix works, though!
+	closure.GotchaFix()
+	// Output:
+	// fix 1:
+	// number: 0 and pointer: 0xc0000164a8
+	// number: 1 and pointer: 0xc0000164b0
+	// number: 2 and pointer: 0xc0000164b8
+	// number: 3 and pointer: 0xc0000164c0
+	// fix 2:
+	// number: 0 and pointer: 0xc0000164c8
+	// number: 1 and pointer: 0xc0000164d0
+	// number: 2 and pointer: 0xc0000164d8
+	// number: 3 and pointer: 0xc0000164e0
 }
 ```

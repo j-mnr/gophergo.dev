@@ -48,11 +48,11 @@ See how all three tasks got done, but none of them were ever blocking the other
 tasks? It was only **me** that was switching from each task that made it seem
 like all three got done at the same time (in parallel), but what actually
 happened is when I was waiting for something to finish, I didn't just stand
-there 🧍 I picked up another other task.
+there 🧍 I picked up another task.
 
 **I did not do all my tasks at the same time, I did them when they were ready
-to move to their next steps** This is concurrency. If I did each one of them at
-the same time (Let's say I had two friends come over) then it would be
+to move to their next steps** -- this is concurrency. If I did each one of them
+at the same time (Let's say I had two friends come over) then it would be
 parallelism. We can see that in this case 💼 Having a friend watch water boil
 and another friend watch the washer until it turns off **wouldn't make the
 process any quicker**
@@ -74,4 +74,4 @@ the tool, instead of admitting your depth of knowledge and lack of
 understanding is the reason the application is failing. After all, you wouldn't
 blame a chainsaw ⛓️🪚 for cutting the table in half when you tried to cut the
 butter 🧈 would you? 😏 You have full knowledge 🧠 of when and where to use
-one. Now let's go make that a reality with concurrency! 💪😁
+a chainsaw. Now let's _Go_ 😹 make that a reality with concurrency! 💪😁
