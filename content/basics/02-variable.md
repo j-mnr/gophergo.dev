@@ -16,21 +16,21 @@ value.
 
 ## Setup
 
-Let's make our directory `variables` and the files we want inside of that
-directory `example_test.go` `variables.go`
+Let's make our directory `variable` and the files we want inside of that
+directory `example_test.go` `variable.go`
 
 ```sh
-mkdir variables
-touch variables/example_test.go variables/variables.go
+mkdir variable
+touch variable/example_test.go variable/variable.go
 ```
 
-Now let's open up `variables.go` and for the very first line we'll add
+Now let's open up `variable.go` and for the very first line we'll add
 ```go
-package variables
+package variable
 ```
 Next for `example_test.go` for the very first line we'll add
 ```go
-package variables_test
+package variable_test
 ```
 
 ## Explicit Declaration and Zero Values
@@ -53,7 +53,7 @@ values? **Glad you asked!** 😁
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### `variables.go`
+#### `variable.go`
 
 ```go
 // Zero shows off all of the zero values or what might also be
@@ -83,7 +83,7 @@ map zero value is: %+v`,
 
 ```go
 func ExampleZero() {
-	variables.Zero()
+	variable.Zero()
 	// Output:
 	// string zero value is: ""
 	// int zero value is: 0
@@ -113,7 +113,7 @@ variables values that we want, in other words, we should initialize them.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### `variables.go`
+#### `variable.go`
 
 ```go
 // Explicit shows that we can explicitly type a variable to a specific
@@ -137,7 +137,7 @@ func Explicit() {
 
 ```go
 func ExampleExplicit() {
-	variables.Explicit()
+	variable.Explicit()
 	// Output:
 	// My Name's Jay! 😁,
 	// From 0 to 1000
@@ -158,7 +158,7 @@ experience you'll see it's obvious what `type` something is.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### `variables.go`
+#### `variable.go`
 
 ```go
 // Implicit shows that we don't need to declare what the type is as
@@ -181,7 +181,7 @@ func Implicit() {
 
 ```go
 func ExampleImplicit() {
-	variables.Implicit()
+	variable.Implicit()
 	// Output:
 	// Does anyone have any room for 🥧,
 	// More Pi 3.141590
@@ -205,7 +205,7 @@ some buck teeth. Remind you of anything cute, blue, and furry?
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### `variables.go`
+#### `variable.go`
 
 ```go
 // AssignmentOperator shows the preferred and idomatic way of declaring
@@ -225,7 +225,7 @@ func AssignmentOperator() {
 
 ```go
 func ExampleAssignmentOperator() {
-	variables.AssignmentOperator()
+	variable.AssignmentOperator()
 	// Output:
 	// Short and Sweet. Very Nice! 👍
 	// I really need c0ffee
@@ -317,7 +317,7 @@ package variables_test
 import "basics/variables"
 
 func ExampleExplicit() {
-	variables.Explicit()
+	variable.Explicit()
 	// Output:
 	// My Name's Jay! 😁,
 	// From 0 to 1000
@@ -325,7 +325,7 @@ func ExampleExplicit() {
 }
 
 func ExampleImplicit() {
-	variables.Implicit()
+	variable.Implicit()
 	// Output:
 	// Does anyone have any room for 🥧,
 	// More Pi 3.141590
@@ -334,7 +334,7 @@ func ExampleImplicit() {
 }
 
 func ExampleZero() {
-	variables.Zero()
+	variable.Zero()
 	// Output:
 	// string zero value is: ""
 	// int zero value is: 0
@@ -346,7 +346,7 @@ func ExampleZero() {
 }
 
 func ExampleAssignmentOperator() {
-	variables.AssignmentOperator()
+	variable.AssignmentOperator()
 	// Output:
 	// Short and Sweet. Very Nice! 👍
 	// I really need c0ffee

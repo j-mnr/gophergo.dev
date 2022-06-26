@@ -15,6 +15,26 @@ to change. For example, we might want a default format `string` for our
 limits a resource, like the number of `goroutines` (coming soon) or the number
 of connections to a database. A constant is perfect for these situations!
 
+## Setup
+
+Let's make our directory `constant` and the files we want inside of that directory
+`example_test.go` `constant.go`
+
+```sh
+mkdir constant
+touch constant/example_test.go constant/constant.go
+```
+
+Now let's open up `constant.go` and for the very first line we'll add
+```go
+package constant
+```
+Next for `example_test.go` for the very first line we'll add
+```go
+package constant_test
+```
+
+
 ## Allowable Constants
 
 Constants are super useful and seen throughout many codebases, in Go, you're
@@ -99,26 +119,26 @@ const (
 
 ```go
 func ExampleStuck() {
-	fmt.Println(constants.Stuck)
+	fmt.Println(constant.Stuck)
 	// Output:
 	// This variable can never be reassigned.
 }
 
 func ExampleHeartEyes() {
 	// We can convert constants just like variables
-	fmt.Println(string(constants.HeartEyes))
+	fmt.Println(string(constant.HeartEyes))
 	// Output:
 	// 😍
 }
 
 func ExampleArithmetic() {
-	fmt.Println(constants.Arithmetic)
+	fmt.Println(constant.Arithmetic)
 	// Output:
 	// 175.38731365097925
 }
 
 func ExampleAlwaysTrue() {
-	fmt.Println(constants.AlwaysTrue)
+	fmt.Println(constant.AlwaysTrue)
 	// Output:
 	// true
 }
@@ -141,7 +161,7 @@ therefore have underlying types that can be converted.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### `constants.go`
+#### `constant.go`
 
 ```go
 // UntypedConst shows that constants can have values that will be automatically
@@ -163,7 +183,7 @@ func UntypedConst() {
 
 ```go
 func ExampleUntypedConst() {
-	constants.UntypedConst()
+	constant.UntypedConst()
 	// Output:
 	// false
 	// false
@@ -174,7 +194,7 @@ This may still be a little confusing as I've pulled in something from the
 standard library, that we're not familiar with yet **and** it's math 😬 So
 let's do one more! This time _we'll_ make our own `type` 😄
 
-#### `constants.go`
+#### `constant.go`
 
 ```go
 const UntypedString = "I fit wherever the underlying type of something is a string!"
@@ -190,7 +210,7 @@ func Print(s myString) { fmt.Println(s) }
 
 ```go
 func ExamplePrint() {
-	constants.Print(constants.UntypedString)
+	constant.Print(constant.UntypedString)
 	// Output:
 	// I fit wherever the underlying type of something is a string!
 }
@@ -281,39 +301,39 @@ import (
 )
 
 func ExampleStuck() {
-	fmt.Println(constants.Stuck)
+	fmt.Println(constant.Stuck)
 	// Output:
 	// This variable can never be reassigned.
 }
 
 func ExampleHeartEyes() {
 	// We can convert constants just like variables
-	fmt.Println(string(constants.HeartEyes))
+	fmt.Println(string(constant.HeartEyes))
 	// Output:
 	// 😍
 }
 
 func ExampleArithmetic() {
-	fmt.Println(constants.Arithmetic)
+	fmt.Println(constant.Arithmetic)
 	// Output:
 	// 175.38731365097925
 }
 
 func ExampleAlwaysTrue() {
-	fmt.Println(constants.AlwaysTrue)
+	fmt.Println(constant.AlwaysTrue)
 	// Output:
 	// true
 }
 
 func ExampleUntypedConst() {
-	constants.UntypedConst()
+	constant.UntypedConst()
 	// Output:
 	// false
 	// false
 }
 
 func ExamplePrint() {
-	constants.Print(constants.UntypedString)
+	constant.Print(constant.UntypedString)
 	// Output:
 	// I fit wherever the underlying type of something is a string!
 }

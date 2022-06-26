@@ -5,7 +5,7 @@ Draft: false
 ---
 
 We just got done speaking on arrays and it's a perfect time to start talking
-about slices. The more versatile versions of arrays. This is because we
+about slice. The more versatile versions of arrays. This is because we
 **don't** have to declare a size to a slice. Slices can grow indefinitely!
 But wait! There's more! 😲 They also have certain global functions specific to
 them! And to top it all off they come with a really nice optimization for
@@ -20,21 +20,21 @@ We'll take this 🥧 one _slice_ at a time 😹
 
 ## Setup
 
-Let's make our directory `slices` and the files we want inside of that directory
-`example_test.go` `slices.go`
+Let's make our directory `slice` and the files we want inside of that directory
+`example_test.go` `slice.go`
 
 ```sh
-mkdir slices
-touch slices/example_test.go slices/slices.go
+mkdir slice
+touch slice/example_test.go slice/slice.go
 ```
 
-Now let's open up `slices.go` and for the very first line we'll add
+Now let's open up `slice.go` and for the very first line we'll add
 ```go
-package slices
+package slice
 ```
 Next for `example_test.go` for the very first line we'll add
 ```go
-package slices_test
+package slice_test
 ```
 
 ## Initialize
@@ -46,7 +46,7 @@ think about how many elements we want in it, we just declare it.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre" "gopher-heart-eyes by Egon Elbre")
 
-#### `slices.go`
+#### `slice.go`
 
 ```go
 // Basic shows how to create a slice and how to set and get values in it.
@@ -74,7 +74,7 @@ func Basic() {
 
 ```go
 func ExampleBasic() {
-	slices.Basic()
+	slice.Basic()
 	// Output:
 	// empty: [  ]
 	// full: [|set zeroeth value| |set first value| |set second value|]
@@ -104,7 +104,7 @@ need, you'll get that much.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### `slices.go`
+#### `slice.go`
 
 Here we introduce the unpacking operator `...` which is further explained in
 the [lesson on functions](/basics/13-function/#variadic-arguments-varargs) So,
@@ -140,7 +140,7 @@ func Append() {
 
 ```go
 func ExampleAppend() {
-	slices.Append()
+	slice.Append()
 	// Output:
 	// capacity: 0
 	// length: 0
@@ -169,7 +169,7 @@ values.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### `slices.go`
+#### `slice.go`
 
 ```go
 // Copy shows how to copy one slice into another slice using the builtin
@@ -195,7 +195,7 @@ func Copy() {
 
 ```go
 func ExampleCopy() {
-	slices.Copy()
+	slice.Copy()
 	// Output:
 	// empty srcSlice: [0 0 0 0 0 0 0 0 0 0]
 	// full srcSlice: [0 1 2 3 4 5 6 7 8 9]
@@ -221,7 +221,7 @@ outside of the capacity, you're going to have a bad time ⏰
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### `slices.go`
+#### `slice.go`
 
 I don't like showing off things we haven't learned yet, but later we will
 understand what `panic`, `recover`, and `defer` are doing. For now copy and
@@ -249,7 +249,7 @@ func IndexOutOfRangePanic() {
 
 ```go
 func ExampleIndexOutOfRangePanic() {
-	slices.IndexOutOfRangePanic()
+	slice.IndexOutOfRangePanic()
 	// Output:
 	// slice paniced!
 	//  runtime error: index out of range [-1]
@@ -277,7 +277,7 @@ with the slice operator `:` is. What efficiency you may ask? Well I'll let
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### `slices.go`
+#### `slice.go`
 
 ```go
 // ReasonForName shows us why a slice is called a slice and that's because we can
@@ -316,7 +316,7 @@ func ReasonForName() {
 
 ```go
 func ExampleReasonForName() {
-	slices.ReasonForName()
+	slice.ReasonForName()
 	// Output:
 	// sliceUpToThirdIndex: [zero one two three four five]
 	// length: 6 capacity: 6
@@ -343,7 +343,7 @@ more if you want. So don't be intimidated, you got this! 💪😤
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### `slices.go`
+#### `slice.go`
 
 ```go
 // Matrix shows how to make a matrix also known as a 2d array, but still
@@ -371,7 +371,7 @@ func Matrix() {
 
 ```go
 func ExampleMatrix() {
-	slices.Matrix()
+	slice.Matrix()
 	// Output:
 	// matrix empty: [[] [] []]
 	// matrix full: [[0] [1 2] [2 3 4]]
@@ -528,7 +528,7 @@ package slices_test
 import "basics/slices"
 
 func ExampleBasic() {
-	slices.Basic()
+	slice.Basic()
 	// Output:
 	// empty: [  ]
 	// full: [|set zeroeth value| |set first value| |set second value|]
@@ -539,7 +539,7 @@ func ExampleBasic() {
 }
 
 func ExampleAppend() {
-	slices.Append()
+	slice.Append()
 	// Output:
 	// capacity: 0
 	// length: 0
@@ -554,7 +554,7 @@ func ExampleAppend() {
 }
 
 func ExampleCopy() {
-	slices.Copy()
+	slice.Copy()
 	// Output:
 	// empty srcSlice: [0 0 0 0 0 0 0 0 0 0]
 	// full srcSlice: [0 1 2 3 4 5 6 7 8 9]
@@ -563,14 +563,14 @@ func ExampleCopy() {
 }
 
 func ExampleIndexOutOfRangePanic() {
-	slices.IndexOutOfRangePanic()
+	slice.IndexOutOfRangePanic()
 	// Output:
 	// slice paniced!
 	//  runtime error: index out of range [-1]
 }
 
 func ExampleReasonForName() {
-	slices.ReasonForName()
+	slice.ReasonForName()
 	// Output:
 	// sliceUpToThirdIndex: [zero one two three four five]
 	// length: 6 capacity: 6
@@ -584,7 +584,7 @@ func ExampleReasonForName() {
 }
 
 func ExampleMatrix() {
-	slices.Matrix()
+	slice.Matrix()
 	// Output:
 	// matrix empty: [[] [] []]
 	// matrix full: [[0] [1 2] [2 3 4]]

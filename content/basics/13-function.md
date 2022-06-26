@@ -8,7 +8,7 @@ It's time for the **FUNC** 🪩🕺 Can you handle it?
 
 Function that is and of course you can handle it! 😄 We've been using them this
 entire time. We've needed some preliminary exposure to other keywords before we
-can dig into functions. So let's get `func`-y 😹 and boogie on down to our next
+can dig into function. So let's get `func`-y 😹 and boogie on down to our next
 lesson.
 
 In it's purest form a function takes in zero to many inputs and produces one to
@@ -19,21 +19,21 @@ would be a function that takes in two inputs and produces one output.
 
 ## Setup
 
-Let's make our directory `functions` and the files we want inside of that directory
-`example_test.go` `functions.go`
+Let's make our directory `function` and the files we want inside of that directory
+`example_test.go` `function.go`
 
 ```sh
-mkdir functions
-touch functions/example_test.go functions/functions.go
+mkdir function
+touch function/example_test.go function/function.go
 ```
 
-Now let's open up `functions.go` and for the very first line we'll add
+Now let's open up `function.go` and for the very first line we'll add
 ```go
-package functions
+package function
 ```
 Next for `example_test.go` for the very first line we'll add
 ```go
-package functions_test
+package function_test
 ```
 
 ## Private Functions
@@ -79,7 +79,7 @@ We don't know what each of those calls are doing but it reads like a story.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### `functions.go`
+#### `function.go`
 
 ```go
 // privateFunc is an example function, that is not exported. It is not always
@@ -97,7 +97,7 @@ func privateFunc() {
 // This will not work, uncomment it and see what error it gives you.
 // func ExampleprivateFunc() {
 // 	// NOTE(jay): privateFunc not exported by package functions
-// 	functions.privateFunc()
+// 	function.privateFunc()
 // }
 ```
 
@@ -127,7 +127,7 @@ have a {{< anchor-new-window "fmt_test"
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### `functions.go`
+#### `function.go`
 
 ```go
 // Public is an example function, that is exported. It is always a good
@@ -143,7 +143,7 @@ func Public() {
 
 ```go
 func ExamplePublic() {
-	functions.Public()
+	function.Public()
 	// Output:
 	// This function is exported and can be called anywhere.
 }
@@ -169,7 +169,7 @@ though, so no big deal.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### `functions.go`
+#### `function.go`
 
 ```go
 // WithParams is an example function, that shows you how to pass in
@@ -183,7 +183,7 @@ func WithParams(name string, value int, emoji rune) {
 
 ```go
 func ExampleWithParams() {
-	functions.WithParams("Mechanical Arm", 9, '🦾')
+	function.WithParams("Mechanical Arm", 9, '🦾')
 	// Output:
 	// Mechanical Arm looks like 🦾 and is a 9/10
 }
@@ -207,7 +207,7 @@ turn it Go style!
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### `functions.go`
+#### `function.go`
 
 ```go
 // WithReturn is an example function on how to specify what type you want a
@@ -221,7 +221,7 @@ func WithReturn() string {
 
 ```go
 func ExampleWithReturn() {
-	fmt.Println(functions.WithReturn())
+	fmt.Println(function.WithReturn())
 	// Output:
 	// It's just this easy to return a type
 }
@@ -252,7 +252,7 @@ func Add(n1 int, n2 int) (int, bool) {
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### `functions.go`
+#### `function.go`
 
 ```go
 // WithMultipleReturn is an example function that will return two types at
@@ -267,7 +267,7 @@ func WithMultipleReturn() ([]int, bool) {
 
 ```go
 func ExampleWithMultipleReturn() {
-	fmt.Println(functions.WithMultipleReturn())
+	fmt.Println(function.WithMultipleReturn())
 	// Output:
 	// [1 2 3 4 5] true
 }
@@ -298,7 +298,7 @@ func Add(n1 int, n2 int) (sum int, gtThousand bool) {
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### `functions.go`
+#### `function.go`
 
 ```go
 // WithNamedReturn is an example function that shows how you can name all
@@ -320,7 +320,7 @@ func WithNamedReturn(name, scheme, host, path, query string) (email, url string)
 
 ```go
 func ExampleWithNamedReturn() {
-	fmt.Println(functions.WithNamedReturn("Gamba",
+	fmt.Println(function.WithNamedReturn("Gamba",
 		"https://", "gophergo.dev", "/fun-with-funcs", "?isFun=yes&isEasy=yes"))
 	// Output:
 	// Gamba@gophergo.dev https://gophergo.dev/fun-with-funcs?isFun=yes&isEasy=yes
@@ -354,7 +354,7 @@ anchor-new-window "pack/unpack"
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
-#### `functions.go`
+#### `function.go`
 
 When we use the pack operator `...` it will take all of the values and turn it
 into a slice of a type, for this we make a slice of int `[]int` and as we
@@ -383,10 +383,10 @@ or other edge cases.
 
 ```go
 func ExampleVariadic() {
-	fmt.Println(functions.Variadic())
-	fmt.Println(functions.Variadic(1, 2, 3))
+	fmt.Println(function.Variadic())
+	fmt.Println(function.Variadic(1, 2, 3))
 	nums := []int{4, 5, 6, 7, 8, 9, 10, 11, 12}
-	fmt.Println(functions.Variadic(nums...))
+	fmt.Println(function.Variadic(nums...))
 	// Output:
 	// 0
 	// 6
@@ -478,45 +478,45 @@ import (
 // This will not work, uncomment it and see what error it gives you.
 // func ExampleprivateFunc() {
 // 	// NOTE(jay): privateFunc not exported by package functions
-// 	functions.privateFunc()
+// 	function.privateFunc()
 // }
 
 func ExamplePublic() {
-	functions.Public()
+	function.Public()
 	// Output:
 	// This function is exported and can be called anywhere.
 }
 
 func ExampleWithParams() {
-	functions.WithParams("Mechanical Arm", 9, '🦾')
+	function.WithParams("Mechanical Arm", 9, '🦾')
 	// Output:
 	// Mechanical Arm looks like 🦾 and is a 9/10
 }
 
 func ExampleWithReturn() {
-	fmt.Println(functions.WithReturn())
+	fmt.Println(function.WithReturn())
 	// Output:
 	// It's just this easy to return a type
 }
 
 func ExampleWithMultipleReturn() {
-	fmt.Println(functions.WithMultipleReturn())
+	fmt.Println(function.WithMultipleReturn())
 	// Output:
 	// [1 2 3 4 5] true
 }
 
 func ExampleWithNamedReturn() {
-	fmt.Println(functions.WithNamedReturn("Gamba",
+	fmt.Println(function.WithNamedReturn("Gamba",
 		"https://", "gophergo.dev", "/fun-with-funcs", "?isFun=yes&isEasy=yes"))
 	// Output:
 	// Gamba@gophergo.dev https://gophergo.dev/fun-with-funcs?isFun=yes&isEasy=yes
 }
 
 func ExampleVariadic() {
-	fmt.Println(functions.Variadic())
-	fmt.Println(functions.Variadic(1, 2, 3))
+	fmt.Println(function.Variadic())
+	fmt.Println(function.Variadic(1, 2, 3))
 	nums := []int{4, 5, 6, 7, 8, 9, 10, 11, 12}
-	fmt.Println(functions.Variadic(nums...))
+	fmt.Println(function.Variadic(nums...))
 	// Output:
 	// 0
 	// 6
