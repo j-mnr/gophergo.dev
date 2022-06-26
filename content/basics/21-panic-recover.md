@@ -87,7 +87,7 @@ func AfterDefer() {
 #### `example_test.go`
 
 Some things just can't have good output. To see this in action we need to go to
-our `cmd/main.go` made _all_ the way back on [lesson
+our `cmd/main.go` made _all_ the way back in [lesson
 0](/basics/00-hello-gophers/#func-main) You'll need to import our new package
 and run it. I did it like
 
