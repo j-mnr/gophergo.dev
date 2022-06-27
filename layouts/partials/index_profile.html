@@ -11,22 +11,34 @@
 </style>
 <div class="profile">
   {{- with .Site.Params.profileMode }}
-  <div class="profile_inner">
-    <div class="banner">
-      <img src="{{ .imageUrl }}" alt={{ .imageTitle }} />
-      <div>
-        <span>
-          <a
-            href="https://github.com/ashleymcnamara/gophers/blob/master/GoCommunity.png"
-            target="_blank">{{ .imageTitle }}</a> by
-          <a href="https://twitter.com/ashleymcnamara" target="_blank">Ashley McNamara</a>,
-          used under
-          <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY</a>
-        </span>
-      </div>
+  <div class="banner" style="grid-column: span 3">
+    <img src="/ashley-mcnamara/GoCommunity.png" alt={{ .imageTitle }} />
+    <div>
+      <span>
+        <a
+          href="https://github.com/ashleymcnamara/gophers/blob/master/GoCommunity.png"
+          target="_blank">Go Community</a> by
+        <a href="https://twitter.com/ashleymcnamara" target="_blank">Ashley McNamara</a>,
+        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">LICENSED BY</a>
+      </span>
     </div>
-    <h1>{{ .title | default $.Site.Title | markdownify }}</h1>
-    <span>{{ .subtitle | markdownify }}</span>
+  </div>
+  <div class="banner">
+    <img src="/takuya-ueda/cheer.png" alt="Cheer" />
+    <div>
+      <span>
+        <a
+          href="https://github.com/tenntenn/gopher-stickers/blob/master/png/cheer.png"
+          target="_blank">Cheer</a> by
+        <a href="https://twitter.com/tenntenn" target="_blank">Takuya
+          Ueda</a>,
+        <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank">LICENSED BY</a>
+      </span>
+    </div>
+  </div>
+  <div>
+    <h1>Let's Go for it!</h1>
+    <span>Pick an area to explore</span>
     {{- partial "social_icons.html" $.Site.Params.socialIcons -}}
     {{- with .buttons }}
     <div class="buttons">
@@ -37,6 +49,49 @@
       {{- end }}
     </div>
     {{- end }}
+  </div>
+  <div class="banner">
+    <img src="/egon-elbre/jet-pack.svg" alt="Jet Pack" />
+    <div>
+      <span>
+        <a
+          href="https://github.com/egonelbre/gophers/blob/master/vector/science/jet-pack.svg"
+          target="_blank">Jet Pack</a> by
+        <a href="https://twitter.com/egonelbre/" target="_blank">Egon
+          Elbre</a>,
+        <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">LICENSED BY</a>
+      </span>
+    </div>
+  </div>
+  <div class="banner" style="grid-column: span 2">
+    <img src="/maria-letta/illustrations/4.svg" alt="illustrations #4"
+    style="
+    object-fit: cover;
+    width: 700px;
+    height: 255px;
+    " />
+    <div>
+      <span>
+        <a
+          href="https://github.com/MariaLetta/free-gophers-pack/blob/master/illustrations/svg/4.svg"
+          target="_blank">Illustrations-4</a> by
+        <a href="https://creativemarket.com/Maria_Letta" target="_blank">Maria
+          Letta</a>,
+        <a href="https://github.com/MariaLetta/free-gophers-pack/blob/master/LICENSE" target="_blank">LICENSED BY</a>
+      </span>
+    </div>
+  </div>
+  <div class="banner">
+    <img src="/marcus-olsson/midsummer.svg" alt="midsummer" />
+    <div>
+      <span>
+        <a
+          href="https://github.com/marcusolsson/gophers/blob/master/midsummer.svg"
+          target="_blank">Midsummer</a> by
+        <a href="https://marcus.se.net/" target="_blank">Marcus Olsson</a>,
+        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">LICENSED BY</a>
+      </span>
+    </div>
   </div>
   {{- end}}
 </div>
