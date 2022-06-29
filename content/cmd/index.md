@@ -6,4 +6,4 @@ by [Ashley McNamara](https://twitter.com/ashleymcnamara)-
 [CC BY](https://creativecommons.org/licenses/by/4.0/)`
 >}}
 
-## The official docs are your **_Go_** 😹 to here {{< anchor-new-window "go.dev" "https://pkg.go.dev/cmd/go" >}}
+## The official docs are your **_Go_** 😹 to here [go.dev](https://pkg.go.dev/cmd/go)

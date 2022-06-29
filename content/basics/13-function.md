@@ -119,9 +119,9 @@ This means you've known how to call functions outside of the packages we've
 been creating this entire time! 😁 So don't be afraid when calling something
 like `fmt.Printf`. You're literally doing the same thing that the language
 designers did in their package `fmt` and would you look at that 😲, they even
-have a {{< anchor-new-window "fmt_test"
-"https://cs.opensource.google/go/go/+/refs/tags/go1.18.1:src/fmt/example_test.go"
->}} package. 😄
+have a
+[fmt_test](https://cs.opensource.google/go/go/+/refs/tags/go1.18.1:src/fmt/example_test.go)
+package. 😄
 
 ### Coding Time!
 
@@ -340,15 +340,13 @@ function), but makes our lives (the writer of the function) a little more
 difficult. I'll explain more during coding in `example_test.go`.
 
 So how do we get this fancy stuff into our functions? Well with an operator of
-course; the `...` operator. According to the
-{{< anchor-new-window "language specification"
-"https://go.dev/ref/spec#Passing_arguments_to_..._parameters"
->}} there is no name for the `...` operator 😥 In other languages they have
-similar operators with names, (splat/spread), but our `...` operator doesn't
-just pull out all values (from a slice), it also puts them all in. So we'll
-take a page out of the Lua programming language and call it the {{<
-anchor-new-window "pack/unpack"
-"https://www.lua.org/manual/5.4/manual.html#6.6" >}} operator.
+course; the `...` operator. According to the [language
+specification](https://go.dev/ref/spec#Passing_arguments_to_..._parameters)
+there is no name for the `...` operator 😥 In other languages they have similar
+operators with names, (splat/spread), but our `...` operator doesn't just pull
+out all values (from a slice), it also puts them all in. So we'll take a page
+out of the Lua programming language and call it the
+[pack/unpack](https://www.lua.org/manual/5.4/manual.html#6.6) operator.
 
 ### Coding Time!
 

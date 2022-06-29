@@ -190,10 +190,10 @@ func ExampleForAccessingData() {
 
 ## Decorator Pattern
 
-There is a _very_ popular design pattern known as the {{< anchor-new-window
-"Decorator Pattern" "https://refactoring.guru/design-patterns/decorator" >}} 🎍
-It's called that because it adds a little flair to something like a 🎀`func`🎀
-without actually changing any of the underlying implementation of the `func`.
+There is a _very_ popular design pattern known as the [Decorator
+Pattern](https://refactoring.guru/design-patterns/decorator) 🎍 It's called
+that because it adds a little flair to something like a 🎀`func`🎀 without
+actually changing any of the underlying implementation of the `func`.
 
 In Python 🐍 and JS 📜 they literally call them decorators and in Java ☕ they
 are called annotations (**disclaimer** not all annotations function as
