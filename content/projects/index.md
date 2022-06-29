@@ -6,4 +6,4 @@ by [Ashley McNamara](https://twitter.com/ashleymcnamara)-
 [CC BY](https://creativecommons.org/licenses/by/4.0/)`
 >}}
 
-## You should **_Go_** 😹 checkout {{< anchor-new-window "gophercises" "https://gophercises.com/" >}}
+## You should **_Go_** 😹 checkout [gophercises](https://gophercises.com/)

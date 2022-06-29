@@ -14,8 +14,8 @@ teacher."
 The same thing can be done in Go. We can `defer` function calls to be executed.
 Why is this useful? 🤔 There are two main driving reasons I can see 👁️ as to
 why we use `defer`. Readability and control flow. In Go it's idiomatic (common)
-to see code that tends towards the {{< anchor-new-window "return early pattern"
-"https://medium.com/swlh/return-early-pattern-3d18a41bba8" >}}... _very_
+to see code that tends towards the [return early
+pattern](https://medium.com/swlh/return-early-pattern-3d18a41bba8)... _very_
 common. It's almost _wrong_ to nest clauses in Go and reading that code _I'd_
 raise an eyebrow of concern 🤨
 

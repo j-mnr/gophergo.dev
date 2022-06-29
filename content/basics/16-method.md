@@ -10,14 +10,10 @@ reading this and if that's true, it must be explicitly said:
 Go does not support _Object-Oriented Programming_ (OOP). Sorry not sorry 🙃 I
 say that because it has been stated (and argued 😂)
 
-{{< anchor-new-window "time"
-"https://codeburst.io/inheritance-is-evil-stop-using-it-6c4f1caf5117" >}} {{<
-anchor-new-window "and" "https://neethack.com/2017/04/Why-inheritance-is-bad/"
->}} {{< anchor-new-window "time"
-"https://bytecrafter.blogspot.com/2008/05/why-inheritance-is-bad.html" >}} {{<
-anchor-new-window "again"
-"https://softwareengineering.stackexchange.com/questions/134097/why-should-i-prefer-composition-over-inheritance"
->}}
+[time](https://codeburst.io/inheritance-is-evil-stop-using-it-6c4f1caf5117)-
+[and](https://neethack.com/2017/04/Why-inheritance-is-bad/)-
+[time](https://bytecrafter.blogspot.com/2008/05/why-inheritance-is-bad.html)-
+[again](https://softwareengineering.stackexchange.com/questions/134097/why-should-i-prefer-composition-over-inheritance)
 
 That inheritance belongs in the bin 🗑️  Now don't get me wrong
 

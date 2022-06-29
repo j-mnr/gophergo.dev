@@ -67,7 +67,7 @@ In languages that _don't_ support pointers, it's a moot _point_ 😹 to bring up
 "Pass by value 🆚 Pass by reference" because, well, you don't care! It get's
 into the function/method/procedure in any case and you just do your business
 with it all the same. It's usually collection types people get tripped up on,
-which we'll go over 👇 {{< anchor-new-window "down below" "#pass-by-reference-pointer-in-depth" >}}. See
+which we'll go over 👇 [down below](#pass-by-reference-pointer-in-depth). See
 what I did there? I made a pointer to another topic 😂
 
 ### Coding Time!
@@ -199,8 +199,8 @@ float: 0xc00018c020
 addresses: 0xc0001a4000 0xc00018c015 0xc00018c018 0xc00018c020
 ```
 
-As you can see they are all in {{< anchor-new-window "hexadecimal"
-"https://www.freecodecamp.org/news/hexadecimal-number-system/" >}}
+As you can see they are all in
+[hexadecimal](https://www.freecodecamp.org/news/hexadecimal-number-system/)
 representation, but more importantly, it's a number. If someone lives on a
 street in a house 🏡 They _must_ have leading digits to **the exact location**
 Something like **1234** Square Road. The address `0xc0001a4000` is the same as
@@ -286,8 +286,7 @@ pointers that can be dereferenced.
 There is more detail about slices we could go into, but it'd be getting a
 little too deep. I feel like I've already stretched our minds 🧠 enough with
 the quick history lesson. If you are interested there is an amazing explanation
-by Rob Pike on {{< anchor-new-window "The Go Blog" "https://go.dev/blog/slices"
->}}
+by Rob Pike on [The Go Blog](https://go.dev/blog/slices)
 
 ### Coding Time!
 

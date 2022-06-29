@@ -7,20 +7,18 @@ Title: Concurrency
 
 Go has very, _very_, good support for concurrency. No matter what programming
 language you are coming from, this is a good time 🕐 to sit down and read 👓
-because you're going to learn something new ... Unless you're coming from {{<
-anchor-new-window "Erlang"
-"https://en.wikipedia.org/wiki/Erlang_(programming_language)" >}} in which case
-you've got concurrency down 👍 and could teach me something about it 😂 Though
-the code examples will still be useful to see how it's done in Go.
+because you're going to learn something new ... Unless you're coming from
+[Erlang](https://en.wikipedia.org/wiki/Erlang_(programming_language)) in which
+case you've got concurrency down 👍 and could teach me something about it 😂
+Though the code examples will still be useful to see how it's done in Go.
 
-So first things first, {{< anchor-new-window "Concurrency is not parallelism"
-"https://www.youtube.com/watch?v=oV9rvDllKEg" >}} this is an absolutely
+So first things first, [Concurrency is not
+parallelism](https://www.youtube.com/watch?v=oV9rvDllKEg) this is an absolutely
 necessary talk for any budding gopher by Rob Pike. We'll find out with the
 coming lessons that concurrency is unlocked 🔓 with the power of goroutines,
-channels, condition variables and {{< anchor-new-window
-"monitors"
-"https://en.wikipedia.org/wiki/Monitor_(synchronization)#Condition_variables"
->}} 🕵
+channels, condition variables and
+[monitors](https://en.wikipedia.org/wiki/Monitor_(synchronization)#Condition_variables)
+🕵
 
 Second, what's concurrency? The ability to do tasks without blocking execution
 of other code. This is an incomplete definition 😓 but we need to start

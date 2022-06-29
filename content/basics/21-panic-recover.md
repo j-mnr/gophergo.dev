@@ -350,17 +350,17 @@ testing.runExample.func2()
         /usr/lib/go/src/testing/run_example.go:59 +0x11c
 ```
 
-The {{< anchor-new-window "InternalExample struct"
-"https://cs.opensource.google/go/go/+/master:src/testing/example.go;l=91;drc=7791e934c882fd103357448aee0fd577b20013ce;bpv=0"
->}} panicked at line 91 high up on the stack trace at `0x4e5` or `1253` All of
-the hexadecimal values in between `processRunResult(0xc000057c68, {0x0, 0x0},
+The [InternalExample
+struct](https://cs.opensource.google/go/go/+/master:src/testing/example.go;l=91;drc=7791e934c882fd103357448aee0fd577b20013ce;bpv=0)
+panicked at line 91 high up on the stack trace at `0x4e5` or `1253` All of the
+hexadecimal values in between `processRunResult(0xc000057c68, {0x0, 0x0},
 0xc00007eb60?, 0x0, {0x5027e0, 0x5ef9f0})` are pointers too all of the
 arguments that the method takes and it happened in `example.go` which is in the
 standard library `testing` package.
 
-And an {{< anchor-new-window "anonymous function"
-"https://cs.opensource.google/go/go/+/master:src/testing/run_example.go;l=59;bpv=0"
->}} on line 59 in the `run_example.go` file panicked because the above
+And an [anonymous
+function](https://cs.opensource.google/go/go/+/master:src/testing/run_example.go;l=59;bpv=0)
+on line 59 in the `run_example.go` file panicked because the above
 `InternalExample` panicked.
 
 
@@ -376,10 +376,10 @@ basics/panic-recover_test.ExampleNilPointer()
         /home/jay/basics/panic-recover/example_test.go:18 +0x17
 ```
 
-The place where {{< anchor-new-window "panic is defined"
-"https://cs.opensource.google/go/go/+/master:src/runtime/panic.go;l=838;bpv=0"
->}} in the runtime package in the file `panic.go` at line 838 and fairly high
-on the stack trace at `0x207` or `519` in decimal.
+The place where [panic is
+defined](https://cs.opensource.google/go/go/+/master:src/runtime/panic.go;l=838;bpv=0)
+in the runtime package in the file `panic.go` at line 838 and fairly high on
+the stack trace at `0x207` or `519` in decimal.
 
 Next we see all of our code that has files, directories and packages that we
 made! This is where we should check. We have control over all of these values.
@@ -402,23 +402,23 @@ main.main()
 exit status 2
 ```
 
-We see a {{< anchor-new-window "runExample function call"
-"https://cs.opensource.google/go/go/+/master:src/testing/run_example.go;l=63;bpv=0"
->}} that has some pointers to the passed in arguments that happened in the
+We see a [runExample function
+call](https://cs.opensource.google/go/go/+/master:src/testing/run_example.go;l=63;bpv=0)
+that has some pointers to the passed in arguments that happened in the
 `testing` package in the `run_example.go` file on line 63. Much higher than our
 function calls at `0x28d` or `653` in decimal.
 
-Another function call to {{< anchor-new-window "runExamples"
-"https://cs.opensource.google/go/go/+/master:src/testing/example.go;l=44;bpv=0"
->}} a different function from the above in the same package in `example.go` on
-line 44 and closer to the bottom of the stack at `0x186` or `390` in decimal.
+Another function call to
+[runExamples](https://cs.opensource.google/go/go/+/master:src/testing/example.go;l=44;bpv=0)
+a different function from the above in the same package in `example.go` on line
+44 and closer to the bottom of the stack at `0x186` or `390` in decimal.
 
-Finally we see our last actual call of a library using the {{<
-anchor-new-window "testing M struct's Run method"
-"https://cs.opensource.google/go/go/+/master:src/testing/testing.go;l=1728;bpv=0"
->}} with one pointer to a `code` argument which is an `int`. This happens on
-line 1721!!!! Of the file at `0x689`!!! Or `1673` in decimal, very high up on
-the stack.
+Finally we see our last actual call of a library using the [testing M struct's
+Run
+method](https://cs.opensource.google/go/go/+/master:src/testing/testing.go;l=1728;bpv=0)
+with one pointer to a `code` argument which is an `int`. This happens on line
+1721!!!! Of the file at `0x689`!!! Or `1673` in decimal, very high up on the
+stack.
 
 And every Go program must have a `main` function. It is made for us by the
 builtin `testing` package. Thanks Go! 😁👍

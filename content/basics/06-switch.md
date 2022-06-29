@@ -210,13 +210,13 @@ everything! 🤔 Why? Because it has **zero** methods and therefore all types ca
 _also_ implement **zero** methods. Though I understand the syntax can be
 confusing if you're seeing it for the first time. There is also the `any` type
 which is **the exact same thing** as `interface{}` but it reads nicer 😄. We
-will learn about [`interface`](/basics/17-interfaces)soon enough so don't worry
+will learn about [interfaces](/basics/17-interfaces) soon enough so don't worry
 , this is confusing for now. You got this! 💪
 
 So if you see `interface{}` anywhere you can put `any` there. It's out of scope
-for what we need to learn but if you're interested, here's some 🤓 {{<
-anchor-new-window "reading material"
-"https://jordanorelli.com/post/32665860244/how-to-use-interfaces-in-go" >}} 📖
+for what we need to learn but if you're interested, here's some 🤓 [reading
+material](https://jordanorelli.com/post/32665860244/how-to-use-interfaces-in-go)
+📖
 
 ### Compare with If/Else
 

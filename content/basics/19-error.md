@@ -108,9 +108,9 @@ func ExampleNew() {
 ## Errors Are Just Values
 
 First, if we see 👀 what an `error` actually is in the standard library it
-won't be so mystical and magical 🧙 to us -- {{< anchor-new-window "here it is"
-"https://cs.opensource.google/go/go/+/refs/tags/go1.18.2:src/builtin/builtin.go;l=270"
->}} or if you don't want to click away it looks like this
+won't be so mystical and magical 🧙 to us -- [here it
+is](https://cs.opensource.google/go/go/+/refs/tags/go1.18.2:src/builtin/builtin.go;l=270)
+or if you don't want to click away it looks like this
 
 ```go
 // The error built-in interface type is the conventional interface for

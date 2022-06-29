@@ -6,4 +6,4 @@ by [Ashley McNamara](https://twitter.com/ashleymcnamara)-
 [CC BY](https://creativecommons.org/licenses/by/4.0/)`
 >}}
 
-## Why not **_Go_** 😹 checkout {{< anchor-new-window "exercism.org" "https://exercism.org/tracks/go" >}}
+## Why not **_Go_** 😹 checkout [exercism.org](https://exercism.org/tracks/go)

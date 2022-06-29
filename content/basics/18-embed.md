@@ -36,10 +36,9 @@ understand why we would embed in the first place.
 There are times when you want to add data to fields but don't want to touch the
 original `struct`. Well in this case you can just wrap 🌯 that `struct` and put
 new information with it's own methods **without needing to rewrite any code** 🥹
-this is such a common strategy in software engineering it has a name {{<
-anchor-new-window "decorator"
-"https://refactoring.guru/design-patterns/decorator" >}}. Embedding allows for
-reusable code that can be composed into a larger `struct`.
+this is such a common strategy in software engineering it has a name
+[Decorator pattern](https://refactoring.guru/design-patterns/decorator).
+Embedding allows for reusable code that can be composed into a larger `struct`.
 
 ### Coding Time!
 

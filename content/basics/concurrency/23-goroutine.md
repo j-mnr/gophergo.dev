@@ -24,11 +24,10 @@ completion **They do not have to execute in parallel❗** They open the
 possibility to do so.
 
 Though let's not get ahead of ourselves. What is a goroutine? Well it's
-actually a play on words 😹 There is something known as a {{<
-anchor-new-window "coroutine" "https://en.wikipedia.org/wiki/Coroutine" >}}
-that appears in certain languages. I'll be 💯 % honest and say that wiki link
-is kinda garbage for an explanation on what a coroutine is, so we can do
-better.
+actually a play on words 😹 There is something known as a
+[coroutine](https://en.wikipedia.org/wiki/Coroutine) that appears in certain
+languages. I'll be 💯 % honest and say that wiki link is kinda garbage for an
+explanation on what a coroutine is, so we can do better.
 
 We have coroutines (from now on going to be called goroutines) 🔄 and threads
 🧵 they are similar because they both have their own work to
@@ -116,12 +115,12 @@ are beneficial in Go.
    😘
 4. This 👉 **concurrency** 👈 is _literally_ what a goroutine does
 
-You know what asynchronicity actually does? Create {{< anchor-new-window
-"caller-side ambiguity" "https://youtu.be/5zXAHh5tJqQ?t=421" >}} 😑 (Great talk
-by Bryan C. Mills, definitely give it a watch!👍) and that's why it should be
-avoided like the plague 🤢 At least in Go. Other languages have to use it
-because they have no choice 🤷 they have nothing better. The benefits above
-apply to their language. Go does have something better -- goroutines.
+You know what asynchronicity actually does? Create [caller-side
+ambiguity](https://youtu.be/5zXAHh5tJqQ?t=421) 😑 (Great talk by Bryan C.
+Mills, definitely give it a watch!👍) and that's why it should be avoided like
+the plague 🤢 At least in Go. Other languages have to use it because they have
+no choice 🤷 they have nothing better. The benefits above apply to their
+language. Go does have something better -- goroutines.
 
 This is not to say Go doesn't have asynchronous programming. The word
 asynchronous and concurrent are very similar. It's just good to know there's a
@@ -196,9 +195,9 @@ scheduled in such a way across threads _then_ add concurrency.
 
 ___
 
-Small aside -- a really fun thing to look into is {{< anchor-new-window
-"Amdahl's Law" "https://en.wikipedia.org/wiki/Amdahl%27s_law" >}} 🧑‍⚖
-which says in theory
+Small aside -- a really fun thing to look into is [Amdahl's
+Law](https://en.wikipedia.org/wiki/Amdahl%27s_law) 🧑‍⚖ which says in
+theory
 
 > If 95% of the program can be parallelized, the theoretical maximum speedup
 > with a CPU with 16 cores is 10 times the amount.

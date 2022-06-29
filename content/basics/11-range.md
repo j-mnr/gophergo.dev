@@ -290,7 +290,7 @@ func ExampleMap() {
 We're going to talk in-depth about runes (coming soon!), but it's good to know
 that by using `range`, a `string` will produce an index and a `rune` **not** a
 `byte`. This is for native support with
-{{< anchor-new-window "UTF-8" "https://blog.hubspot.com/website/what-is-utf-8" >}} strings, or more
+[UTF-8](https://blog.hubspot.com/website/what-is-utf-8) strings, or more
 broadly I could say strings that support **all** the languages. So you can
 write Go in whatever language you so please. 🥰
 
@@ -387,7 +387,9 @@ func ExampleChannel() {
 We've talked about scoping before and we'll talk about it some more. Scoping is
 what allows certain variables to live 👶 and die 💀 in certain spaces. Scoping
 is _soooo_ important in programming that JS developers got so fed up with their
-`var` keyword {{< anchor-new-window "that they made two more" "https://www.freecodecamp.org/news/understanding-let-const-and-var-keywords/" >}}, _just_ for scope.
+`var` keyword [that they made two
+more](https://www.freecodecamp.org/news/understanding-let-const-and-var-keywords/),
+_just_ for scope.
 
 In Go we don't have those troubles, the language is very well designed, but
 what we do have is human minds 🧠 and without necessary information we may feel

@@ -7,7 +7,7 @@ Draft: false
 ## Install Go
 
 Before we can begin writing Go code we'll need to, would you believe it?
-{{< anchor-new-window "Install Go" "https://go.dev/doc/install" >}}
+[Install Go](https://go.dev/doc/install)
 
 ## Install Text Editor
 
@@ -25,33 +25,18 @@ practices the magic arts, you need a tool. Instead of using a wand, developers
 use text editors or IDEs (Integrated Development Environment). Text editors
 allow us to use our powers.
 
-So now it's time to choose your Text Editor, I've ranked them by (popularity /
-ease of use):
-
-1. {{< anchor-new-window "VSCode" "https://code.visualstudio.com/" >}}
-1. {{< anchor-new-window "Neovim"
-   "https://github.com/neovim/neovim/wiki/Installing-Neovim" >}}
-1. {{< anchor-new-window "Vim" "https://www.vim.org/download.php" >}}
-1. {{< anchor-new-window "GoLand" "https://www.jetbrains.com/go/" >}}
-1. {{< anchor-new-window "Sublime Text" "https://www.sublimetext.com/download"
-   >}}
-1. {{< anchor-new-window "Atom"
-   "https://flight-manual.atom.io/getting-started/sections/installing-atom/#platform-windows"
-   >}}
-1. {{< anchor-new-window "Emacs"
-   "https://www.gnu.org/software/emacs/download.html" >}}
-1. {{< anchor-new-window "Notepad++" "https://notepad-plus-plus.org/downloads/"
-   >}}
+So now it's time to choose your Text Editor
 
 I use **Neovim** but if you're a beginner, I _highly_ recommend **VSCode**.
-**Vim** is a very, _very_ powerful text editor (I've had to update 20 lines of
-50 files, 1000 lines of code, all done with a single command), but it is
-**not** beginner friendly. If you know what you're doing and want to improve
-your speed and understanding as a developer give **Neovim** or **Vim** a try;
-with any of the IDEs, you want to find a plugin/extension store and install Go.
-For example with **VSCode** you want to search for the {{< anchor-new-window
-"Go extension" "https://code.visualstudio.com/docs/languages/go" >}} and
-install it.
+**Vim** is a very, _very_ powerful text editor, but it is **not** beginner
+friendly. If you know what you're doing and want to improve your speed and
+understanding as a developer give **Neovim** or **Vim** a try; With **VSCode**
+you want to search for the [Go
+extension](https://code.visualstudio.com/docs/languages/go) and install it.
+
+1. [VSCode](https://code.visualstudio.com/)
+1. [Vim](https://www.vim.org/download.php)
+1. [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 
 ## Setup
 
@@ -59,8 +44,9 @@ We have **Go** installed and we have a text editor, now it's time to start our
 first project❗ Are you excited⁉️ I am 😁 From this point on I'll assume we're
 using **VSCode**. Open **VSCode** and hit Ctrl+\` (That's the backtick or the
 key right next to `1` on a QWERTY keyboard) to open the
-{{< anchor-new-window "Terminal" "https://code.visualstudio.com/docs/editor/integrated-terminal" >}} and
+[Terminal](https://code.visualstudio.com/docs/editor/integrated-terminal) and
 type the following in the terminal:
+
 1. `mkdir basics` -- make a directory and name it basics (Our project name)
 1. `cd basics` -- change directory into our project basics
 1. `go mod init basics` -- initialize (start) a go module named basics
@@ -115,7 +101,7 @@ everything you want your program to do. So always remember if you want to `go
 run` your application, it needs to be in `package main` and it must be inside
 of the `func main()` function.
 
-### fmt.Println(...)
+### fmt.Println( ... )
 
 Here we _call_ the `fmt` package that we imported to use it's `Println`
 function. `Println` is short for print line. It's called that because it will
@@ -130,10 +116,10 @@ Save the file and type `go run cmd/main.go` into your terminal.
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-dance-long-3x.gif "gopher-dance-long-3x by Egon Elbre")
 
-Why not celebrate and {{< anchor-new-window "Make Your Own Gopher" "https://gopherize.me/" >}} and if
-you want there's a very supportive community over on
-{{< anchor-new-window "Slack" "https://invite.slack.golangbridge.org/" >}} and
-{{< anchor-new-window "Reddit" "https://www.reddit.com/r/golang/" >}}
+Why not celebrate and [Make Your Own Gopher](https://gopherize.me/) and if you
+want there's a very supportive community over on
+[Slack](https://invite.slack.golangbridge.org/) and
+[Reddit](https://www.reddit.com/r/golang/)
 
 All that said and done. Let's head on over to the next lesson!
 
