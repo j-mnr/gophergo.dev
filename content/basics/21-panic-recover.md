@@ -4,6 +4,13 @@ Title: "Panic & Recover"
 Draft: false
 ---
 
+
+{{< figure src="/maria-letta/goroutines/5.svg" alt="Goroutines 5"
+attr=`[goroutines-5](https://github.com/MariaLetta/free-gophers-pack/blob/master/goroutines/svg/5.svg)
+[Maria Letta](https://instagram.com/maria_letta_art)-
+[License](https://github.com/MariaLetta/free-gophers-pack/blob/master/LICENSE)`
+width=1080px >}}
+
 IT'S _NOW_ TIME TO `panic` 😱 AHHHHHHHHH! -- **But wait**, before we completely
 lose our 💩Let's take a deep  breath in 🧘 to `recover` and exhale 🌬️
 
