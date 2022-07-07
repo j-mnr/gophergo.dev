@@ -15,9 +15,11 @@ The same thing can be done in Go. We can `defer` function calls to be executed.
 Why is this useful? 🤔 There are two main driving reasons I can see 👁️ as to
 why we use `defer`. Readability and control flow. In Go it's idiomatic (common)
 to see code that tends towards the [return early
-pattern](https://medium.com/swlh/return-early-pattern-3d18a41bba8)... _very_
-common. It's almost _wrong_ to nest clauses in Go and reading that code _I'd_
-raise an eyebrow of concern 🤨
+pattern](https://medium.com/swlh/return-early-pattern-3d18a41bba8). A fellow
+Gopher, [Mat Ryer](https://twitter.com/matryer) also talks about it as [line of
+sight](https://medium.com/@matryer/line-of-sight-in-code-186dd7cdea88)... It's
+almost _wrong_ to nest clauses in Go and reading that code _I'd_ raise an
+eyebrow of concern 🤨 
 
 The thing is, if we aren't afraid to return early in Go, we **must** have a way
 of making sure that the resources that our functions grab can be released **at
