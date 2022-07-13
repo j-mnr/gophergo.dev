@@ -455,6 +455,10 @@ operators, then we'll get into the code.
 
 ### (AND, &&, &)
 
+There is no way to subtract `-` bits like we understand in math, **but** an `&`
+_will_ remove bits if they aren't both `1` and therefore acts like
+subtraction.
+
 > Give me one bulbasaur AND one charmander or you don't get one pikachu!
 >
 > Give me `bulbasaur && charmander` --> `pikachu`
@@ -463,6 +467,9 @@ operators, then we'll get into the code.
 
 ### (OR, ||, |)
 
+We cannot use the `+` plus sign with bits, **but** we can add more bits with
+`|` because it favors a `1` over `0`. This is how we do addition in bitland 👾
+
 > Get me a burger 🍔 OR a slice of pizza 🍕 --> 🍔
 >
 > Get me `🍔 || 🍕` --> 🍔
@@ -470,6 +477,8 @@ operators, then we'll get into the code.
 > Get me `1 | 0` --> `1`, `0 | 1` --> `1`, `0 | 0` --> `0`, `1 | 1` --> `1`
 
 ### (XOR, ! with &&, ^)
+
+We can use `^` to flip 🙃 bits 🙂
 
 > Grab a ticket 🎟️ if we have money💸 AND there's no line
 >
