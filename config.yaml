@@ -24,6 +24,7 @@ markup:
 theme: PaperMod
 params:
   showToc: true
+  showBreadCrumbs: true
 
   assets:
     disableHLJS: true
