@@ -1,3 +1,4 @@
 ---
 Title: Basics
+ShowBreadCrumbs: false
 ---
