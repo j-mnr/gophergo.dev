@@ -1,0 +1,23 @@
+{{- define "main" }}
+{{ $asset := resources.GetRemote "https://github.com/MariaLetta/free-gophers-pack/raw/master/goroutines/png/7.png" }}
+{{ $asset = $asset.Fit "880x483 webp" }}
+
+<style> a { text-decoration: underline; } </style>
+
+<figure
+  style="display:flex;align-items:center;justify-content:center;flex-direction:column;">
+  <img src="{{ $asset.RelPermalink }}" alt="goroutines-7 by Maria Letta"
+  width={{ $asset.Width }} height={{ $asset.Height }}/>
+  <figcaption>
+      <span>
+        <a
+          href="https://github.com/MariaLetta/free-gophers-pack/blob/master/goroutines/png/7.png"
+          target="_blank">Goroutines-7</a> by
+        <a href="https://creativemarket.com/Maria_Letta" target="_blank">Maria
+          Letta</a>,
+        <a href="https://github.com/MariaLetta/free-gophers-pack/blob/master/LICENSE" target="_blank">LICENSE</a>
+      </span>
+  </figcaption>
+<h1>404 &rarr; time to <em>Go</em> 😹 <a href="/">Home</a> </h1>
+</figure>
+{{- end }}{{/* end main */ -}}
