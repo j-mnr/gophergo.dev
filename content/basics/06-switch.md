@@ -47,8 +47,7 @@ engineer on the planet. This goes for **literally** every person on the planet
 Simple. We can see with our `switch` we **only** need to think about the very
 first `rune` in the provided `string` and that's it!
 
-```go
-myStr := "Switches can focus content"
+{{< side-by-side >}}myStr := "Switches can focus content"
 switch myStr[0] {
   case 's':
     // Do stuff
@@ -57,9 +56,7 @@ switch myStr[0] {
   default:
     // Do if nothing else matches
 }
-```
 
-```go
 myStr := "If else makes no guarantee"
 if (myStr[0] == 'i') {
   // Do stuff
@@ -72,7 +69,7 @@ if (myStr[0] == 'i') {
 } else {
   // Do if nothing else matches
 }
-```
+{{< /side-by-side >}}
 
 With `if/else` statements there is nothing driving us to _only_ look at
 the first `rune` in the `string`, we can look at the second one or we could
@@ -127,25 +124,28 @@ them all together in one long run on statement or break them up into multiple
 `else if` blocks and repeat the code ☠️ We'll do the first one because duplicate
 code is unmaintainable code.
 
-```go
-myFluctuatingInt := 8
-if (myFluctuatingInt == 0 || myFluctuatingInt == 1 || myFluctuatingInt == 2) {
-  // Do stuff
-} else if (myFluctuatingInt == 3 || myFluctuatingInt == 4 || myFluctuatingInt
-== 5 || myFluctuatingInt == 6 || myFluctuatingInt == 7 || myFluctuatingInt == 8) {
-  // Do stuff
-}
-```
+{{< side-by-side >}}myFluctuatingInt := 8
+	if myFluctuatingInt == 0 ||
+		myFluctuatingInt == 1 ||
+		myFluctuatingInt == 2 {
+		// Do stuff
+	} else if myFluctuatingInt == 3 ||
+		myFluctuatingInt == 4 ||
+		myFluctuatingInt == 5 ||
+		myFluctuatingInt == 6 ||
+		myFluctuatingInt == 7 ||
+		myFluctuatingInt == 8 {
+		// Do stuff
+	}
 
-```go
 myFluctuatingInt := 8
 switch myFluctuatingInt {
-  case 0, 1, 2:
-    // Do stuff
-  case 3, 4, 5, 6, 7, 8:
-    // Do stuff
+	case 0, 1, 2:
+		// Do stuff
+	case 3, 4, 5, 6, 7, 8:
+		// Do stuff
 }
-```
+{{< /side-by-side >}}
 
 As we can see it is **much** clearer to use a `switch` statement, here. We
 boil down what is important to look at and then allow for things to be done in
@@ -276,8 +276,7 @@ find it much easier to move a `case` statement around or add another one and in
 `vim` the `%` key lets me go to the top of a `switch` statement when I'm on the
 `}` unlike with an `if/else` statement.
 
-```go
-apple := "🍎"
+{{< side-by-side >}}apple := "🍎"
 if (apple == "🍏") {
   // Do stuff
 } else if (apple == "🍐") {
@@ -285,9 +284,7 @@ if (apple == "🍏") {
 } else if (apple == "🍌") {
   // Do stuff
 }
-```
 
-```go
 apple := "🍎"
 switch {
 case apple == "🍏":
@@ -297,7 +294,7 @@ case apple == "🍐":
 case apple == "🍌":
   // Do stuff
 }
-```
+{{< /side-by-side >}}
 
 ### Coding Time!
 
