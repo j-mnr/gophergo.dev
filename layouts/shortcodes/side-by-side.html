@@ -1,0 +1,5 @@
+<div style="display:flex">
+  {{ range split .Inner "\n\n" }}
+  {{ highlight . "go" }}
+  {{ end }}
+</div>
