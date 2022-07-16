@@ -46,17 +46,33 @@ package CHANGEME_test
 
 You know what else is a `struct`? A Gopher.
 
-{{< figure src="/maria-letta/characters/36.svg" alt="characters-36"
+{{< collage >}}
+  {{< figure src="/maria-letta/characters/58.svg" alt="characters-58"
+attr=`[characters-58](https://github.com/MariaLetta/free-gophers-pack/blob/master/characters/svg/58.svg) by
+[Maria Letta](https://instagram.com/maria_letta_art)-
+[License](https://github.com/MariaLetta/free-gophers-pack/blob/master/LICENSE)`
+height=200px width=200px >}}
+
+  {{< figure src="/maria-letta/characters/36.svg" alt="characters-36"
 attr=`[characters-36](https://github.com/MariaLetta/free-gophers-pack/blob/master/characters/svg/36.svg) by
 [Maria Letta](https://instagram.com/maria_letta_art)-
 [License](https://github.com/MariaLetta/free-gophers-pack/blob/master/LICENSE)`
-width=100px >}}
+height=200px width=200px >}}
 
-{{< figure src="/maria-letta/characters/27.svg" alt="characters-27"
-attr=`[characters-27](https://github.com/MariaLetta/free-gophers-pack/blob/master/characters/svg/27.svg) by
+  {{< figure src="/maria-letta/characters/16.svg" alt="characters-16"
+attr=`[characters-16](https://github.com/MariaLetta/free-gophers-pack/blob/master/characters/svg/16.svg) by
 [Maria Letta](https://instagram.com/maria_letta_art)-
 [License](https://github.com/MariaLetta/free-gophers-pack/blob/master/LICENSE)`
-width=100px >}}
+height=200px width=200px >}}
+
+  {{< figure src="/maria-letta/characters/56.svg" alt="characters-56"
+attr=`[characters-56](https://github.com/MariaLetta/free-gophers-pack/blob/master/characters/svg/56.svg) by
+[Maria Letta](https://instagram.com/maria_letta_art)-
+[License](https://github.com/MariaLetta/free-gophers-pack/blob/master/LICENSE)`
+height=200px width=200px >}}
+
+{{< /collage >}}
+
 
 That means you and I can be represented as a `struct`. So what basic things
 make up a gopher? 🤔 We have a name, we have an age, and there's a really good
