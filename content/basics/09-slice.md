@@ -43,7 +43,7 @@ think about how many elements we want in it, we just declare it.
 
 ### Coding Time!
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre" "gopher-heart-eyes by Egon Elbre")
+![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
 
 #### `slice.go`
 
