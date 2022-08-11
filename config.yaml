@@ -43,9 +43,9 @@ params:
         url: "/basics"
       - name: Standard Library
         url: "/std"
-      - name: Coding Questions
-        url: "/code"
+      - name: Resources
+        url: "/resources"
       - name: Projects
         url: "/projects"
-      - name: Go command
+      - name: Go Toolchain
         url: "/cmd"
