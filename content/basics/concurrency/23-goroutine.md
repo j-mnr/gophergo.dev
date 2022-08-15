@@ -267,6 +267,12 @@ goroutine.
 #### `goroutine.go`
 
 ```go
+type async string
+
+func (a async) myMethod() {
+	fmt.Println(a, "from a method: use in a new goroutine if you want!")
+}
+
 func AcceptableTypes(val any) {
 	// The `go` keyword needs a function and that is all, even if it is an
 	// anonymous function, it can still be used in a goroutine
