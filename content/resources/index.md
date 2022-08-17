@@ -24,6 +24,7 @@ ShowBreadCrumbs: false
 
 ## Learning Resources
 
+- [Go in 15 minutes](https://learnxinyminutes.com/docs/go/)
 - [A Tour of Go](https://go.dev/tour/welcome/1) 🚎
 - [Effective Go](https://go.dev/doc/effective_go) 💪
 - [FAQ of Go](https://go.dev/doc/faq) 🤔

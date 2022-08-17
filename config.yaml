@@ -25,6 +25,7 @@ theme: PaperMod
 params:
   showToc: true
   showBreadCrumbs: true
+  showCodeCopyButtons: true
 
   assets:
     disableHLJS: true
