@@ -10,24 +10,7 @@ A `switch` statement is made up of `case` statements and if necessary a
 do everything the same as `if/else` statements with a clearer and possibly more
 pointed statement. We prefer a `switch` over an `if/else` in Go, if possible.
 
-## Setup
-
-Let's make our directory `switches` and the files we want inside of that directory
-`example_test.go` `switches.go`
-
-```sh
-mkdir switches
-touch switches/example_test.go switches/switches.go
-```
-
-Now let's open up `switches.go` and for the very first line we'll add
-```go
-package switches
-```
-Next for `example_test.go` for the very first line we'll add
-```go
-package switches_test
-```
+{{% setup-instructions lessonname="switches" %}}
 
 ## Switch Statement
 

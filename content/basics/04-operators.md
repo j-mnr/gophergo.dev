@@ -16,24 +16,7 @@ repeatedly we put "-er" on the end of it. So an _operator_ operates on
 _something_. It may operate on numbers, booleans, strings, runes, you
 name it!
 
-## Setup
-
-Let's make our directory `operators` and the files we want inside of that
-directory `example_test.go` `operators.go`
-
-```sh
-mkdir operators
-touch operators/example_test.go operators/operators.go
-```
-
-Now let's open up `operators.go` and for the very first line we'll add
-```go
-package operators
-```
-Next for `example_test.go` for the very first line we'll add
-```go
-package operators_test
-```
+{{% setup-instructions lessonname="operators" %}}
 
 ## Comparing Values
 

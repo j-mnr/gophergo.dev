@@ -15,24 +15,7 @@ first class functions.
 If you're unfamiliar with first-class functions -- Strap in and put on a helmet
 ⛑️ -- because I'm about to blow your mind 🤯
 
-## Setup
-
-Let's make our directory `closure` and the files we want inside of that directory
-`example_test.go` `closure.go`
-
-```sh
-mkdir closure
-touch closure/example_test.go closure/closure.go
-```
-
-Now let's open up `closure.go` and for the very first line we'll add
-```go
-package closure
-```
-Next for `example_test.go` for the very first line we'll add
-```go
-package closure_test
-```
+{{% setup-instructions lessonname="closure" %}}
 
 ## Generators
 

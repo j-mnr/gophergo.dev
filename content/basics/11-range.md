@@ -26,24 +26,7 @@ those items until we've seen the whole collection. These collection of items
 can be any of the ones we talked about in previous lessons (arrays, slices,
 strings, maps) and a new `type` channel or `chan`(coming soon!).
 
-## Setup
-
-Let's make our directory `ranges` and the files we want inside of that directory
-`example_test.go` `ranges.go`
-
-```sh
-mkdir ranges
-touch ranges/example_test.go ranges/ranges.go
-```
-
-Now let's open up `ranges.go` and for the very first line we'll add
-```go
-package ranges
-```
-Next for `example_test.go` for the very first line we'll add
-```go
-package ranges_test
-```
+{{% setup-instructions lessonname="ranges" %}}
 
 ## Understanding Why
 

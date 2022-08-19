@@ -22,4 +22,4 @@ package {{ $lessonname }}_test
 
 We can `import basics/{{ $lessonname }}` into `cmd/main.go` and run functions
 from there with `go run cmd/main.go` and also to run our `example_test.go` 👍
-we use `go test` in the commandline.
+we use `go test {{ $lessonname }}/example_test.go` in the commandline.

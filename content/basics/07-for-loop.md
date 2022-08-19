@@ -39,25 +39,7 @@ func Loop() {
 	}
 }
 ```
-
-## Setup
-
-Let's make our directory `for-loop` and the files we want inside of that
-directory `example_test.go` `for_loop.go`
-
-```sh
-mkdir for-loop
-touch for_loop/example_test.go for_loop/for_loop.go
-```
-
-Now let's open up `for_loop.go` and for the very first line we'll add
-```go
-package for_loop
-```
-Next for `example_test.go` for the very first line we'll add
-```go
-package for_loop_test
-```
+{{% setup-instructions lessonname="for_loop" %}}
 
 ## For Loop
 

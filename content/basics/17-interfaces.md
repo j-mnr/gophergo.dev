@@ -27,24 +27,7 @@ This is where the "two or more separate components of a system" comes in. We
 can also say "two 2️⃣ or more ➕ separate types for a function parameter".
 It is with this power that makes an `interface` so strong 💪
 
-## Setup
-
-Let's make our directory `interfaces` and the files we want inside of that directory
-`example_test.go` `interfaces.go`
-
-```sh
-mkdir interfaces
-touch interfaces/example_test.go interfaces/interfaces.go
-```
-
-Now let's open up `interfaces.go` and for the very first line we'll add
-```go
-package interfaces
-```
-Next for `example_test.go` for the very first line we'll add
-```go
-package interfaces_test
-```
+{{% setup-instructions lessonname="interfaces" %}}
 
 ## Interface Basics
 

@@ -52,24 +52,7 @@ represent {{< topower 2 8 >}} or 256 values. 🤯 So that means **everything**
 not in those 256 values (0 is a value, that's why it only goes to 255)
 **cannot** be represented with a `byte` or a `uint8`, not even emojis 😢
 
-## Setup
-
-Let's make our directory `runes` and the files we want inside of that directory
-`example_test.go` `runes.go`
-
-```sh
-mkdir runes
-touch runes/example_test.go runes/runes.go
-```
-
-Now let's open up `runes.go` and for the very first line we'll add
-```go
-package runes
-```
-Next for `example_test.go` for the very first line we'll add
-```go
-package runes_test
-```
+{{% setup-instructions lessonname="runes" %}}
 
 ## Deepen Understanding of Runes
 

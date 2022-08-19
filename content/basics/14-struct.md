@@ -23,24 +23,7 @@ types running around in your code base. So, _instead_ of declaring thousands of
 oddball 🤪 variables, lets group them up, into a logical structure, a data
 structure, a `struct` 😄
 
-## Setup
-
-Let's make our directory `structs` and the files we want inside of that directory
-`example_test.go` `structs.go`
-
-```sh
-mkdir structs
-touch structs/example_test.go structs/structs.go
-```
-
-Now let's open up `structs.go` and for the very first line we'll add
-```go
-package structs
-```
-Next for `example_test.go` for the very first line we'll add
-```go
-package CHANGEME_test
-```
+{{% setup-instructions lessonname="structs" %}}
 
 ## Declare Struct
 

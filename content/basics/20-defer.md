@@ -32,24 +32,7 @@ that will get a resource can let go of it on the next line. This makes
 readability and _glanceability_  much higher and makes catching 🕸️🪰 bugs much
 easier because you're not managing _where_ you have to let that resource go.
 
-## Setup
-
-Let's make our directory `defers` and the files we want inside of that directory
-`example_test.go` `defers.go`
-
-```sh
-mkdir defers
-touch defers/example_test.go defers/defers.go
-```
-
-Now let's open up `defers.go` and for the very first line we'll add
-```go
-package defers
-```
-Next for `example_test.go` for the very first line we'll add
-```go
-package defers_test
-```
+{{% setup-instructions lessonname="defers" %}}
 
 ## Where's it Start 🙂 Where's it End 🙃
 

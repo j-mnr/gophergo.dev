@@ -9,24 +9,7 @@ something and place it **deeply** within something else. So that it becomes a
 part of it. Maybe you've embedded your phone case to your phone? 📱 I know I
 have, the thing's impossible to get off!
 
-## Setup
-
-Let's make our directory `embed` and the files we want inside of that directory
-`example_test.go` `embed.go`
-
-```sh
-mkdir embed
-touch embed/example_test.go embed/embed.go
-```
-
-Now let's open up `embed.go` and for the very first line we'll add
-```go
-package embed
-```
-Next for `example_test.go` for the very first line we'll add
-```go
-package embed_test
-```
+{{% setup-instructions lessonname="embed" %}}
 
 ## Embedding Structs
 
@@ -159,7 +142,6 @@ the motorcycle.
 ### Coding Time!
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png "gopher-heart-eyes by Egon Elbre")
-{.myclass}
 
 #### `embed.go`
 
