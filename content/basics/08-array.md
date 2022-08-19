@@ -155,73 +155,10 @@ func ExampleMatrix() {
 }
 ```
 
-## The Whole File
+## Source File 📄
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-victorious.png "gopher-victorious by Egon Elbre")
+[The Source File](https://goplay.tools/snippet/B4h-66sxVVT)
 
-```go
-package array
+## Test File 📝
 
-import "fmt"
-
-// Arrays shows all the ways to make and manipulate arrays in Go.
-func Arrays() {
-	var arr [4]int
-	fmt.Println("Length of arr:", len(arr))
-	fmt.Println("Empty:", arr)
-	arr[0] = 0
-	arr[1] = 1
-	arr[2] = 2
-	arr[3] = 3
-	fmt.Println("Filled:", arr)
-	fmt.Println("Grab one value:", arr[3])
-
-	inline := [4]int{2, 3, 4, 5}
-	fmt.Println("Can be declared inline", inline)
-
-	// If you don't want to count how many values, but you don't want a slice.
-	// you can use the `...` syntax which will make an array of however many
-	// values that you initialize it with.
-	constSlice := [...]int{8, 9, 10, 11, 15}
-	fmt.Printf("Just an array %T\nValues:%v", constSlice, constSlice)
-}
-
-// Matrix shows how to make a 2-dimensional array (a matrix) in Go.
-func Matrix() {
-	var matrix [4][5]int
-	for i := 0; i < 4; i++ {
-		for j := 0; j < 5; j++ {
-			matrix[i][j] = i + j
-		}
-	}
-	fmt.Println("Matrix:", matrix)
-}
-```
-
-## All Of The Outputs To Our Examples
-
-![https://twitter.com/egonelbre](/egon-elbre/typing-furiously.gif "typing-furiously by Egon Elbre")
-
-```go
-package array_test
-
-import "basics/array"
-
-func ExampleArrays() {
-	array.Arrays()
-	// Output:
-	// Length of arr: 4
-	// Empty: [0 0 0 0]
-	// Filled: [0 1 2 3]
-	// Grab one value: 3
-	// Can be declared inline [2 3 4 5]
-	// Just an array [5]int
-	// Values:[8 9 10 11 15]
-}
-
-func ExampleMatrix() {
-	array.Matrix()
-	// Output:
-	// Matrix: [[0 1 2 3 4] [1 2 3 4 5] [2 3 4 5 6] [3 4 5 6 7]]
-}
-```
+[The Test File](https://goplay.tools/snippet/pjYd5VSeSb_5)
