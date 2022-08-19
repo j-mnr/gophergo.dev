@@ -137,7 +137,8 @@ lots of things to `Println`, but we'll see more of that in later lessons.
 
 ## Run your very first program
 
-Save the file and type `go run cmd/main.go` into your terminal.
+Save the file and type `go run cmd/main.go` into your terminal. [Playground
+link](https://goplay.tools)
 
 ### 🥳🥳 Congratulations! 🎉🎊🎉 You're officially a Gopher!
 
