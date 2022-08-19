@@ -156,6 +156,8 @@ ShowBreadCrumbs: false
 
 ## Miscellaneous
 
+- [Slice Tricks](https://github.com/golang/go/wiki/SliceTricks) 🔪
+- [Json to Go](https://mholt.github.io/json-to-go/) 🏃
 - [Go Playground](https://go.dev/play/) 🛝
 - [Better Go Playground](https://goplay.tools/) 🎢
 
