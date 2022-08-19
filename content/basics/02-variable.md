@@ -14,24 +14,7 @@ something we name and can _**change**_ the value of. A variable! So in
 programming, a variable is a type value with a name that can change it's
 value.
 
-## Setup
-
-Let's make our directory `variable` and the files we want inside of that
-directory `example_test.go` `variable.go`
-
-```sh
-mkdir variable
-touch variable/example_test.go variable/variable.go
-```
-
-Now let's open up `variable.go` and for the very first line we'll add
-```go
-package variable
-```
-Next for `example_test.go` for the very first line we'll add
-```go
-package variable_test
-```
+{{% setup-instructions lessonname="variable" %}}
 
 ## Explicit Declaration and Zero Values
 

@@ -17,24 +17,7 @@ input from one of the creators of Go, Rob Pike, check out the [Go
 Blog](https://go.dev/blog/slices) on it! We'll take this one _slice_ 🍕 at a
 time 😹
 
-## Setup
-
-Let's make our directory `slice` and the files we want inside of that directory
-`example_test.go` `slice.go`
-
-```sh
-mkdir slice
-touch slice/example_test.go slice/slice.go
-```
-
-Now let's open up `slice.go` and for the very first line we'll add
-```go
-package slice
-```
-Next for `example_test.go` for the very first line we'll add
-```go
-package slice_test
-```
+{{% setup-instructions lessonname="slice" %}}
 
 ## Initialize
 

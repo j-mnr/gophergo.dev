@@ -17,24 +17,7 @@ because reliably **every** time you put a number to its left and put a number
 to its right then outputted is another number `4 + 5 --> 9`. That means `+`
 would be a function that takes in two inputs and produces one output.
 
-## Setup
-
-Let's make our directory `function` and the files we want inside of that directory
-`example_test.go` `function.go`
-
-```sh
-mkdir function
-touch function/example_test.go function/function.go
-```
-
-Now let's open up `function.go` and for the very first line we'll add
-```go
-package function
-```
-Next for `example_test.go` for the very first line we'll add
-```go
-package function_test
-```
+{{% setup-instructions lessonname="function" %}}
 
 ## Private Functions
 

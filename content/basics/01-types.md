@@ -11,24 +11,7 @@ We use words 💬 to make sentences and sentences to make paragraphs 📄
 
 We use types ✨ to declare variables and variables to make functions 🦾
 
-## Setup
-
-Let's make our directory `types` and the files we want inside of that directory
-`example_test.go` `types.go`
-
-```sh
-mkdir types
-touch types/example_test.go types/types.go
-```
-
-Now let's open up `types.go` and for the very first line we'll add
-```go
-package types
-```
-Next for `example_test.go` for the very first line we'll add
-```go
-package types_test
-```
+{{% setup-instructions lessonname="types" %}}
 
 ## `bool`
 

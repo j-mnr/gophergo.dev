@@ -23,6 +23,8 @@ logging. You might have a limit to a resource, like the number of
 [`goroutines`](/basics/concurrency/23-goroutine) or the number of connections
 to a database. A constant is perfect for these situations!
 
+{{% setup-instructions lessonname="constant" %}}
+
 ## Magic Numbers 🙅
 
 We as developers we are modern day 🧙‍♀️ mages 🧙‍♂️   We can do lots
@@ -296,8 +298,8 @@ func ExamplePrint() {
 
 ## Source File 📄
 
-[The Source File](https://goplay.tools/snippet/GoRjdcb3RFw)
+[The Source File](https://goplay.tools/snippet/a4Ij_BwCnWJ)
 
 ## Test File 📝
 
-[The Test File](https://goplay.tools/snippet/rNCrCVwuHpc)
+[The Test File](https://goplay.tools/snippet/WBt-Nyx3-Qv)

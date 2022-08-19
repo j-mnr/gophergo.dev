@@ -47,24 +47,7 @@ don't take this to heart ❤️ We just want to capture the idea -- **Concurrenc
 not parallelism and goroutines do not run in parallel, but instead
 concurrently.**
 
-## Setup
-
-Let's make our directory `goroutine` and the files we want inside of that
-directory `example_test.go` `goroutine.go`
-
-```sh
-mkdir goroutine
-touch goroutine/example_test.go goroutine/goroutine.go
-```
-
-Now let's open up `goroutine.go` and for the very first line we'll add
-```go
-package goroutine
-```
-Next for `example_test.go` for the very first line we'll add
-```go
-package goroutine_test
-```
+{{% setup-instructions lessonname="goroutine" %}}
 
 ## Can't stop, addicted to the... Async 😂
 

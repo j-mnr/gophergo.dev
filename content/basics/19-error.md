@@ -28,24 +28,7 @@ same logic applies in our applications we create. When a function `func
 CanGoWrong( ... ) (string, error) { ... }` gives us an `error` **we do
 not ignore it, we handle it gracefully** 🦢 
 
-## Setup
-
-Let's make our directory `errs` and the files we want inside of that directory
-`example_test.go` `errs.go`
-
-```sh
-mkdir errs
-touch errs/example_test.go errs/errs.go
-```
-
-Now let's open up `errs.go` and for the very first line we'll add
-```go
-package errs
-```
-Next for `example_test.go` for the very first line we'll add
-```go
-package errs_test
-```
+{{% setup-instructions lessonname="errs" %}}
 
 ⚠️ **Note** The reason we don't call our package `error` is because that would
 lead to massive confusion if we wanted the `error` interface or our `error`

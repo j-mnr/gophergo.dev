@@ -10,24 +10,7 @@ In other languages they are called Dictionaries, Hash Tables, or Associative
 Arrays. [Wikipedia](https://en.wikipedia.org/wiki/Associative_array) provides
 us with a showing of just how timeless ⏳ this data structure truly is.
 
-## Setup
-
-Let's make our directory `maps` and the files we want inside of that directory
-`example_test.go` `maps.go`
-
-```sh
-mkdir maps
-touch maps/example_test.go maps/maps.go
-```
-
-Now let's open up `maps.go` and for the very first line we'll add
-```go
-package maps
-```
-Next for `example_test.go` for the very first line we'll add
-```go
-package maps_test
-```
+{{% setup-instructions lessonname="maps" %}}
 
 ## Basic Operations
 

@@ -17,24 +17,7 @@ account? Your physical home address? Yup, all pointers. All of these things can
 get to the **true** value of you, _indirectly_. They are not you but they
 _point_ 👉 to you.
 
-## Setup
-
-Let's make our directory `pointer` and the files we want inside of that directory
-`example_test.go` `pointer.go`
-
-```sh
-mkdir pointer
-touch pointer/example_test.go pointer/pointer.go
-```
-
-Now let's open up `pointer.go` and for the very first line we'll add
-```go
-package pointer
-```
-Next for `example_test.go` for the very first line we'll add
-```go
-package pointer_test
-```
+{{% setup-instructions lessonname="pointer" %}}
 
 ## Pass By Value
 

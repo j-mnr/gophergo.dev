@@ -45,24 +45,7 @@ Where as OOP revolves around a `struct`, in the case of Go, and updating the
 fields (also known as updating encapsulated state) of that `struct` while
 having inputs interact with it; there may or may not be an output.
 
-## Setup
-
-Let's make our directory `method` and the files we want inside of that directory
-`example_test.go` `method.go`
-
-```sh
-mkdir method
-touch method/example_test.go method/method.go
-```
-
-Now let's open up `method.go` and for the very first line we'll add
-```go
-package method
-```
-Next for `example_test.go` for the very first line we'll add
-```go
-package method_test
-```
+{{% setup-instructions lessonname="method" %}}
 
 ## Initial Setup
 

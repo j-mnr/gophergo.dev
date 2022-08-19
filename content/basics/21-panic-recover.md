@@ -23,24 +23,7 @@ something that doesn't belong to you, 👹 you're going to have to pay the
 consequences. 💀 Though this isn't the only reason for a `panic` and we can
 call `panic` ourselves.
 
-## Setup
-
-Let's make our directory `panic_recover` and the files we want inside of that directory
-`example_test.go` `panic_recover.go`
-
-```sh
-mkdir panic-recover
-touch panic-recover/example_test.go panic-recover/panic_recover.go
-```
-
-Now let's open up `panic_recover.go` and for the very first line we'll add
-```go
-package pnr
-```
-Next for `example_test.go` for the very first line we'll add
-```go
-package pnr_test
-```
+{{% setup-instructions lessonname="panic_recover" %}}
 
 ## Panic and Defer
 

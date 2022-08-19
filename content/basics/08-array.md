@@ -16,24 +16,7 @@ but! There is one important detail about arrays. They have limited space. Just
 like a fruit basket can hold so many fruits and a zoo can only hold so many
 animals, the same goes for arrays.
 
-## Setup
-
-Let's make our directory `array` and the files we want inside of that directory
-`example_test.go` `array.go`
-
-```sh
-mkdir array
-touch array/example_test.go array/array.go
-```
-
-Now let's open up `array.go` and for the very first line we'll add
-```go
-package array
-```
-Next for `example_test.go` for the very first line we'll add
-```go
-package array_test
-```
+{{% setup-instructions lessonname="array" %}}
 
 ## Initialize
 
