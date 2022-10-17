@@ -12,26 +12,20 @@ Draft: false
 
 ![https://twitter.com/egonelbre](/egon-elbre/gopher-heart-eyes.png)
 
-#### FIXME.go
+#### `FIXME.go`
 
 ```go
 ```
 
-#### example_test.go
+#### `example_test.go`
 
 ```go
 ```
 
-## The Whole File
+## Source File 📄
 
-![https://twitter.com/egonelbre](/egon-elbre/gopher-victorious.png)
+[The Source File]()
 
-```go
-```
+## Test File 📝
 
-## All Of The Outputs To Our Examples
-
-![https://twitter.com/egonelbre](/egon-elbre/typing-furiously.gif)
-
-```go
-```
+[The Test File]()
