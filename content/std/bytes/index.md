@@ -5,7 +5,7 @@ Draft: false
 
 ## Source Code
 
-[Playground link](https://goplay.tools/snippet/jIK9xNaNFme)
+🛝 [Playground link](https://goplay.tools/snippet/VvSTEKHthuR)
 
 ## Other packages used
 
@@ -16,7 +16,17 @@ Draft: false
 - [`golang.org/x/text/cases`]()
 - [`golang.org/x/text/language`]()
 
-## `MinRead`
+## Constants and Variables
+
+```go
+const MinRead = 512
+
+var ErrTooLarge = errors.New("bytes.Buffer: too large")
+```
+
+## Examples
+
+### `MinRead`
 
 ```go
 func ExampleMinRead() {
@@ -40,11 +50,11 @@ func ExampleMinRead() {
 ```
 
 
-## `ErrTooLarge`
+### `ErrTooLarge`
 
 ```go
 func ExampleErrTooLarge() {
-	// NOTE(jay): See bytes.Buffer.Grow() for another example.
+	// NOTE(jay): See [bytes.Buffer.Grow] for another example.
 	var buf bytes.Buffer
 	defer func() {
 		if r := recover(); r != nil {
@@ -65,7 +75,7 @@ func ExampleErrTooLarge() {
 ```
 
 
-## `Compare`
+### `Compare`
 
 ```go
 // https://github.com/pingcap/tidb/blob/00791e7968ffad2de33d7af7f6f8a21580e2ab7e/ddl/cluster.go#L280
@@ -100,7 +110,7 @@ func ExampleCompare() {
 }
 ```
 
-## `Contains`
+### `Contains`
 
 ```go
 func ExampleContains() {
@@ -127,7 +137,7 @@ func ExampleContains() {
 }
 ```
 
-## `ContainsAny`
+### `ContainsAny`
 
 ```go
 func ExampleContainsAny() {
@@ -153,7 +163,7 @@ func ExampleContainsAny() {
 }
 ```
 
-## `ContainsRune`
+### `ContainsRune`
 
 ```go
 func ExampleContainsRune() {
@@ -178,7 +188,7 @@ func ExampleContainsRune() {
 }
 ```
 
-## `Count`
+### `Count`
 
 ```go
 func ExampleCount() {
@@ -201,7 +211,7 @@ func ExampleCount() {
 }
 ```
 
-## `Cut`
+### `Cut`
 
 ```go
 func ExampleCut() {
@@ -226,7 +236,7 @@ func ExampleCut() {
 }
 ```
 
-## `Equal`
+### `Equal`
 
 ```go
 func ExampleEqual() {
@@ -253,7 +263,7 @@ func ExampleEqual() {
 }
 ```
 
-## `EqualFold`
+### `EqualFold`
 
 ```go
 func ExampleEqualFold() {
@@ -280,7 +290,7 @@ func ExampleEqualFold() {
 }
 ```
 
-## `Fields`
+### `Fields`
 
 ```go
 func ExampleFields() {
@@ -318,7 +328,7 @@ func ExampleFields() {
 }
 ```
 
-## `FieldsFunc`
+### `FieldsFunc`
 
 ```go
 func ExampleFieldsFunc() {
@@ -358,7 +368,7 @@ func ExampleFieldsFunc() {
 }
 ```
 
-## `HasPrefix`
+### `HasPrefix`
 
 ```go
 func ExampleHasPrefix() {
@@ -381,7 +391,7 @@ func ExampleHasPrefix() {
 }
 ```
 
-## `HasSuffix`
+### `HasSuffix`
 
 ```go
 func ExampleHasSuffix() {
@@ -404,7 +414,7 @@ func ExampleHasSuffix() {
 }
 ```
 
-## `Index`
+### `Index`
 
 ```go
 func ExampleIndex() {
@@ -435,7 +445,7 @@ func ExampleIndex() {
 }
 ```
 
-## `IndexAny`
+### `IndexAny`
 
 ```go
 func ExampleIndexAny() {
@@ -461,7 +471,7 @@ func ExampleIndexAny() {
 }
 ```
 
-## `IndexByte`
+### `IndexByte`
 
 ```go
 func ExampleIndexByte() {
@@ -482,7 +492,7 @@ func ExampleIndexByte() {
 }
 ```
 
-## `IndexFunc`
+### `IndexFunc`
 
 ```go
 func ExampleIndexFunc() {
@@ -507,7 +517,7 @@ func ExampleIndexFunc() {
 }
 ```
 
-## `IndexRune`
+### `IndexRune`
 
 ```go
 func ExampleIndexRune() {
@@ -528,7 +538,7 @@ func ExampleIndexRune() {
 }
 ```
 
-## `Join`
+### `Join`
 
 ```go
 func ExampleJoin() {
@@ -559,7 +569,7 @@ func ExampleJoin() {
 }
 ```
 
-## `LastIndex`
+### `LastIndex`
 
 ```go
 func ExampleLastIndex() {
@@ -581,7 +591,7 @@ func ExampleLastIndex() {
 }
 ```
 
-## `LastIndexAny`
+### `LastIndexAny`
 
 ```go
 func ExampleLastIndexAny() {
@@ -605,7 +615,7 @@ func ExampleLastIndexAny() {
 }
 ```
 
-## `LastIndexByte`
+### `LastIndexByte`
 
 ```go
 func ExampleLastIndexByte() {
@@ -626,7 +636,7 @@ func ExampleLastIndexByte() {
 }
 ```
 
-## `LastIndexFunc`
+### `LastIndexFunc`
 
 ```go
 func ExampleLastIndexFunc() {
@@ -653,12 +663,11 @@ func ExampleLastIndexFunc() {
 }
 ```
 
-## `Map`
+### `Map`
 
 ```go
 func ExampleMap() {
 	data := []byte("Th)e l!yric^s., of the213 so*ng() sound230ed li$$ke fi===n93gerna;ils on a cha_+}\\lkboa<]rd.")
-  ```
 	fmt.Printf("from:\t%q\nto:\t%q",
 		data,
 		bytes.Map(
@@ -677,8 +686,9 @@ func ExampleMap() {
 	// from:	"Th)e l!yric^s., of the213 so*ng() sound230ed li$$ke fi===n93gerna;ils on a cha_+}\\lkboa<]rd."
 	// to:	"The lYRicS Of The SONg SOUNded like fiNgeRNailS ON a chalkbOaRd"
 }
+```
 
-## `Repeat`
+### `Repeat`
 
 ```go
 func ExampleRepeat() {
@@ -696,7 +706,7 @@ func ExampleRepeat() {
 }
 ```
 
-## `Replace`
+### `Replace`
 
 ```go
 func ExampleReplace() {
@@ -707,7 +717,7 @@ func ExampleReplace() {
 	}
 	etp(data, []byte("difficult"), []byte("easy😎"), 1)
 	etp(data, []byte("difficult"), []byte("easy😎"), 2)
-	etp(data, []byte("tennis"), []byte("football🏈"), -1) // == bytes.ReplaceAll
+	etp(data, []byte("tennis"), []byte("football🏈"), -1) // == [bytes.ReplaceAll]
 	// Output:
 	// orig:	"It's much more difficult to play tennis with a bowling ball than it is to bowl with a tennis ball, but tennis is difficult in general."
 	// new:	"It's much more easy😎 to play tennis with a bowling ball than it is to bowl with a tennis ball, but tennis is difficult in general."
@@ -721,7 +731,7 @@ func ExampleReplace() {
 }
 ```
 
-## `ReplaceAll`
+### `ReplaceAll`
 
 ```go
 func ExampleReplaceAll() {
@@ -735,7 +745,7 @@ func ExampleReplaceAll() {
 }
 ```
 
-## `Runes`
+### `Runes`
 
 ```go
 func ExampleRunes() {
@@ -747,7 +757,7 @@ func ExampleRunes() {
 }
 ```
 
-## `Split`
+### `Split`
 
 ```go
 func ExampleSplit() {
@@ -760,7 +770,7 @@ func ExampleSplit() {
 }
 ```
 
-## `SplitAfter`
+### `SplitAfter`
 
 ```go
 func ExampleSplitAfter() {
@@ -773,7 +783,7 @@ func ExampleSplitAfter() {
 }
 ```
 
-## `SplitAfterN`
+### `SplitAfterN`
 
 ```go
 func ExampleSplitAfterN() {
@@ -783,7 +793,7 @@ func ExampleSplitAfterN() {
 		fmt.Printf("len: %d, values: %q\n", len(nsplits), nsplits)
 	}
 	splits(data, []byte("🎭"), 0)  // useful for obfuscation?
-	splits(data, []byte("🎭"), -1) // == bytes.SplitAfter
+	splits(data, []byte("🎭"), -1) // == [bytes.SplitAfter]
 	splits(data, []byte("🎭"), 4)
 	splits(data, []byte("🎭"), 20)
 	// Output:
@@ -794,7 +804,7 @@ func ExampleSplitAfterN() {
 }
 ```
 
-## `SplitN`
+### `SplitN`
 
 ```go
 func ExampleSplitN() {
@@ -804,7 +814,7 @@ func ExampleSplitN() {
 		fmt.Printf("len: %d, values: %q\n", len(nsplits), nsplits)
 	}
 	splits(data, []byte("💜"), 0)  // useful for obfuscation?
-	splits(data, []byte("💜"), -1) // == bytes.SplitAfter
+	splits(data, []byte("💜"), -1) // == [bytes.SplitAfter]
 	splits(data, []byte("💜"), 3)
 	splits(data, []byte("💜"), 10)
 	// Output:
@@ -815,12 +825,12 @@ func ExampleSplitN() {
 }
 ```
 
-## `Title`
+### `Title`
 
 ```go
 func ExampleTitle() {
 	// XXX(jay): Don't use this! DEPRECATED
-	// bytes.Title()
+	// [bytes.Title]
 	src := []byte("The rain pelted the windshield as the darkness engulfed us.")
 	dst := make([]byte, len(src))
 	// Use this in it's place.
@@ -834,7 +844,7 @@ func ExampleTitle() {
 }
 ```
 
-## `ToLower`
+### `ToLower`
 
 ```go
 func ExampleToLower() {
@@ -846,7 +856,7 @@ func ExampleToLower() {
 }
 ```
 
-## `ToLowerSpecial`
+### `ToLowerSpecial`
 
 ```go
 func ExampleToLowerSpecial() {
@@ -856,11 +866,11 @@ func ExampleToLowerSpecial() {
 }
 ```
 
-## `ToTitle`
+### `ToTitle`
 
 ```go
 func ExampleToTitle() {
-	// NOTE(jay): Compare with bytes.ToUpper and bytes.Title
+	// NOTE(jay): Compare with [bytes.ToUpper] and [bytes.Title]
 	data := []byte("He found a leprechaun in his walnut shell.")
 	data2 := []byte("он нашел лепрекона в скорлупе грецкого ореха.")
 	comp := func(a []byte) {
@@ -876,7 +886,7 @@ func ExampleToTitle() {
 }
 ```
 
-## `ToTitleSpecial`
+### `ToTitleSpecial`
 
 ```go
 func ExampleToTitleSpecial() {
@@ -886,11 +896,11 @@ func ExampleToTitleSpecial() {
 }
 ```
 
-## `ToUpper`
+### `ToUpper`
 
 ```go
 func ExampleToUpper() {
-	// NOTE(jay): Compare with bytes.ToTitle and bytes.Title
+	// NOTE(jay): Compare with [bytes.ToTitle] and [bytes.Title]
 	data := []byte("He found a leprechaun in his walnut shell.")
 	data2 := []byte("он нашел лепрекона в скорлупе грецкого ореха.")
 	comp := func(a []byte) {
@@ -906,7 +916,7 @@ func ExampleToUpper() {
 }
 ```
 
-## `ToUpperSpecial`
+### `ToUpperSpecial`
 
 ```go
 func ExampleToUpperSpecial() {
@@ -916,7 +926,7 @@ func ExampleToUpperSpecial() {
 }
 ```
 
-## `ToValidUTF8`
+### `ToValidUTF8`
 
 ```go
 func ExampleToValidUTF8() {
@@ -949,7 +959,7 @@ func ExampleToValidUTF8() {
 }
 ```
 
-## `Trim`
+### `Trim`
 
 ```go
 func ExampleTrim() {
@@ -960,16 +970,16 @@ func ExampleTrim() {
 }
 ```
 
-## `TrimFunc`
+### `TrimFunc`
 
 ```go
 func ExampleTrimFunc() {
 	data := []byte(`
-/###%%%#####%%%#####'#####'#####'#####'###'#####'#####'#####%%%#####%%%####\
-*###%%%#####%%%#############################################%%%#####%%%####*
-*###%%%### `The secret ingredient to his wonderful life was crime. ##%%%####*`
-*####%#######%###############################################%#######%#####*
-\###'#'#####'#'#############################################'#'#####'#'####/
+/####%%%#######%%%#######'#######'#######'#######'####'#######'#######'#######%%%#######%%%######\
+*####%%%#######%%%###################################################################%%%#######%%%######*
+*####%%%#### `The secret ingredient to his wonderful life was crime. ###%%%######*`
+*######%##########%######################################################################%##########%#######*
+\####'#'#######'#'###################################################################'#'#######'#'######/
 `[1:])
 	fmt.Printf("cleaned: %q\n", bytes.TrimFunc(data, func(r rune) bool {
 		return r == '\n' || r == ' ' || r == '#' || r == '\\' ||
@@ -980,7 +990,7 @@ func ExampleTrimFunc() {
 }
 ```
 
-## `TrimLeft`
+### `TrimLeft`
 
 ```go
 func ExampleTrimLeft() {
@@ -991,7 +1001,7 @@ func ExampleTrimLeft() {
 }
 ```
 
-## `TrimLeftFunc`
+### `TrimLeftFunc`
 
 ```go
 func ExampleTrimLeftFunc() {
@@ -1014,7 +1024,7 @@ The pet shop stocks everything you need to keep your anaconda happy.`)
 }
 ```
 
-## `TrimPrefix`
+### `TrimPrefix`
 
 ```go
 func ExampleTrimPrefix() {
@@ -1029,7 +1039,7 @@ func ExampleTrimPrefix() {
 }
 ```
 
-## `TrimRight`
+### `TrimRight`
 
 ```go
 func ExampleTrimRight() {
@@ -1041,7 +1051,7 @@ func ExampleTrimRight() {
 }
 ```
 
-## `TrimRightFunc`
+### `TrimRightFunc`
 
 ```go
 func ExampleTrimRightFunc() {
@@ -1057,7 +1067,7 @@ func ExampleTrimRightFunc() {
 }
 ```
 
-## `TrimSpace`
+### `TrimSpace`
 
 ```go
 func ExampleTrimSpace() {
@@ -1069,7 +1079,7 @@ func ExampleTrimSpace() {
 }
 ```
 
-## `TrimSuffix`
+### `TrimSuffix`
 
 ```go
 func ExampleTrimSuffix() {
@@ -1084,7 +1094,7 @@ func ExampleTrimSuffix() {
 }
 ```
 
-## `NewBuffer`
+### `NewBuffer`
 
 ```go
 func ExampleNewBuffer() {
@@ -1094,7 +1104,15 @@ func ExampleNewBuffer() {
 }
 ```
 
-## `NewBufferString`
+#### `stubBuffer`
+
+```go
+func stubBuffer() *bytes.Buffer {
+	return bytes.NewBuffer([]byte("The hand sanitizer was actually clear glue."))
+}
+```
+
+### `NewBufferString`
 
 ```go
 func ExampleNewBufferString() {
@@ -1104,15 +1122,11 @@ func ExampleNewBufferString() {
 }
 ```
 
-func exampleBuffer() *bytes.Buffer {
-	return bytes.NewBuffer([]byte("The hand sanitizer was actually clear glue."))
-}
-
-## `Buffer.Bytes`
+### `Buffer.Bytes`
 
 ```go
 func ExampleBuffer_Bytes() {
-	buf := exampleBuffer()
+	buf := stubBuffer()
 	for _, b := range buf.Bytes() {
 		// Do something with the bytes.
 		fmt.Print(b)
@@ -1126,22 +1140,22 @@ func ExampleBuffer_Bytes() {
 }
 ```
 
-## `Buffer.Cap`
+### `Buffer.Cap`
 
 ```go
 func ExampleBuffer_Cap() {
 	// NOTE(jay): compare with Reader.Size()
-	fmt.Println("the total space allocated for the buffer's data is:", exampleBuffer().Cap())
+	fmt.Println("the total space allocated for the buffer's data is:", stubBuffer().Cap())
 	// Output:
 	// the total space allocated for the buffer's data is: 43
 }
 ```
 
-## `Buffer.Grow`
+### `Buffer.Grow`
 
 ```go
 func ExampleBuffer_Grow() {
-	buf := exampleBuffer()
+	buf := stubBuffer()
 	fmt.Println("the total space allocated for the buffer's data is:", buf.Cap())
 	buf.Grow(1 << 9)
 	fmt.Println("the total space allocated for the buffer's data is:", buf.Cap())
@@ -1165,11 +1179,11 @@ func ExampleBuffer_Grow() {
 }
 ```
 
-## `Buffer.Len`
+### `Buffer.Len`
 
 ```go
 func ExampleBuffer_Len() {
-	buf := exampleBuffer()
+	buf := stubBuffer()
 	fmt.Println("the number of bytes in the UNREAD portion:", buf.Len())
 	fmt.Println("the total space allocated for the buffer's data is:", buf.Cap())
 	p := make([]byte, 1<<4)
@@ -1182,8 +1196,9 @@ func ExampleBuffer_Len() {
 		b, _ := buf.ReadByte()
 		fmt.Printf(" %q", b)
 	}
-	b, err := buf.ReadByte() // err should be io.EOF
+	b, err := buf.ReadByte() // err should be [io.EOF]
 	fmt.Printf("\ndidn't make it to the end: byte: %q err: %v", b, err)
+\(\/\/.*\)\(io\.\w\+\)\(.*\)
 	// Output:
 	// the number of bytes in the UNREAD portion: 43
 	// the total space allocated for the buffer's data is: 43
@@ -1196,11 +1211,11 @@ func ExampleBuffer_Len() {
 }
 ```
 
-## `Buffer.Next`
+### `Buffer.Next`
 
 ```go
 func ExampleBuffer_Next() {
-	buf := exampleBuffer()
+	buf := stubBuffer()
 	// NOTE(jay): Memory allocated for returned byte slice. Not as efficient as Buffer.Read
 	data := buf.Next(1 << 5)
 	fmt.Printf("data Len: %d, Cap: %d, result: %q\n", len(data), cap(data), data)
@@ -1215,11 +1230,11 @@ func ExampleBuffer_Next() {
 }
 ```
 
-## `Buffer.Read`
+### `Buffer.Read`
 
 ```go
 func ExampleBuffer_Read() {
-	buf := exampleBuffer()
+	buf := stubBuffer()
 	data := make([]byte, 1<<4)
 	n, err := buf.Read(data)
 	fmt.Printf("number bytes read into data: %d, any error: %v, result: %q\n", n, err, data[:n])
@@ -1237,11 +1252,11 @@ func ExampleBuffer_Read() {
 }
 ```
 
-## `Buffer.ReadByte`
+### `Buffer.ReadByte`
 
 ```go
 func ExampleBuffer_ReadByte() {
-	buf := exampleBuffer()
+	buf := stubBuffer()
 	b, err := buf.ReadByte()
 	fmt.Printf("byte: %q, err: %v\n", b, err)
 	n := buf.Len()
@@ -1256,18 +1271,18 @@ func ExampleBuffer_ReadByte() {
 }
 ```
 
-## `Buffer.ReadBytes`
+### `Buffer.ReadBytes`
 
 ```go
 func ExampleBuffer_ReadBytes() {
 	// NOTE(jay): Compare to Buffer.ReadString
-	buf := exampleBuffer()
+	buf := stubBuffer()
 	line, err := buf.ReadBytes('r')
 	fmt.Printf("err: %v\tline: %q\n", err, line)
 	line, err = buf.ReadBytes('.')
 	fmt.Printf("err: %v\tline: %q\n\n", err, line)
 
-	buf = exampleBuffer()
+	buf = stubBuffer()
 	line, err = buf.ReadBytes('x')
 	fmt.Printf("err: %v\tline: %q\n", err, line)
 	// Output:
@@ -1278,11 +1293,11 @@ func ExampleBuffer_ReadBytes() {
 }
 ```
 
-## `Buffer.ReadFrom`
+### `Buffer.ReadFrom`
 
 ```go
 func ExampleBuffer_ReadFrom() {
-	buf := exampleBuffer()
+	buf := stubBuffer()
 	buf.ReadFrom(bytes.NewReader([]byte(" There's a message for you if you look to the left.")))
 	fmt.Printf("%q\n", buf.String())
 	// Output:
@@ -1290,7 +1305,7 @@ func ExampleBuffer_ReadFrom() {
 }
 ```
 
-## `Buffer.ReadRune`
+### `Buffer.ReadRune`
 
 ```go
 func ExampleBuffer_ReadRune() {
@@ -1312,18 +1327,18 @@ func ExampleBuffer_ReadRune() {
 }
 ```
 
-## `Buffer.ReadString`
+### `Buffer.ReadString`
 
 ```go
 func ExampleBuffer_ReadString() {
 	// NOTE(jay): Compare to Buffer.ReadBytes
-	buf := exampleBuffer()
+	buf := stubBuffer()
 	line, err := buf.ReadString('r')
 	fmt.Printf("err: %v\tline: %q\n", err, line)
 	line, err = buf.ReadString('.')
 	fmt.Printf("err: %v\tline: %q\n\n", err, line)
 
-	buf = exampleBuffer()
+	buf = stubBuffer()
 	line, err = buf.ReadString('x')
 	fmt.Printf("err: %v\tline: %q\n", err, line)
 	// Output:
@@ -1334,11 +1349,11 @@ func ExampleBuffer_ReadString() {
 }
 ```
 
-## `Buffer.Reset`
+### `Buffer.Reset`
 
 ```go
 func ExampleBuffer_Reset() {
-	buf := exampleBuffer()
+	buf := stubBuffer()
 	buf.Reset() // buf.Trancate(0)
 	fmt.Printf("reset:\tlen: %d and cap: %d\n", buf.Len(), buf.Cap())
 	var _new bytes.Buffer
@@ -1360,12 +1375,12 @@ func ExampleBuffer_Reset() {
 }
 ```
 
-## `Buffer.String`
+### `Buffer.String`
 
 ```go
 func ExampleBuffer_String() {
-	fmt.Printf("%v\n", exampleBuffer().String())
-	fmt.Printf("%v\n\n", exampleBuffer().Bytes())
+	fmt.Printf("%v\n", stubBuffer().String())
+	fmt.Printf("%v\n\n", stubBuffer().Bytes())
 
 	var buf *bytes.Buffer
 	buf = nil
@@ -1378,15 +1393,15 @@ func ExampleBuffer_String() {
 }
 ```
 
-## `Buffer.Truncate`
+### `Buffer.Truncate`
 
 ```go
 func ExampleBuffer_Truncate() {
-	buf := exampleBuffer()
+	buf := stubBuffer()
 	buf.Truncate(0) // buf.Reset()
 	fmt.Printf("reset:\tlen: %d and cap: %d\n\n", buf.Len(), buf.Cap())
 
-	buf = exampleBuffer()
+	buf = stubBuffer()
 	buf.Truncate(16)
 	fmt.Printf("trunc:\tlen: %d and cap: %d\n", buf.Len(), buf.Cap())
 	fmt.Printf("data after truncation: %q\n", buf.String())
@@ -1398,7 +1413,7 @@ func ExampleBuffer_Truncate() {
 }
 ```
 
-## `Buffer.UnreadByte`
+### `Buffer.UnreadByte`
 
 ```go
 func ExampleBuffer_UnreadByte() {
@@ -1418,7 +1433,7 @@ func ExampleBuffer_UnreadByte() {
 	fmt.Printf("%q\n\n", out.String())
 
 	buf.ReadBytes('|') // Drain buf
-	buf.ReadByte()     // err == io.EOF
+	buf.ReadByte()     // err == [io.EOF]
 	err := buf.UnreadByte()
 	fmt.Printf("%v\n\n", err)
 
@@ -1436,7 +1451,7 @@ func ExampleBuffer_UnreadByte() {
 }
 ```
 
-## `Buffer.UnreadRune`
+### `Buffer.UnreadRune`
 
 ```go
 func ExampleBuffer_UnreadRune() {
@@ -1446,9 +1461,9 @@ func ExampleBuffer_UnreadRune() {
 	r2, _, _ := seeingDbl.ReadRune()
 	fmt.Printf("size: %d, result: %s %s\n\n", n, string(r1), string(r2))
 
-	buf := exampleBuffer()
+	buf := stubBuffer()
 	buf.ReadBytes('|') // Drain buf
-	buf.ReadRune()     // err == io.EOF
+	buf.ReadRune()     // err == [io.EOF]
 	err = buf.UnreadRune()
 	fmt.Printf("%v\n\n", err)
 
@@ -1466,73 +1481,73 @@ func ExampleBuffer_UnreadRune() {
 }
 ```
 
-## `Buffer.Write`
+### `Buffer.Write`
 
 ```go
 func ExampleBuffer_Write() {
-	buf := exampleBuffer()
+	buf := stubBuffer()
 	n, err := buf.Write([]byte(" I may struggle with geography, but I'm sure I'm somewhere around here."))
 	fmt.Printf("number of bytes written: %d, any error: %v, result: %q\n", n, err, buf.String())
-	// XXX(jay): Panics with bytes.ErrorTooLarge if string too large to grow buf, see
-	// Buffer.Grow for example of bytes.ErrorTooLarge.
+	// XXX(jay): Panics with [bytes.ErrorTooLarge] if string too large to grow buf, see
+	// [Buffer.Grow] for example of [bytes.ErrorTooLarge].
 
 	// Output:
 	// number of bytes written: 71, any error: <nil>, result: "The hand sanitizer was actually clear glue. I may struggle with geography, but I'm sure I'm somewhere around here."
 }
 ```
 
-## `Buffer.WriteByte`
+### `Buffer.WriteByte`
 
 ```go
 func ExampleBuffer_WriteByte() {
-	buf := exampleBuffer()
+	buf := stubBuffer()
 	fmt.Printf("any error: %v, result: %q\n", buf.WriteByte('}'), buf.String())
-  ```
-	// XXX(jay): Panics with bytes.ErrorTooLarge if string too large to grow buf, see
-	// Buffer.Grow for example of bytes.ErrorTooLarge.
+	// XXX(jay): Panics with [bytes.ErrorTooLarge] if string too large to grow buf, see
+	// [Buffer.Grow] for example of [bytes.ErrorTooLarge].
 
 	// Output:
 	// any error: <nil>, result: "The hand sanitizer was actually clear glue.}"
 }
+```
 
-## `Buffer.WriteRune`
+### `Buffer.WriteRune`
 
 ```go
 func ExampleBuffer_WriteRune() {
-	buf := exampleBuffer()
+	buf := stubBuffer()
 	n, err := buf.WriteRune('🧴')
 	fmt.Printf("number of bytes written: %d, any error: %v, result: %q\n", n, err, buf.String())
 
-	// XXX(jay): Panics with bytes.ErrorTooLarge if string too large to grow buf, see
-	// Buffer.Grow for example of bytes.ErrorTooLarge.
+	// XXX(jay): Panics with [bytes.ErrorTooLarge] if string too large to grow buf, see
+	// [Buffer.Grow] for example of [bytes.ErrorTooLarge].
 
 	// Output:
 	// number of bytes written: 4, any error: <nil>, result: "The hand sanitizer was actually clear glue.🧴"
 }
 ```
 
-## `Buffer.WriteString`
+### `Buffer.WriteString`
 
 ```go
 func ExampleBuffer_WriteString() {
-	buf := exampleBuffer()
+	buf := stubBuffer()
 	buf.WriteString(" There was no telling what thoughts would come from the machine.")
 	fmt.Printf("%q\n\n", buf.String())
 
-	// XXX(jay): Panics with bytes.ErrorTooLarge if string too large to grow buf, see
-	// Buffer.Grow for example of bytes.ErrorTooLarge.
+	// XXX(jay): Panics with [bytes.ErrorTooLarge] if string too large to grow buf, see
+	// [Buffer.Grow] for example of [bytes.ErrorTooLarge].
 
 	// Output:
 	// "The hand sanitizer was actually clear glue. There was no telling what thoughts would come from the machine."
 }
 ```
 
-## `Buffer.WriteTo`
+### `Buffer.WriteTo`
 
 ```go
 func ExampleBuffer_WriteTo() {
-	buf := exampleBuffer()
-	dblbuf := exampleBuffer()
+	buf := stubBuffer()
+	dblbuf := stubBuffer()
 	n, err := buf.WriteTo(dblbuf)
 	fmt.Printf("number of bytes written: %d, error: %v\n", n, err)
 	fmt.Printf("all the written data plus contents of other writer:\n\t%q\n", dblbuf.String())
@@ -1543,7 +1558,7 @@ func ExampleBuffer_WriteTo() {
 }
 ```
 
-## `NewReader`
+### `NewReader`
 
 ```go
 func ExampleNewReader() {
@@ -1553,25 +1568,29 @@ func ExampleNewReader() {
 }
 ```
 
-func exampleReader() *bytes.Reader {
+#### `stubReader`
+
+```go
+func stubReader() *bytes.Reader {
 	return bytes.NewReader([]byte("The changing of down comforters to cotton bedspreads always meant the gophers had returned."))
 }
+```
 
-## `Reader.Len`
+### `Reader.Len`
 
 ```go
 func ExampleReader_Len() {
-	fmt.Println("the number of bytes in the UNREAD portion:", exampleReader().Len())
+	fmt.Println("the number of bytes in the UNREAD portion:", stubReader().Len())
 	// Output:
 	// the number of bytes in the UNREAD portion: 91
 }
 ```
 
-## `Reader.Read`
+### `Reader.Read`
 
 ```go
 func ExampleReader_Read() {
-	r := exampleReader()
+	r := stubReader()
 	data := make([]byte, 1<<5)
 	n, err := r.Read(data)
 	fmt.Printf("bytes read: %d, any error: %v, result: %q\n", n, err, data[:n])
@@ -1589,12 +1608,12 @@ func ExampleReader_Read() {
 }
 ```
 
-## `Reader.ReadAt`
+### `Reader.ReadAt`
 
 ```go
 func ExampleReader_ReadAt() {
-	// NOTE(jay): For more information read io.SeekerAt interface
-	r := exampleReader()
+	// NOTE(jay): For more information read [io.SeekerAt] interface
+	r := stubReader()
 	data := make([]byte, 1<<5)
 	n, err := r.ReadAt(data, 66)
 	fmt.Printf("bytes read: %d, any error: %v, result: %q\n", n, err, data[:n])
@@ -1609,11 +1628,11 @@ func ExampleReader_ReadAt() {
 }
 ```
 
-## `Reader.ReadByte`
+### `Reader.ReadByte`
 
 ```go
 func ExampleReader_ReadByte() {
-	r := exampleReader()
+	r := stubReader()
 	b, err := r.ReadByte()
 	fmt.Printf("byte: %q, err: %v\n", b, err)
 	n := r.Len()
@@ -1628,7 +1647,7 @@ func ExampleReader_ReadByte() {
 }
 ```
 
-## `Reader.ReadRune`
+### `Reader.ReadRune`
 
 ```go
 func ExampleReader_ReadRune() {
@@ -1650,11 +1669,11 @@ func ExampleReader_ReadRune() {
 }
 ```
 
-## `Reader.Reset`
+### `Reader.Reset`
 
 ```go
 func ExampleReader_Reset() {
-	r := exampleReader()
+	r := stubReader()
 	fmt.Printf("reset:\tlen: %d and cap: %d\n", r.Len(), r.Size())
 	// resets or switches to new Reader
 	r.Reset([]byte("All you need to do is pick up the pen and begin."))
@@ -1671,11 +1690,11 @@ func ExampleReader_Reset() {
 }
 ```
 
-## `Reader.Seek`
+### `Reader.Seek`
 
 ```go
 func ExampleReader_Seek() {
-	r := exampleReader()
+	r := stubReader()
 	data := make([]byte, bytes.MinRead)
 	newOffset, err := r.Seek(66, io.SeekStart)
 	fmt.Printf("offset in reader: %d, any error: %v\n", newOffset, err)
@@ -1705,12 +1724,12 @@ func ExampleReader_Seek() {
 }
 ```
 
-## `Reader.Seek_whence`
+### `Reader.Seek_whence`
 
 ```go
 func ExampleReader_Seek_whence() {
-	// NOTE(jay): For more information check the io.Seeker interface
-	r := exampleReader()
+	// NOTE(jay): For more information check the [io.Seeker] interface
+	r := stubReader()
 	readWord := func(r *bytes.Reader, wordSize int) []byte {
 		word := make([]byte, wordSize)
 		for i := 0; i < wordSize; i++ {
@@ -1745,12 +1764,12 @@ func ExampleReader_Seek_whence() {
 }
 ```
 
-## `Reader.Size`
+### `Reader.Size`
 
 ```go
 func ExampleReader_Size() {
 	// NOTE(jay): compare with Buffer.Cap()
-	r := exampleReader()
+	r := stubReader()
 	data := make([]byte, 1<<4)
 	r.Read(data)
 	fmt.Printf("the total space allocated for the reader: %d and length of unread data: %d\n",
@@ -1760,11 +1779,11 @@ func ExampleReader_Size() {
 }
 ```
 
-## `Reader.UnreadByte`
+### `Reader.UnreadByte`
 
 ```go
 func ExampleReader_UnreadByte() {
-	// NOTE(jay): For more info checkout io.ByteReader
+	// NOTE(jay): For more info checkout [io.ByteReader]
 	r := bytes.NewReader([]byte("se al stuf"))
 	var out bytes.Buffer
 	repeat := false
@@ -1782,11 +1801,11 @@ func ExampleReader_UnreadByte() {
 
 	drain := make([]byte, 1<<8)
 	r.Read(drain) // Drain r
-	r.ReadByte()  // err == io.EOF
+	r.ReadByte()  // err == [io.EOF]
 	err := r.UnreadByte()
 	fmt.Printf("does not return error at EOF: %v\n\n", err)
 
-	fmt.Printf("error: %v\n", exampleReader().UnreadByte())
+	fmt.Printf("error: %v\n", stubReader().UnreadByte())
 	// Output:
 	// "see all stuff"
 	//
@@ -1796,21 +1815,21 @@ func ExampleReader_UnreadByte() {
 }
 ```
 
-## `Reader.UnreadRune`
+### `Reader.UnreadRune`
 
 ```go
 func ExampleReader_UnreadRune() {
-	// NOTE(jay): For more info checkout io.RuneReader
+	// NOTE(jay): For more info checkout [io.RuneReader]
 	seeingDbl := bytes.NewReader([]byte("👀"))
 	r1, n, err := seeingDbl.ReadRune()
 	seeingDbl.UnreadRune()
 	r2, _, _ := seeingDbl.ReadRune()
 	fmt.Printf("size: %d, result: %s %s\n\n", n, string(r1), string(r2))
 
-	r := exampleReader()
+	r := stubReader()
 	drain := make([]byte, 1<<8)
 	r.Read(drain) // Drain r
-	r.ReadRune()  // err == io.EOF
+	r.ReadRune()  // err == [io.EOF]
 	err = r.UnreadRune()
 	fmt.Printf("error: %v\n\n", err)
 
@@ -1821,11 +1840,11 @@ func ExampleReader_UnreadRune() {
 }
 ```
 
-## `Reader.WriteTo`
+### `Reader.WriteTo`
 
 ```go
 func ExampleReader_WriteTo() {
-	r := exampleReader()
+	r := stubReader()
 	var buf bytes.Buffer
 	// NOTE(jay): To see what other Writers exist in the std lib use `guru`.
 	// 	https://docs.google.com/document/d/1_Y9xCEMj5S-7rv2ooHpZNH15JgRT5iM742gJkw5LtmQ/edit

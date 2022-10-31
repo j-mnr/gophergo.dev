@@ -14,6 +14,7 @@ ShowBreadCrumbs: false
 ## Community
 
 - [Golang Weekly Email](https://golangweekly.com/) 📧
+- [Go Google Group](https://groups.google.com/g/golang-nuts) 🥜
 - [Gopherize Me](https://gopherize.me/) 😂
 - [Go Slack](https://invite.slack.golangbridge.org/) ❗
 - [Go Reddit](https://www.reddit.com/r/golang/) 🔼
