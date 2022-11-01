@@ -24,7 +24,7 @@ Example 3
 We use `range` to specify a start and an end and to move through each one of
 those items until we've seen the whole collection. These collection of items
 can be any of the ones we talked about in previous lessons (arrays, slices,
-strings, maps) and a new `type` channel or `chan`(coming soon!).
+strings, maps) and a new `type` channel or [`chan`](/basics/concurrency/24-channel).
 
 {{% setup-instructions lessonname="ranges" %}}
 
@@ -270,7 +270,7 @@ func ExampleMap() {
 
 ## Range Through String
 
-We're going to talk in-depth about runes (coming soon!), but it's good to know
+We're going to talk in-depth about [runes](/basics/12-runes) , but it's good to know
 that by using `range`, a `string` will produce an index and a `rune` **not** a
 `byte`. This is for native support with
 [UTF-8](https://blog.hubspot.com/website/what-is-utf-8) strings, or more
@@ -316,7 +316,7 @@ func ExampleString() {
 
 ## Range Through Channel
 
-We will talk about channels (coming soon!) later on after covering more
+We will talk about [channels](/basics/concurrency/24-channel) later on after covering more
 fundamental topics, but we're talking about `range` right now and if we ever
 come back to this lesson we'll have a complete look at what types `range` works
 with.

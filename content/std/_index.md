@@ -2,7 +2,10 @@
 ShowBreadCrumbs: false
 ---
 
-#
+# Examples Ready!
+
+- [`bytes`✅](/std/bytes/)
+- [`time`✅](/std/time/)
 
 {{< figure src="/ashley-mcnamara/COMING_SOON_GOPHER.png" alt="Coming Soon"
 attr=`[Coming Soon](https://github.com/ashleymcnamara/gophers/blob/master/COMING_SOON_GOPHER.png)
@@ -15,7 +18,6 @@ by [Ashley McNamara](https://twitter.com/ashleymcnamara)-
 - [`archive/tar`]() WIP
 - [`archive/zip`]() WIP
 - [`bufio`]() WIP
-- [`bytes ✅`](/std/bytes/)
 - [`compress/bzip2`]() WIP
 - [`compress/flate`]() WIP
 - [`compress/gzip`]() WIP
@@ -160,7 +162,6 @@ by [Ashley McNamara](https://twitter.com/ashleymcnamara)-
 - [`text/tabwriter`]() WIP
 - [`text/template`]() WIP
 - [`text/template/parse`]() WIP
-- [`time`]() WIP
 - [`time/tzdata`]() WIP
 - [`unicode`]() WIP
 - [`unicode/utf16`]() WIP
