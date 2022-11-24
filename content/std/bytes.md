@@ -1,6 +1,7 @@
 ---
 Title: "bytes"
 Draft: false
+URL: /std/bytes/
 ---
 
 ## Source Code
