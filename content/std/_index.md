@@ -4,8 +4,9 @@ ShowBreadCrumbs: false
 
 # Examples Ready!
 
-- [`bytes`✅](/std/bytes/)
-- [`time`✅](/std/time/)
+- [`bytes`](/std/bytes/)
+- [`time`](/std/time/)
+- [`net/http/cookiejar`](/std/net/http/cookiejar/)
 
 {{< figure src="/ashley-mcnamara/COMING_SOON_GOPHER.png" alt="Coming Soon"
 attr=`[Coming Soon](https://github.com/ashleymcnamara/gophers/blob/master/COMING_SOON_GOPHER.png)
@@ -118,7 +119,6 @@ by [Ashley McNamara](https://twitter.com/ashleymcnamara)-
 - [`net`]() WIP
 - [`net/http`]() WIP
 - [`net/http/cgi`]() WIP
-- [`net/http/cookiejar`]() WIP
 - [`net/http/fcgi`]() WIP
 - [`net/http/httptest`]() WIP
 - [`net/http/httptrace`]() WIP

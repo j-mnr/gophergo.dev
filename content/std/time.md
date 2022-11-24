@@ -1,6 +1,7 @@
 ---
 Title: "time"
 Draft: false
+URL: /std/time/
 ---
 
 ## Source Code
